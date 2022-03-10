@@ -21,9 +21,11 @@ def generate_keyword_mapping(queries: list) -> dict:
     """
     keyword_to_queries = dict()
     for i, question in enumerate(queries):
-        keywords = generate_keywords(question.get("query"))
-        for keyword in keywords:
-            keyword_to_queries.setdefault(keyword, []).append(i)
+        if question.get('query'):
+            keywords = generate_keywords(question.get("query"))
+            keywords.extend(generate_keywords(question.get("response")))
+            for keyword in keywords:
+                keyword_to_queries.setdefault(keyword, []).append(i)
     return keyword_to_queries
 
 
@@ -34,7 +36,7 @@ def generate_keywords(query: string) -> list:
     :param query: a search query
     :return: the list of keywords from that query
     """
-    stop_words = ["is", "a", "the"]
+    stop_words = ["", "is", "a", "the", "can", "i", "to", "in", "by", "from", "be", "of"]
     keywords = query \
         .translate(str.maketrans('', '', string.punctuation)) \
         .lower() \
@@ -61,6 +63,19 @@ def search(keyword_to_queries: dict, keywords: list) -> list:
     return best_matches
 
 
+def create_md_link(url: string, text: string) -> string:
+    """
+    Creates a markdown link.
+
+    :param url: the url to link to
+    :param text: the text to display
+    :return: the markdown link
+    """
+    if url:
+        return f"[{text}]({url})"
+    return text
+
+
 # Global variables
 client = commands.Bot(
     command_prefix=commands.when_mentioned_or("!"),
@@ -80,8 +95,18 @@ keyword_mapping = generate_keyword_mapping(queries)
 async def _react_on_mention(message: Message):
     if client.user.mentioned_in(message):
         indices = search(keyword_mapping, generate_keywords(message.content))
-        top_queries = "\n".join([f"{queries[i].get('query')} (i = {i})" for i in indices[:5]])
-        await message.reply(f"**Here are the top queries:**\n{top_queries}")
+        reply = list()
+        reply.append("Use the id with the /lookup command to get an answer:")
+        reply.extend([
+            f"1. {create_md_link(queries[i].get('resource'), queries[i].get('query'))} (id = {i})" 
+            for i in indices[:5]
+        ])
+        top_queries = "\n".join(reply)
+        embed = discord.Embed(
+            title="Do any of these questions match yours?",
+            description=top_queries
+        )
+        await message.reply(embed=embed)
 
 
 @client.event

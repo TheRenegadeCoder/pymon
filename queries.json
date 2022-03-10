@@ -5,10 +5,16 @@
     },
     {
         "query": "What is a magic number?",
-        "response": "A magic number is a number that is not obvious upon inspection."
+        "response": "A magic number is a number that is not obvious upon inspection and should therefore be converted to a constant.",
+        "resource": "https://therenegadecoder.com/code/what-is-a-magic-number-and-how-do-we-fix-it/"
     },
     {
         "query": "What is a primitive type?",
-        "response": "A primitive type is one of 8 data types including int, double, and boolean. All primitive types are written in lowercase letters."
+        "response": "In Java, a primitive type, which differs from a reference type, is one of 8 data types including int, double, and boolean. All primitive types are written in lowercase letters.",
+        "resource": "https://therenegadecoder.com/code/the-8-primitive-types-in-java/"
+    },
+    {
+        "query": "How can I create a constant?",
+        "response": "In Java, a constant can be created by using the final keyword: `final int x = 5;`"
     }
 ]
