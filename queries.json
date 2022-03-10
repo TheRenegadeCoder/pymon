@@ -1,0 +1,53 @@
+[
+    {
+        "query": "",
+        "response": ""
+    },
+    {
+        "query": "What is a magic number?",
+        "response": "A magic number is a number that is not obvious upon inspection and should therefore be converted to a constant.",
+        "resource": "https://therenegadecoder.com/code/what-is-a-magic-number-and-how-do-we-fix-it/"
+    },
+    {
+        "query": "What is a primitive type?",
+        "response": "In Java, a primitive type, which differs from a reference type, is one of 8 data types including int, double, and boolean. All primitive types are written in lowercase letters.",
+        "resource": "https://therenegadecoder.com/code/the-8-primitive-types-in-java/"
+    },
+    {
+        "query": "How can I create a constant?",
+        "response": "In Java, a constant can be created by using the final keyword: \n```java\nfinal int x = 5;\n```"
+    },
+    {
+        "query": "What is testing?",
+        "response": "Testing is the process of evaluating a program for bugs. It cannot be used to determine correctness of a program. It is used in conjuction with debugging to resolve bugs."
+    },
+    {
+        "query": "What is debugging?",
+        "response": "Debugging is the process of finding and fixing bugs. It is often used in conjunction with testing to resolve bugs."
+    },
+    {
+        "query": "What is correctness?",
+        "response": "Correctness has many definitions. However, for the purposes of this course, we define correctness as the ability of a program to behave in a way that is consistent with the contract. In other words, the set of actual outputs of a program fit within the set of all possible outputs according to the contract."
+    },
+    {
+        "query": "What is JUnit?",
+        "response": "JUnit is a unit testing framework for Java. It is used to automatically detect bugs in methods.",
+        "resource": "https://therenegadecoder.com/code/junit-testing-in-java/"
+    },
+    {
+        "query": "What is unit testing?",
+        "response": "Unit testing is a specific form of program testing where the focus is on a small unit of the program, usually a single method. A common unit testing framework in Java is JUnit."
+    },
+    {
+        "query": "What is an expression tree?",
+        "response": "An expression tree is a tree representation of a mathematical expression. It is used to evaluate an expression."
+    },
+    {
+        "query": "What is confidence building?",
+        "response": "Confidence building is an approach to reasoning about a recursive algorithm. Confidence building begins by testing the recursive algorithm with the smallest problem. It then tests the recursive algorithm with the next smallest problem, and so on. By subbing in correct answers to smaller problems, we can build confidence in the recursive algorithm."
+    },
+    {
+        "query": "What is the declared type of a variable?",
+        "response": "Sometimes called the static type or the compile-time type, the declared type is the type of a variable at the time it was declared. The declared type is often called the static type or compile-time type because it is the type the compiler uses to type check the program."
+    }
+]
