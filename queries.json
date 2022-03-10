@@ -16,5 +16,17 @@
     {
         "query": "How can I create a constant?",
         "response": "In Java, a constant can be created by using the final keyword: \n```java\nfinal int x = 5;\n```"
+    },
+    {
+        "query": "What is testing?",
+        "response": "Testing is the process of evaluating a program for bugs. It cannot be used to determine correctness of a program. It is used in conjuction with debugging to resolve bugs."
+    },
+    {
+        "query": "What is debugging?",
+        "response": "Debugging is the process of finding and fixing bugs. It is often used in conjunction with testing to resolve bugs."
+    },
+    {
+        "query": "What is correctness?",
+        "response": "Correctness has many definitions. However, for the purposes of this course, we define correctness as the ability of a program to behave in a way that is consistent with the contract. In other words, the set of actual outputs of a program fit within the set of all possible outputs according to the contract."
     }
 ]
