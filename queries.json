@@ -37,5 +37,13 @@
     {
         "query": "What is unit testing?",
         "response": "Unit testing is a specific form of program testing where the focus is on a small unit of the program, usually a single method. A common unit testing framework in Java is JUnit."
+    },
+    {
+        "query": "What is an expression tree?",
+        "response": "An expression tree is a tree representation of a mathematical expression. It is used to evaluate an expression."
+    },
+    {
+        "query": "What is confidence building?",
+        "response": "Confidence building is an approach to reasoning about a recursive algorithm. Confidence building begins by testing the recursive algorithm with the smallest problem. It then tests the recursive algorithm with the next smallest problem, and so on. By subbing in correct answers to smaller problems, we can build confidence in the recursive algorithm."
     }
 ]
