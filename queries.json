@@ -1,0 +1,14 @@
+[
+    {
+        "query": "",
+        "response": ""
+    },
+    {
+        "query": "What is a magic number?",
+        "response": "A magic number is a number that is not obvious upon inspection."
+    },
+    {
+        "query": "What is a primitive type?",
+        "response": "A primitive type is one of 8 data types including int, double, and boolean. All primitive types are written in lowercase letters."
+    }
+]
