@@ -39,7 +39,8 @@ def generate_keywords(query: string) -> list:
     :param query: a search query
     :return: the list of keywords from that query
     """
-    stop_words = ["", "is", "a", "the", "can", "i", "to", "in", "by", "from", "be", "of"]
+    stop_words = ["", "is", "a", "the", "can",
+                  "i", "to", "in", "by", "from", "be", "of"]
     keywords = query \
         .translate(str.maketrans('', '', string.punctuation)) \
         .lower() \
@@ -62,7 +63,8 @@ def search(keyword_to_queries: dict, keywords: list) -> list:
         for i in query_indices:
             query_count.setdefault(i, 0)
             query_count[i] += 1
-    best_matches = list(dict(sorted(query_count.items(), key=lambda item: item[1])).keys())
+    best_matches = list(
+        dict(sorted(query_count.items(), key=lambda item: item[1])).keys())
     return best_matches
 
 
@@ -101,7 +103,7 @@ async def _react_on_mention(message: Message):
         if indices:
             reply = list()
             reply.extend([
-                f"{create_md_link(queries[i].get('resource'), queries[i].get('query'))}" 
+                f"{create_md_link(queries[i].get('resource'), queries[i].get('query'))}"
                 for i in indices[:3]
             ])
             embed = discord.Embed(
@@ -112,8 +114,8 @@ async def _react_on_mention(message: Message):
             )
             for idx, row in enumerate(reply):
                 embed.add_field(
-                    name=f"#{idx + 1}: ID-{indices[idx]}", 
-                    value=row, 
+                    name=f"#{idx + 1}: ID-{indices[idx]}",
+                    value=row,
                     inline=True
                 )
             embed.set_footer(
@@ -135,12 +137,6 @@ async def on_message(message: Message):
     """
     if message.author != client.user:
         await _react_on_mention(message)
-
-
-@client.event
-async def on_ready():
-    channel = client.get_channel(309845675946934274)
-    await channel.send("Ask me anytime.")
 
 
 @slash.slash(
@@ -172,7 +168,7 @@ async def _get(ctx, index: int):
         value=queries[index].get("response"),
         inline=False
     )
-        
+
     await ctx.send(embed=embed)
 
 
