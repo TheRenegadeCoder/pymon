@@ -28,5 +28,14 @@
     {
         "query": "What is correctness?",
         "response": "Correctness has many definitions. However, for the purposes of this course, we define correctness as the ability of a program to behave in a way that is consistent with the contract. In other words, the set of actual outputs of a program fit within the set of all possible outputs according to the contract."
+    },
+    {
+        "query": "What is JUnit?",
+        "response": "JUnit is a unit testing framework for Java. It is used to automatically detect bugs in methods.",
+        "resource": "https://therenegadecoder.com/code/junit-testing-in-java/"
+    },
+    {
+        "query": "What is unit testing?",
+        "response": "Unit testing is a specific form of program testing where the focus is on a small unit of the program, usually a single method. A common unit testing framework in Java is JUnit."
     }
 ]
