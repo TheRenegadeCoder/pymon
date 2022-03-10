@@ -96,15 +96,24 @@ async def _react_on_mention(message: Message):
     if client.user.mentioned_in(message):
         indices = search(keyword_mapping, generate_keywords(message.content))
         reply = list()
-        reply.append("Use the id with the /lookup command to get an answer:")
         reply.extend([
-            f"1. {create_md_link(queries[i].get('resource'), queries[i].get('query'))} (id = {i})" 
-            for i in indices[:5]
+            f"{create_md_link(queries[i].get('resource'), queries[i].get('query'))}" 
+            for i in indices[:3]
         ])
-        top_queries = "\n".join(reply)
         embed = discord.Embed(
-            title="Do any of these questions match yours?",
-            description=top_queries
+            title="Do any of these questions match your query?",
+            description="Use the ID with the /lookup command to get an answer:",
+            color=discord.Color.blue()
+        )
+        for idx, row in enumerate(reply):
+            embed.add_field(
+                name=f"#{idx + 1}: ID-{indices[idx]}", 
+                value=row, 
+                inline=True
+            )
+        embed.set_footer(
+            text="Learn more about how this bot works @ https://github.com/TheRenegadeCoder/cs-query-bot.",
+            icon_url="https://therenegadecoder.com/wp-content/uploads/2017/05/the-renegade-coder-icon-cropped.png"
         )
         await message.reply(embed=embed)
 
