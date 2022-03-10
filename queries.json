@@ -15,6 +15,6 @@
     },
     {
         "query": "How can I create a constant?",
-        "response": "In Java, a constant can be created by using the final keyword: `final int x = 5;`"
+        "response": "In Java, a constant can be created by using the final keyword: \n```java\nfinal int x = 5;\n```"
     }
 ]

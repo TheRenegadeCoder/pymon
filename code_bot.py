@@ -106,7 +106,7 @@ async def _react_on_mention(message: Message):
             ])
             embed = discord.Embed(
                 title=f"CS Query Bot v{__version__}: Do any of these questions match your query?",
-                description="Use the ID with the /lookup command to get an answer or follow the available links:",
+                description="Use the ID with the /get command to get an answer or follow the available links:",
                 color=discord.Color.blue(),
                 url="https://github.com/TheRenegadeCoder/cs-query-bot"
             )
@@ -144,7 +144,7 @@ async def on_ready():
 
 
 @slash.slash(
-    name="lookup",
+    name="get",
     description="Looks up the answer to a query by its ID.",
     options=[
         create_option(
@@ -155,14 +155,25 @@ async def on_ready():
         )
     ]
 )
-async def _lookup(ctx, index: int):
+async def _get(ctx, index: int):
     """
     Looks up the answer to a query by its ID.
 
     :param ctx: the context to send messages to
     :return: None
     """
-    await ctx.send(queries[index]["response"])
+    embed = discord.Embed(
+        title=f"CS Query Bot v{__version__}: Answer to ID-{index}",
+        color=discord.Color.red(),
+        url=queries[index].get("resource", discord.embeds.EmptyEmbed)
+    )
+    embed.add_field(
+        name=queries[index].get("query"),
+        value=queries[index].get("response"),
+        inline=False
+    )
+        
+    await ctx.send(embed=embed)
 
 
 client.run(os.environ.get("DISCORD_TOKEN"))
