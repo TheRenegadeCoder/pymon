@@ -65,5 +65,13 @@
     {
         "query": "What is the extends relationship?",
         "response": "The extends relationship can only occur between classes and classes or interfaces and interfaces. In other words, class B can extend class A and interface B can extend interface A, but class A cannot extend interface A."
+    },
+    {
+        "query": "What is a mathematical string?",
+        "response": "When modeling data types, we often use mathematical models. One such model is the mathematical string, and it can be used to model everything from strings to arrays and queues. Mathematical string notation takes the form of angle brackets which store sequential items: `<3, 5, 2>`."
+    },
+    {
+        "query": "What is mathematical string notation for concatenation?",
+        "response": "Often, strings are concatenated using the `+` operator. In mathematical string notation, we concatenate strings using the `*` operator. Therefore, `<2, 3> * <5> = <2, 3, 5>`."
     }
 ]
