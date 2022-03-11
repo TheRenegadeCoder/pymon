@@ -11,7 +11,7 @@ from discord_slash.utils.manage_commands import create_option
 from dotenv import load_dotenv
 
 
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 
 
 # Helper methods
@@ -124,7 +124,7 @@ async def _react_on_mention(message: Message):
             )
             await message.reply(embed=embed)
         else:
-            await message.reply("Sorry! No questions matched your query.")
+            await message.reply("How about we explore the area ahead of us later? https://tenor.com/bqnuv.gif")
 
 
 @client.event

@@ -49,5 +49,37 @@
     {
         "query": "What is the declared type of a variable?",
         "response": "Sometimes called the static type or the compile-time type, the declared type is the type of a variable at the time it was declared. The declared type is often called the static type or compile-time type because it is the type the compiler uses to type check the program."
+    },
+    {
+        "query": "What is method overriding?",
+        "response": "Method overriding occurs when a method from a parent class is reimplemented in the child class."
+    },
+    {
+        "query": "What is method overloading?",
+        "response": "Method overloading occurs when multiple methods with the same name have different parameters."
+    },
+    {
+        "query": "What is the implements relationship?",
+        "response": "The implements relationship can only occur between classes and interfaces. Specifically, a class can implement an interface using the `implements` keyword."
+    },
+    {
+        "query": "What is the extends relationship?",
+        "response": "The extends relationship can only occur between classes and classes or interfaces and interfaces. In other words, class B can extend class A and interface B can extend interface A, but class A cannot extend interface A."
+    },
+    {
+        "query": "What is a mathematical string?",
+        "response": "When modeling data types, we often use mathematical models. One such model is the mathematical string, and it can be used to model everything from strings to arrays and queues. Mathematical string notation takes the form of angle brackets which store sequential items: `<3, 5, 2>`."
+    },
+    {
+        "query": "What is mathematical string notation for concatenation?",
+        "response": "Often, strings are concatenated using the `+` operator. In mathematical string notation, we concatenate strings using the `*` operator. Therefore, `<2, 3> * <5> = <2, 3, 5>`."
+    },
+    {
+        "query": "What is a parameter mode?",
+        "response": "A parameter mode is a way to specify what will happen to a parameter when the method is called. In our course, there are four main parameter modes: restores, clears, updates, and replaces."
+    },
+    {
+        "query": "What is restores mode?",
+        "response": "Restores mode is the default parameter mode. If a parameter is in restores mode, the method promises that the parameter will not be modified from the perspective of the client. It is okay for a method to modify the parameter, but they must always restore it before the method returns."
     }
 ]

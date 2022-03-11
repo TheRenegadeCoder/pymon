@@ -1,3 +1,4 @@
 discord
 python-dotenv
 discord-py-slash-command
+snakemd
