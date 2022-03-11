@@ -45,6 +45,10 @@ Currently, the bot can answer the following questions. The numbers map directly 
 13. What is method overloading?
 14. What is the implements relationship?
 15. What is the extends relationship?
+16. What is a mathematical string?
+17. What is mathematical string notation for concatenation?
+18. What is a parameter mode?
+19. What is restores mode?
 
 ---
 
