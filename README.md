@@ -22,9 +22,13 @@ From there, you can run the bot like any other Python script:
 python3 code_bot.py
 ```
 
-## Current Bot Features
+## How to Use the Bot
 
-Currently, the bot can answer the following questions:
+The CS Query Bot currently has two main services. First, you can directly @ the bot to get it to respond with the top three matching questions to your query. The response will include an ID which you can lookup with the `/get` command. Alternatively, you can use the list in the next section directly. Note that the questions don't have any organization, so asking the bot to give you some matches is sometimes a better start.
+
+## Question IDs
+
+Currently, the bot can answer the following questions. The numbers map directly to the lookup IDs, so if you want an answer to any of these questions, just ask the bot with `/get`.
 
 1. What is a magic number?
 2. What is a primitive type?
@@ -41,3 +45,7 @@ Currently, the bot can answer the following questions:
 13. What is method overloading?
 14. What is the implements relationship?
 15. What is the extends relationship?
+
+---
+
+This README was automatically generated using SnakeMD.

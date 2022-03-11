@@ -54,11 +54,28 @@ doc.add_code(
     "shell"
 )
 
-doc.add_header("Bot Features", 2)
+doc.add_header("How to Use the Bot", 2)
 
 doc.add_paragraph(
     """
-    Currently, the bot can answer the following questions:
+    The CS Query Bot currently has two main services. First, you
+    can directly @ the bot to get it to respond with the top three
+    matching questions to your query. The response will include an ID
+    which you can lookup with the `/get` command. Alternatively,
+    you can use the list in the next section directly. Note that the
+    questions don't have any organization, so asking the bot to give
+    you some matches is sometimes a better start. 
+    """
+)
+
+doc.add_header("Question IDs", 2)
+
+doc.add_paragraph(
+    """
+    Currently, the bot can answer the following questions. 
+    The numbers map directly to the lookup IDs, so if you want
+    an answer to any of these questions, just ask the bot with
+    `/get`. 
     """
 )
 
@@ -68,5 +85,13 @@ for query in queries:
         questions.append(query.get("query"))
 
 doc.add_ordered_list(questions)
+
+doc.add_horizontal_rule()
+
+doc.add_paragraph(
+    """
+    This README was automatically generated using SnakeMD. 
+    """
+)
 
 doc.output_page()
