@@ -11,7 +11,7 @@ from discord_slash.utils.manage_commands import create_option
 from dotenv import load_dotenv
 
 
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 
 
 # Helper methods
