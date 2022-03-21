@@ -28,7 +28,7 @@ def test_generate_keyword_mapping():
         "response": "The cow is brown."
     }
     expected_mapping = {
-        "brown": {0: 11},
+        "brown": {0: 11}, # index: weight
         "cow": {0: 11},
         "now": {0: 10}
     }
