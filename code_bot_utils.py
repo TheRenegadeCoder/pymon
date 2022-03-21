@@ -11,9 +11,15 @@ def generate_keyword_mapping(queries: list) -> dict:
     for i, question in enumerate(queries):
         if question.get('query'):
             keywords = generate_keywords(question.get("query"))
-            keywords.extend(generate_keywords(question.get("response")))
             for keyword in keywords:
-                keyword_to_queries.setdefault(keyword, []).append(i)
+                keyword_to_queries.setdefault(keyword, {})
+                keyword_to_queries[keyword].setdefault(i, 0)
+                keyword_to_queries[keyword][i] += 10
+            keywords = generate_keywords(question.get("response"))
+            for keyword in keywords:
+                keyword_to_queries.setdefault(keyword, {})
+                keyword_to_queries[keyword].setdefault(i, 0)
+                keyword_to_queries[keyword][i] += 1
     return keyword_to_queries
 
 
@@ -45,12 +51,12 @@ def search(keyword_to_queries: dict, keywords: list) -> list:
     """
     query_count = dict()
     for keyword in keywords:
-        query_indices = keyword_to_queries.get(keyword, [])
-        for i in query_indices:
+        query_indices = keyword_to_queries.get(keyword, {})
+        for i, weight in query_indices.items():
             query_count.setdefault(i, 0)
-            query_count[i] += 1
+            query_count[i] += weight
     best_matches = list(
-        dict(sorted(query_count.items(), key=lambda item: item[1])).keys())
+        dict(sorted(query_count.items(), key=lambda item: item[1], reverse=True)).keys())
     return best_matches
 
 
