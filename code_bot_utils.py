@@ -60,6 +60,21 @@ def search(keyword_to_queries: dict, keywords: list) -> list:
     return best_matches
 
 
+def generate_similar_queries(queries: list, keyword_to_queries: dict) -> None:
+    """
+    Generates a list of similar queries.
+
+    :param queries: a list of queries
+    :param keyword_to_queries: a mapping of keywords to query indices
+    """
+    for i, query in enumerate(queries):
+        if i > 0:
+            keywords = generate_keywords(query["query"])
+            top_ids = search(keyword_to_queries, keywords)
+            top_ids.remove(i)
+            query["similar_queries"] = top_ids
+
+
 def create_md_link(url: string, text: string) -> string:
     """
     Creates a markdown link.

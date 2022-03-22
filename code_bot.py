@@ -12,7 +12,7 @@ from discord_slash.utils.manage_commands import create_option
 from dotenv import load_dotenv
 
 
-__version__ = "0.1.1"
+__version__ = "0.2.0"
 
 
 # Global variables
@@ -28,6 +28,7 @@ slash = SlashCommand(client, sync_commands=True)
 load_dotenv()
 queries = json.load(open("queries.json"))
 keyword_mapping = generate_keyword_mapping(queries)
+generate_similar_queries(queries, keyword_mapping)
 
 
 # Discord bot code
@@ -102,6 +103,15 @@ async def _get(ctx, index: int):
         value=queries[index].get("response"),
         inline=False
     )
+    similar_queries = queries[index].get("similar_queries", [])[:3]
+    if similar_queries:
+        embed.add_field(
+            name=f"Similar Queries",
+            value="\n".join(f"• ID-{i}: {create_md_link(queries[i].get('resource'), queries[i].get('query'))}" 
+                for i in similar_queries
+            ),
+            inline=True
+        )
 
     await ctx.send(embed=embed)
 
