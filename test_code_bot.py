@@ -34,3 +34,8 @@ def test_generate_keyword_mapping():
     }
     keyword_mapping = generate_keyword_mapping([test_query])
     assert keyword_mapping == expected_mapping
+
+def test_generate_similar_queries():
+    generate_similar_queries(queries, keyword_mapping)
+    print(queries)
+    #assert similar_queries == expected_similar_queries
