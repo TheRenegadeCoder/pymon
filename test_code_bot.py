@@ -37,5 +37,4 @@ def test_generate_keyword_mapping():
 
 def test_generate_similar_queries():
     generate_similar_queries(queries, keyword_mapping)
-    print(queries)
-    #assert similar_queries == expected_similar_queries
+    assert 1 not in queries[1]["similar_queries"] 
