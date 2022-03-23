@@ -1,4 +1,6 @@
 import string
+import json
+import os
 
 def generate_keyword_mapping(queries: list) -> dict:
     """
@@ -86,3 +88,16 @@ def create_md_link(url: string, text: string) -> string:
     if url:
         return f"[{text}]({url})"
     return text
+
+
+def load_knowledge() -> dict:
+    """
+    Loads the bot's knowledge database. Prioritizes the
+    KNOWLEDGE_PATH environment variable. KNOWLEDGE_PATH
+    can be set to a local file or a remote URL. Otherwise,
+    uses the local queries file. 
+    """
+    if path := os.environ.get("KNOWLEDGE_PATH"):
+        return json.load(open(path))
+    else:
+        return json.load(open("queries.json"))
