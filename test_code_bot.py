@@ -45,6 +45,7 @@ def test_load_knowledge_type_1():
     actualType, actualKnowledge = load_knowledge()
     expectedType = 1
     expectedKnowledge = json.load(open("queries.json"))
+    os.environ.pop("KNOWLEDGE_PATH")
     assert expectedType == actualType
     assert expectedKnowledge == actualKnowledge
 
