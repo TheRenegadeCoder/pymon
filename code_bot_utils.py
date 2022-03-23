@@ -1,6 +1,8 @@
 import string
 import json
 import os
+from urllib.request import urlopen
+
 
 def generate_keyword_mapping(queries: list) -> dict:
     """
@@ -90,14 +92,21 @@ def create_md_link(url: string, text: string) -> string:
     return text
 
 
-def load_knowledge() -> dict:
+def load_knowledge() -> tuple[int, dict]:
     """
     Loads the bot's knowledge database. Prioritizes the
     KNOWLEDGE_PATH environment variable. KNOWLEDGE_PATH
     can be set to a local file or a remote URL. Otherwise,
     uses the local queries file. 
+
+    :return: a tuple of the type of knowledge database and the
+        knowledge database (0 for remote, 1 for local, 2 for default)
     """
     if path := os.environ.get("KNOWLEDGE_PATH"):
-        return json.load(open(path))
+        try:
+            data = urlopen(path).read().decode("utf-8")
+            return 0, json.loads(data)
+        except:
+            return 1, json.load(open(path))
     else:
-        return json.load(open("queries.json"))
+        return 2, json.load(open("queries.json"))

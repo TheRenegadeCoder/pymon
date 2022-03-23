@@ -38,3 +38,10 @@ def test_generate_keyword_mapping():
 def test_generate_similar_queries():
     generate_similar_queries(queries, keyword_mapping)
     assert 1 not in queries[1]["similar_queries"] 
+
+def test_load_knowledge_type_2():
+    actualType, actualKnowledge = load_knowledge()
+    expectedType = 2
+    expectedKnowledge = json.load(open("queries.json"))
+    assert expectedType == actualType
+    assert expectedKnowledge == actualKnowledge
