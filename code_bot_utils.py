@@ -3,6 +3,8 @@ import json
 import os
 from urllib.request import urlopen
 
+from dotenv import load_dotenv
+
 
 def generate_keyword_mapping(queries: list) -> dict:
     """
@@ -92,7 +94,7 @@ def create_md_link(url: string, text: string) -> string:
     return text
 
 
-def load_knowledge() -> tuple[int, dict]:
+def load_knowledge() -> tuple[int, list]:
     """
     Loads the bot's knowledge database. Prioritizes the
     KNOWLEDGE_PATH environment variable. KNOWLEDGE_PATH
@@ -110,3 +112,20 @@ def load_knowledge() -> tuple[int, dict]:
             return 1, json.load(open(path))
     else:
         return 2, json.load(open("queries.json"))
+
+
+def refresh_knowledge() -> tuple[list, dict]:
+    """
+    Generates useful information from the knowledge database. 
+    Useful when initializing the bot or when the knowledge
+    database has been updated.
+
+    :return: a tuple of the knowledge database and a mapping of
+        keywords to query indices
+    """
+    load_dotenv()
+    _, queries = load_knowledge()
+    keyword_mapping = generate_keyword_mapping(queries)
+    generate_similar_queries(queries, keyword_mapping)
+    return queries, keyword_mapping
+

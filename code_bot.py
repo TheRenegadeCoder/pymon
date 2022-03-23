@@ -25,10 +25,7 @@ client = commands.Bot(
     status=discord.Status.idle
 )
 slash = SlashCommand(client, sync_commands=True)
-load_dotenv()
-_, queries = load_knowledge()
-keyword_mapping = generate_keyword_mapping(queries)
-generate_similar_queries(queries, keyword_mapping)
+queries, keyword_mapping = refresh_knowledge()
 
 
 # Discord bot code
@@ -114,6 +111,24 @@ async def _get(ctx, index: int):
         )
 
     await ctx.send(embed=embed)
+
+
+@slash.slash(
+    name="refresh",
+    description="Refreshes the bot's knowledge base.",
+)
+async def _refresh(ctx):
+    """
+    Refreshes the bot's knowledge base.
+
+    :param ctx: the context to send messages to
+    :return: None
+    """
+    new_queries, new_keyword_mapping = refresh_knowledge()
+    global queries, keyword_mapping
+    diff = [x for x in new_queries if x not in queries]
+    queries, keyword_mapping = new_queries, new_keyword_mapping
+    await ctx.send(f"{len(diff)} queries modified and/or added.")
 
 
 client.run(os.environ.get("DISCORD_TOKEN"))
