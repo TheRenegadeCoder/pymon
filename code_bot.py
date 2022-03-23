@@ -26,7 +26,7 @@ client = commands.Bot(
 )
 slash = SlashCommand(client, sync_commands=True)
 load_dotenv()
-queries = load_knowledge()
+_, queries = load_knowledge()
 keyword_mapping = generate_keyword_mapping(queries)
 generate_similar_queries(queries, keyword_mapping)
 
