@@ -10,6 +10,12 @@ If you'd like to use this bot in your own server, start by cloning/forking this 
 DISCORD_TOKEN=[insert token here]
 ```
 
+If you'd like to include your own knowledge base, you can do so by also creating a KNOWLEDGE_PATH environment variable in your .env file. This should point to a local file or a remote URL. Otherwise, the bot will use the queries.json file, which is designed specifically for a course I am teaching.
+
+```env
+KNOWLEDGE_PATH=[insert path here]
+```
+
 After that, you'll want to install all requirements. Luckily, I've included a requirements.txt file. You can use the following code to install all requirements:
 
 ```shell

@@ -32,6 +32,20 @@ doc.add_code(
 
 doc.add_paragraph(
     """
+    If you'd like to include your own knowledge base, you can do so by also creating
+    a KNOWLEDGE_PATH environment variable in your .env file. This should point to a 
+    local file or a remote URL. Otherwise, the bot will use the queries.json file,
+    which is designed specifically for a course I am teaching.
+    """
+)
+
+doc.add_code(
+    "KNOWLEDGE_PATH=[insert path here]",
+    "env"
+)
+
+doc.add_paragraph(
+    """
     After that, you'll want to install all requirements. Luckily, I've included a
     requirements.txt file. You can use the following code to install all
     requirements:
