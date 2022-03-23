@@ -40,6 +40,18 @@ def test_generate_similar_queries():
     generate_similar_queries(queries, keyword_mapping)
     assert 1 not in queries[1]["similar_queries"] 
 
+def test_load_knowledge_type_0():
+    load_dotenv(dotenv_path=".env.test_type_0")
+    actualType, actualKnowledge = load_knowledge()
+    expectedType = 0
+    data = urlopen("https://raw.githubusercontent.com/TheRenegadeCoder/cs-query-bot/main/queries.json") \
+        .read() \
+        .decode("utf-8")
+    expectedKnowledge = json.loads(data)
+    os.environ.pop("KNOWLEDGE_PATH")
+    assert expectedType == actualType
+    assert expectedKnowledge == actualKnowledge
+
 def test_load_knowledge_type_1():
     load_dotenv(dotenv_path=".env.test_type_1")
     actualType, actualKnowledge = load_knowledge()
