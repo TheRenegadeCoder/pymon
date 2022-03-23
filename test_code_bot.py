@@ -1,5 +1,6 @@
 import json
 from code_bot_utils import *
+from dotenv import load_dotenv
 
 queries = json.load(open("queries.json"))
 keyword_mapping = generate_keyword_mapping(queries)
@@ -40,6 +41,7 @@ def test_generate_similar_queries():
     assert 1 not in queries[1]["similar_queries"] 
 
 def test_load_knowledge_type_1():
+    load_dotenv(dotenv_path=".env.test_type_1")
     actualType, actualKnowledge = load_knowledge()
     expectedType = 1
     expectedKnowledge = json.load(open("queries.json"))
