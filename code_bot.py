@@ -12,7 +12,7 @@ from discord_slash.utils.manage_commands import create_option
 from dotenv import load_dotenv
 
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 
 # Global variables
