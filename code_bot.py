@@ -1,14 +1,12 @@
 import os
 
-from code_bot_utils import *
-
 import discord
 from discord import Message
-
 from discord.ext import commands
 from discord_slash import SlashCommand
 from discord_slash.utils.manage_commands import create_option
 
+from code_bot_utils import *
 
 __version__ = "0.4.0"
 
