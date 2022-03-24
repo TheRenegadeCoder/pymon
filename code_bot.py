@@ -6,7 +6,7 @@ from discord.ext import commands
 from discord_slash import SlashCommand
 from discord_slash.utils.manage_commands import create_option
 
-from code_bot_utils import *
+import code_bot_utils as utils
 
 __version__ = "0.4.0"
 
@@ -21,17 +21,17 @@ client = commands.Bot(
     status=discord.Status.idle
 )
 slash = SlashCommand(client, sync_commands=True)
-queries, keyword_mapping = refresh_knowledge()
+queries, keyword_mapping = utils.refresh_knowledge()
 
 
 # Discord bot code
 async def _react_on_mention(message: Message):
     if client.user.mentioned_in(message):
-        indices = search(keyword_mapping, generate_keywords(message.content))
+        indices = utils.search(keyword_mapping, utils.generate_keywords(message.content))
         if indices:
             reply = list()
             reply.extend([
-                f"{create_md_link(queries[i].get('resource'), queries[i].get('query'))}"
+                f"{utils.create_md_link(queries[i].get('resource'), queries[i].get('query'))}"
                 for i in indices[:3]
             ])
             embed = discord.Embed(
@@ -100,9 +100,10 @@ async def _get(ctx, index: int):
     if similar_queries:
         embed.add_field(
             name=f"Similar Queries",
-            value="\n".join(f"• ID-{i}: {create_md_link(queries[i].get('resource'), queries[i].get('query'))}"
-                            for i in similar_queries
-                            ),
+            value="\n".join(
+                f"• ID-{i}: {utils.create_md_link(queries[i].get('resource'), queries[i].get('query'))}"
+                for i in similar_queries
+            ),
             inline=True
         )
 
@@ -120,7 +121,7 @@ async def _refresh(ctx):
     :param ctx: the context to send messages to
     :return: None
     """
-    new_queries, new_keyword_mapping = refresh_knowledge()
+    new_queries, new_keyword_mapping = utils.refresh_knowledge()
     global queries, keyword_mapping
     diff = [x for x in new_queries if x not in queries]
     queries, keyword_mapping = new_queries, new_keyword_mapping
