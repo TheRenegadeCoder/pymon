@@ -39,10 +39,10 @@ async def _react_on_mention(message: Message):
                 for i in indices[:3]
             ])
             embed = discord.Embed(
-                title=f"CS Query Bot v{__version__}: Do any of these questions match your query?",
+                title=f"Pymon v{__version__}: Do any of these questions match your query?",
                 description="Use the ID with the /get command to get an answer or follow the available links:",
                 color=discord.Color.blue(),
-                url="https://github.com/TheRenegadeCoder/cs-query-bot"
+                url="https://github.com/TheRenegadeCoder/pymon"
             )
             for idx, row in enumerate(reply):
                 embed.add_field(
@@ -91,7 +91,7 @@ async def _get(ctx, index: int):
     :return: None
     """
     embed = discord.Embed(
-        title=f"CS Query Bot v{__version__}: Answer to ID-{index}",
+        title=f"Pymon v{__version__}: Answer to ID-{index}",
         color=discord.Color.red(),
         url=queries[index].get("resource", discord.embeds.EmptyEmbed)
     )
