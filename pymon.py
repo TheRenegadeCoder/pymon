@@ -6,7 +6,7 @@ from discord.ext import commands
 from discord_slash import SlashCommand
 from discord_slash.utils.manage_commands import create_option
 
-import code_bot_utils as utils
+import pymon_utils as utils
 
 __version__ = "0.4.0"
 
