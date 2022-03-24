@@ -1,4 +1,3 @@
-import json
 import os
 
 from code_bot_utils import *
@@ -9,7 +8,6 @@ from discord import Message
 from discord.ext import commands
 from discord_slash import SlashCommand
 from discord_slash.utils.manage_commands import create_option
-from dotenv import load_dotenv
 
 
 __version__ = "0.4.0"
@@ -104,9 +102,9 @@ async def _get(ctx, index: int):
     if similar_queries:
         embed.add_field(
             name=f"Similar Queries",
-            value="\n".join(f"• ID-{i}: {create_md_link(queries[i].get('resource'), queries[i].get('query'))}" 
-                for i in similar_queries
-            ),
+            value="\n".join(f"• ID-{i}: {create_md_link(queries[i].get('resource'), queries[i].get('query'))}"
+                            for i in similar_queries
+                            ),
             inline=True
         )
 
