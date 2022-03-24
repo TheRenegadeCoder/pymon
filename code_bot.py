@@ -16,7 +16,7 @@ client = commands.Bot(
     command_prefix=commands.when_mentioned_or("!"),
     activity=discord.Activity(
         type=discord.ActivityType.listening,
-        name=f'student questions'
+        name='student questions'
     ),
     status=discord.Status.idle
 )
@@ -99,7 +99,7 @@ async def _get(ctx, index: int):
     similar_queries = queries[index].get("similar_queries", [])[:3]
     if similar_queries:
         embed.add_field(
-            name=f"Similar Queries",
+            name="Similar Queries",
             value="\n".join(
                 f"• ID-{i}: {utils.create_md_link(queries[i].get('resource'), queries[i].get('query'))}"
                 for i in similar_queries
