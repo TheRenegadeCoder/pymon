@@ -1,6 +1,6 @@
-import string
 import json
 import os
+import string
 from urllib.request import urlopen
 
 from dotenv import load_dotenv
@@ -128,4 +128,3 @@ def refresh_knowledge() -> tuple[list, dict]:
     keyword_mapping = generate_keyword_mapping(queries)
     generate_similar_queries(queries, keyword_mapping)
     return queries, keyword_mapping
-

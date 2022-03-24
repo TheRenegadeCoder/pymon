@@ -1,18 +1,14 @@
-import json
 import os
-
-from code_bot_utils import *
 
 import discord
 from discord import Message
-
 from discord.ext import commands
 from discord_slash import SlashCommand
 from discord_slash.utils.manage_commands import create_option
-from dotenv import load_dotenv
 
+import pymon_utils as utils
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 
 # Global variables
@@ -20,29 +16,29 @@ client = commands.Bot(
     command_prefix=commands.when_mentioned_or("!"),
     activity=discord.Activity(
         type=discord.ActivityType.listening,
-        name=f'student questions'
+        name='student questions'
     ),
     status=discord.Status.idle
 )
 slash = SlashCommand(client, sync_commands=True)
-queries, keyword_mapping = refresh_knowledge()
+queries, keyword_mapping = utils.refresh_knowledge()
 
 
 # Discord bot code
 async def _react_on_mention(message: Message):
     if client.user.mentioned_in(message):
-        indices = search(keyword_mapping, generate_keywords(message.content))
+        indices = utils.search(keyword_mapping, utils.generate_keywords(message.content))
         if indices:
             reply = list()
             reply.extend([
-                f"{create_md_link(queries[i].get('resource'), queries[i].get('query'))}"
+                f"{utils.create_md_link(queries[i].get('resource'), queries[i].get('query'))}"
                 for i in indices[:3]
             ])
             embed = discord.Embed(
-                title=f"CS Query Bot v{__version__}: Do any of these questions match your query?",
+                title=f"Pymon v{__version__}: Do any of these questions match your query?",
                 description="Use the ID with the /get command to get an answer or follow the available links:",
                 color=discord.Color.blue(),
-                url="https://github.com/TheRenegadeCoder/cs-query-bot"
+                url="https://github.com/TheRenegadeCoder/pymon"
             )
             for idx, row in enumerate(reply):
                 embed.add_field(
@@ -91,7 +87,7 @@ async def _get(ctx, index: int):
     :return: None
     """
     embed = discord.Embed(
-        title=f"CS Query Bot v{__version__}: Answer to ID-{index}",
+        title=f"Pymon v{__version__}: Answer to ID-{index}",
         color=discord.Color.red(),
         url=queries[index].get("resource", discord.embeds.EmptyEmbed)
     )
@@ -103,8 +99,9 @@ async def _get(ctx, index: int):
     similar_queries = queries[index].get("similar_queries", [])[:3]
     if similar_queries:
         embed.add_field(
-            name=f"Similar Queries",
-            value="\n".join(f"• ID-{i}: {create_md_link(queries[i].get('resource'), queries[i].get('query'))}" 
+            name="Similar Queries",
+            value="\n".join(
+                f"• ID-{i}: {utils.create_md_link(queries[i].get('resource'), queries[i].get('query'))}"
                 for i in similar_queries
             ),
             inline=True
@@ -124,7 +121,7 @@ async def _refresh(ctx):
     :param ctx: the context to send messages to
     :return: None
     """
-    new_queries, new_keyword_mapping = refresh_knowledge()
+    new_queries, new_keyword_mapping = utils.refresh_knowledge()
     global queries, keyword_mapping
     diff = [x for x in new_queries if x not in queries]
     queries, keyword_mapping = new_queries, new_keyword_mapping
