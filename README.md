@@ -25,7 +25,7 @@ pip install -r requirements.txt
 From there, you can run the bot like any other Python script:
 
 ```shell
-python3 code_bot.py
+python3 pymon.py
 ```
 
 ## How to Use the Bot
