@@ -84,6 +84,16 @@
     },
     {
         "query": "What is a queue?",
-        "response": "A queue is a sequence-like data structure where elements can only be added to one end and removed from another (FIFO). A common example of a queue is the line at the register of a grocery store. The first person in line is the first person to checkout. In practice, queues are often used for similar purposes, such as a queue of songs in a music player."
+        "response": "A queue is a sequence-like data structure where elements can only be added to one end and removed from another (FIFO). A common example of a queue is the line at the register of a grocery store. The first person in line is the first person to checkout. In practice, queues are often used for similar purposes, such as a queue of songs in a music player.",
+        "resource": "https://therenegadecoder.com/code/queue-data-structure/"
+    },
+    {
+        "query": "What is a set?",
+        "response": "A set is a data structure where all elements are unique and unordered. "
+    },
+    {
+        "query": "What is a stack?",
+        "response": "A stack is a sequence-like data structure where elements can only be added and removed from the same end (LIFO), like a stack of papers or pancakes. Stacks are one of the most important data structures as programming languages like Java use them to store method calls. When you make too many nested method calls, you get a Stack Overflow error, meaning the program ran out of memory.",
+        "resource": "https://therenegadecoder.com/code/stack-data-structure/"
     }
 ]
