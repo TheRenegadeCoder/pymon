@@ -95,5 +95,13 @@
         "query": "What is a stack?",
         "response": "A stack is a sequence-like data structure where elements can only be added and removed from the same end (LIFO), like a stack of papers or pancakes. Stacks are one of the most important data structures as programming languages like Java use them to store method calls. When you make too many nested method calls, you get a Stack Overflow error, meaning the program ran out of memory.",
         "resource": "https://therenegadecoder.com/code/stack-data-structure/"
+    },
+    {
+        "query": "What does FIFO mean?",
+        "response": "FIFO means First In, First Out. In other words, the first element added to the data structure is the first element to be removed."
+    },
+    {
+        "query": "What does LIFO mean?",
+        "response": "LIFO means Last In, First Out. In other words, the last element added to the data structure is the first element to be removed."
     }
 ]
