@@ -25,7 +25,7 @@ pip install -r requirements.txt
 From there, you can run the bot like any other Python script:
 
 ```shell
-python3 code_bot.py
+python3 pymon.py
 ```
 
 ## How to Use the Bot
@@ -55,6 +55,11 @@ Currently, the bot can answer the following questions. The numbers map directly 
 17. What is mathematical string notation for concatenation?
 18. What is a parameter mode?
 19. What is restores mode?
+20. What is a queue?
+21. What is a set?
+22. What is a stack?
+23. What does FIFO mean?
+24. What does LIFO mean?
 
 ---
 

@@ -65,7 +65,7 @@ doc.add_paragraph(
 )
 
 doc.add_code(
-    "python3 code_bot.py",
+    "python3 pymon.py",
     "shell"
 )
 
