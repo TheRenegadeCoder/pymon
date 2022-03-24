@@ -81,5 +81,9 @@
     {
         "query": "What is restores mode?",
         "response": "Restores mode is the default parameter mode. If a parameter is in restores mode, the method promises that the parameter will not be modified from the perspective of the client. It is okay for a method to modify the parameter, but they must always restore it before the method returns."
+    },
+    {
+        "query": "What is a queue?",
+        "response": "A queue is a sequence-like data structure where elements can only be added to one end and removed from another (FIFO). A common example of a queue is the line at the register of a grocery store. The first person in line is the first person to checkout. In practice, queues are often used for similar purposes, such as a queue of songs in a music player."
     }
 ]
