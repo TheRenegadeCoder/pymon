@@ -1,15 +1,16 @@
-import snakemd
 import json
+
+import snakemd
 
 queries = json.load(open("queries.json"))
 
 doc = snakemd.new_doc("README")
 
-doc.add_header("CS Query Bot")
+doc.add_header("Pymon")
 
 doc.add_paragraph(
     """
-    The CS Query Bot was developed to help students find answers to course questions.
+    Pymon was developed to help students find answers to course questions.
     It is not currently hosted for public use, but you can self-host it using the
     code found in this repo. Currently, I am running the bot on a home desktop.
     """
@@ -72,7 +73,7 @@ doc.add_header("How to Use the Bot", 2)
 
 doc.add_paragraph(
     """
-    The CS Query Bot currently has two main services. First, you
+    Pymon currently has two main services. First, you
     can directly @ the bot to get it to respond with the top three
     matching questions to your query. The response will include an ID
     which you can lookup with the `/get` command. Alternatively,
