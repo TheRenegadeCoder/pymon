@@ -133,5 +133,10 @@
         "query": "What is the object type of a variable?",
         "response": "The object type (aka, dynamic type or run-time type) of a variable is the type used by Java to decide which method body to use in the presence of method overriding.",
         "credit": ["Kelvin Nguyen"]
-    } 
+    },
+    {
+        "query": "What is an immutable type?",
+        "response": "An immutable type is a reference type whose object value cannot be modified once created.",
+        "credit": ["Jacob Skarsten"]
+    }
 ]
