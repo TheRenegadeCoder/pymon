@@ -36,30 +36,35 @@ Pymon currently has two main services. First, you can directly @ the bot to get 
 
 Currently, the bot can answer the following questions. The numbers map directly to the lookup IDs, so if you want an answer to any of these questions, just ask the bot with `/get`.
 
-1. What is a magic number?
-2. What is a primitive type?
-3. How can I create a constant?
-4. What is testing?
-5. What is debugging?
-6. What is correctness?
-7. What is JUnit?
-8. What is unit testing?
-9. What is an expression tree?
-10. What is confidence building?
-11. What is the declared type of a variable?
-12. What is method overriding?
-13. What is method overloading?
-14. What is the implements relationship?
-15. What is the extends relationship?
-16. What is a mathematical string?
-17. What is mathematical string notation for concatenation?
-18. What is a parameter mode?
-19. What is restores mode?
-20. What is a queue?
-21. What is a set?
-22. What is a stack?
-23. What does FIFO mean?
-24. What does LIFO mean?
+1. "What is a magic number?" by Jeremy Grifski
+2. "What is a primitive type?" by Jeremy Grifski
+3. "How can I create a constant?" by Jeremy Grifski
+4. "What is testing?" by Jeremy Grifski
+5. "What is debugging?" by Jeremy Grifski
+6. "What is correctness?" by Jeremy Grifski
+7. "What is JUnit?" by Jeremy Grifski
+8. "What is unit testing?" by Jeremy Grifski
+9. "What is an expression tree?" by Jeremy Grifski
+10. "What is confidence building?" by Jeremy Grifski
+11. "What is the declared type of a variable?" by Jeremy Grifski
+12. "What is method overriding?" by Jeremy Grifski
+13. "What is method overloading?" by Jeremy Grifski
+14. "What is the implements relationship?" by Jeremy Grifski
+15. "What is the extends relationship?" by Jeremy Grifski
+16. "What is a mathematical string?" by Jeremy Grifski
+17. "What is mathematical string notation for concatenation?" by Jeremy Grifski
+18. "What is a parameter mode?" by Jeremy Grifski
+19. "What is restores mode?" by Jeremy Grifski
+20. "What is a queue?" by Jeremy Grifski
+21. "What is a set?" by Jeremy Grifski
+22. "What is a stack?" by Jeremy Grifski
+23. "What does FIFO mean?" by Jeremy Grifski
+24. "What does LIFO mean?" by Jeremy Grifski
+25. "What is the object type of a variable?" by Kelvin Nguyen
+26. "What is an immutable type?" by Jacob Skarsten
+27. "What is replaces mode?" by Shaan Patel
+28. "What is updates mode?" by Colin Russel
+29. "Are arrays immutable or mutable?" by Jessice Molitor
 
 ---
 

@@ -97,7 +97,8 @@ doc.add_paragraph(
 questions = []
 for query in queries:
     if query.get("query"):
-        questions.append(query.get("query"))
+        item = f"\"{query.get('query')}\" by {', '.join(query.get('credit'))}"
+        questions.append(item)
 
 doc.add_ordered_list(questions)
 

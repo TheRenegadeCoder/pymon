@@ -1,107 +1,157 @@
 [
     {
         "query": "",
-        "response": ""
+        "response": "",
+        "credit": [""]
     },
     {
         "query": "What is a magic number?",
         "response": "A magic number is a number that is not obvious upon inspection and should therefore be converted to a constant.",
-        "resource": "https://therenegadecoder.com/code/what-is-a-magic-number-and-how-do-we-fix-it/"
+        "resource": "https://therenegadecoder.com/code/what-is-a-magic-number-and-how-do-we-fix-it/",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is a primitive type?",
         "response": "In Java, a primitive type, which differs from a reference type, is one of 8 data types including int, double, and boolean. All primitive types are written in lowercase letters.",
-        "resource": "https://therenegadecoder.com/code/the-8-primitive-types-in-java/"
+        "resource": "https://therenegadecoder.com/code/the-8-primitive-types-in-java/",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "How can I create a constant?",
-        "response": "In Java, a constant can be created by using the final keyword: \n```java\nfinal int x = 5;\n```"
+        "response": "In Java, a constant can be created by using the final keyword: \n```java\nfinal int x = 5;\n```",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is testing?",
-        "response": "Testing is the process of evaluating a program for bugs. It cannot be used to determine correctness of a program. It is used in conjuction with debugging to resolve bugs."
+        "response": "Testing is the process of evaluating a program for bugs. It cannot be used to determine correctness of a program. It is used in conjuction with debugging to resolve bugs.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is debugging?",
-        "response": "Debugging is the process of finding and fixing bugs. It is often used in conjunction with testing to resolve bugs."
+        "response": "Debugging is the process of finding and fixing bugs. It is often used in conjunction with testing to resolve bugs.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is correctness?",
-        "response": "Correctness has many definitions. However, for the purposes of this course, we define correctness as the ability of a program to behave in a way that is consistent with the contract. In other words, the set of actual outputs of a program fit within the set of all possible outputs according to the contract."
+        "response": "Correctness has many definitions. However, for the purposes of this course, we define correctness as the ability of a program to behave in a way that is consistent with the contract. In other words, the set of actual outputs of a program fit within the set of all possible outputs according to the contract.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is JUnit?",
         "response": "JUnit is a unit testing framework for Java. It is used to automatically detect bugs in methods.",
-        "resource": "https://therenegadecoder.com/code/junit-testing-in-java/"
+        "resource": "https://therenegadecoder.com/code/junit-testing-in-java/",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is unit testing?",
-        "response": "Unit testing is a specific form of program testing where the focus is on a small unit of the program, usually a single method. A common unit testing framework in Java is JUnit."
+        "response": "Unit testing is a specific form of program testing where the focus is on a small unit of the program, usually a single method. A common unit testing framework in Java is JUnit.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is an expression tree?",
-        "response": "An expression tree is a tree representation of a mathematical expression. It is used to evaluate an expression."
+        "response": "An expression tree is a tree representation of a mathematical expression. It is used to evaluate an expression.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is confidence building?",
-        "response": "Confidence building is an approach to reasoning about a recursive algorithm. Confidence building begins by testing the recursive algorithm with the smallest problem. It then tests the recursive algorithm with the next smallest problem, and so on. By subbing in correct answers to smaller problems, we can build confidence in the recursive algorithm."
+        "response": "Confidence building is an approach to reasoning about a recursive algorithm. Confidence building begins by testing the recursive algorithm with the smallest problem. It then tests the recursive algorithm with the next smallest problem, and so on. By subbing in correct answers to smaller problems, we can build confidence in the recursive algorithm.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is the declared type of a variable?",
-        "response": "Sometimes called the static type or the compile-time type, the declared type is the type of a variable at the time it was declared. The declared type is often called the static type or compile-time type because it is the type the compiler uses to type check the program."
+        "response": "Sometimes called the static type or the compile-time type, the declared type is the type of a variable at the time it was declared. The declared type is often called the static type or compile-time type because it is the type the compiler uses to type check the program.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is method overriding?",
-        "response": "Method overriding occurs when a method from a parent class is reimplemented in the child class."
+        "response": "Method overriding occurs when a method from a parent class is reimplemented in the child class.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is method overloading?",
-        "response": "Method overloading occurs when multiple methods with the same name have different parameters."
+        "response": "Method overloading occurs when multiple methods with the same name have different parameters.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is the implements relationship?",
-        "response": "The implements relationship can only occur between classes and interfaces. Specifically, a class can implement an interface using the `implements` keyword."
+        "response": "The implements relationship can only occur between classes and interfaces. Specifically, a class can implement an interface using the `implements` keyword.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is the extends relationship?",
-        "response": "The extends relationship can only occur between classes and classes or interfaces and interfaces. In other words, class B can extend class A and interface B can extend interface A, but class A cannot extend interface A."
+        "response": "The extends relationship can only occur between classes and classes or interfaces and interfaces. In other words, class B can extend class A and interface B can extend interface A, but class A cannot extend interface A.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is a mathematical string?",
-        "response": "When modeling data types, we often use mathematical models. One such model is the mathematical string, and it can be used to model everything from strings to arrays and queues. Mathematical string notation takes the form of angle brackets which store sequential items: `<3, 5, 2>`."
+        "response": "When modeling data types, we often use mathematical models. One such model is the mathematical string, and it can be used to model everything from strings to arrays and queues. Mathematical string notation takes the form of angle brackets which store sequential items: `<3, 5, 2>`.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is mathematical string notation for concatenation?",
-        "response": "Often, strings are concatenated using the `+` operator. In mathematical string notation, we concatenate strings using the `*` operator. Therefore, `<2, 3> * <5> = <2, 3, 5>`."
+        "response": "Often, strings are concatenated using the `+` operator. In mathematical string notation, we concatenate strings using the `*` operator. Therefore, `<2, 3> * <5> = <2, 3, 5>`.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is a parameter mode?",
-        "response": "A parameter mode is a way to specify what will happen to a parameter when the method is called. In our course, there are four main parameter modes: restores, clears, updates, and replaces."
+        "response": "A parameter mode is a way to specify what will happen to a parameter when the method is called. In our course, there are four main parameter modes: restores, clears, updates, and replaces.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is restores mode?",
-        "response": "Restores mode is the default parameter mode. If a parameter is in restores mode, the method promises that the parameter will not be modified from the perspective of the client. It is okay for a method to modify the parameter, but they must always restore it before the method returns."
+        "response": "Restores mode is the default parameter mode. If a parameter is in restores mode, the method promises that the parameter will not be modified from the perspective of the client. It is okay for a method to modify the parameter, but they must always restore it before the method returns.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is a queue?",
         "response": "A queue is a sequence-like data structure where elements can only be added to one end and removed from another (FIFO). A common example of a queue is the line at the register of a grocery store. The first person in line is the first person to checkout. In practice, queues are often used for similar purposes, such as a queue of songs in a music player.",
-        "resource": "https://therenegadecoder.com/code/queue-data-structure/"
+        "resource": "https://therenegadecoder.com/code/queue-data-structure/",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is a set?",
-        "response": "A set is a data structure where all elements are unique and unordered. "
+        "response": "A set is a data structure where all elements are unique and unordered.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What is a stack?",
         "response": "A stack is a sequence-like data structure where elements can only be added and removed from the same end (LIFO), like a stack of papers or pancakes. Stacks are one of the most important data structures as programming languages like Java use them to store method calls. When you make too many nested method calls, you get a Stack Overflow error, meaning the program ran out of memory.",
-        "resource": "https://therenegadecoder.com/code/stack-data-structure/"
+        "resource": "https://therenegadecoder.com/code/stack-data-structure/",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What does FIFO mean?",
-        "response": "FIFO means First In, First Out. In other words, the first element added to the data structure is the first element to be removed."
+        "response": "FIFO means First In, First Out. In other words, the first element added to the data structure is the first element to be removed.",
+        "credit": ["Jeremy Grifski"]
     },
     {
         "query": "What does LIFO mean?",
-        "response": "LIFO means Last In, First Out. In other words, the last element added to the data structure is the first element to be removed."
-    }
+        "response": "LIFO means Last In, First Out. In other words, the last element added to the data structure is the first element to be removed.",
+        "credit": ["Jeremy Grifski"]
+    },
+    {
+        "query": "What is the object type of a variable?",
+        "response": "The object type (aka, dynamic type or run-time type) of a variable is the type used by Java to decide which method body to use in the presence of method overriding.",
+        "credit": ["Kelvin Nguyen"]
+    },
+    {
+        "query": "What is an immutable type?",
+        "response": "An immutable type is a reference type whose object value cannot be modified once created. The underlying object value cannot be modified because no fields or methods are exposed to allow it.",
+        "credit": ["Jacob Skarsten"]
+    },
+    {
+        "query": "What is replaces mode?",
+        "response": "Replaces mode is a parameter mode that indicates that a parameter will change regardless of its initial value. In this course, we indicate replaces mode using the JavaDoc annotation @replaces.",
+        "credit": ["Shaan Patel"]
+    },
+    {
+        "query": "What is updates mode?",
+        "response": "Updates mode is a parameter mode which describes a parameter that is to be changed to some other value. Under this mode, the initial value of the parameter matters. In this course, we indicate updates mode using the JavaDoc annotation @updates.",
+        "credit": ["Colin Russel"]
+    },
+    {
+        "query": "Are arrays immutable or mutable?",
+        "response": "Arrays are mutable. Their size cannot be changed, but their elements can be replaced.",
+        "credit": ["Jessice Molitor"]
+    } 
 ]
