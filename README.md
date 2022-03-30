@@ -60,6 +60,11 @@ Currently, the bot can answer the following questions. The numbers map directly 
 22. What is a stack?
 23. What does FIFO mean?
 24. What does LIFO mean?
+25. What is the object type of a variable?
+26. What is an immutable type?
+27. What is replaces mode?
+28. What is updates mode?
+29. Are arrays immutable or mutable?
 
 ---
 
