@@ -146,7 +146,7 @@
     },
     {
         "query": "What is updates mode?",
-        "response": "A parameter mode which describes a parameter that is to be changed to some other value.",
+        "response": "Updates mode is a parameter mode which describes a parameter that is to be changed to some other value. Under this mode, the initial value of the parameter matters. In this course, we indicate updates mode using the JavaDoc annotation @updates.",
         "credit": ["Colin Russel"]
     },
     {
