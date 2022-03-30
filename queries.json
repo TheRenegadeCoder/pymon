@@ -152,6 +152,6 @@
     {
         "query": "Are arrays immutable or mutable?",
         "response": "Arrays are mutable. Their size cannot be changed, but their elements can be replaced.",
-        "credit": ["Jessice Molitor"]
+        "credit": ["Jessica Molitor"]
     } 
 ]

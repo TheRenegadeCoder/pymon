@@ -64,7 +64,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 26. "What is an immutable type?" by Jacob Skarsten
 27. "What is replaces mode?" by Shaan Patel
 28. "What is updates mode?" by Colin Russel
-29. "Are arrays immutable or mutable?" by Jessice Molitor
+29. "Are arrays immutable or mutable?" by Jessica Molitor
 
 ---
 
