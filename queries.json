@@ -136,7 +136,22 @@
     },
     {
         "query": "What is an immutable type?",
-        "response": "An immutable type is a reference type whose object value cannot be modified once created.",
+        "response": "An immutable type is a reference type whose object value cannot be modified once created. The underlying object value cannot be modified because no fields or methods are exposed to allow it.",
         "credit": ["Jacob Skarsten"]
-    }
+    },
+    {
+        "query": "What is replaces mode?",
+        "response": "Replaces mode is a parameter mode that indicates that a parameter will change regardless of its initial value. In this course, we indicate replaces mode using the JavaDoc annotation @replaces.",
+        "credit": ["Shaan Patel"]
+    },
+    {
+        "query": "What is updates mode?",
+        "response": "A parameter mode which describes a parameter that is to be changed to some other value.",
+        "credit": ["Colin Russel"]
+    },
+    {
+        "query": "Are arrays immutable or mutable?",
+        "response": "Arrays are mutable. Their size cannot be changed, but their elements can be replaced.",
+        "credit": ["Jessice Molitor"]
+    } 
 ]
