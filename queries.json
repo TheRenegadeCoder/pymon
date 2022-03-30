@@ -128,5 +128,10 @@
         "query": "What does LIFO mean?",
         "response": "LIFO means Last In, First Out. In other words, the last element added to the data structure is the first element to be removed.",
         "credit": ["Jeremy Grifski"]
-    }
+    },
+    {
+        "query": "What is the object type of a variable?",
+        "response": "The object type (aka, dynamic type or run-time type) of a variable is the type used by Java to decide which method body to use in the presence of method overriding.",
+        "credit": ["Kelvin Nguyen"]
+    } 
 ]
