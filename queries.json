@@ -153,5 +153,15 @@
         "query": "Are arrays immutable or mutable?",
         "response": "Arrays are mutable. Their size cannot be changed, but their elements can be replaced.",
         "credit": ["Jessica Molitor"]
-    } 
+    },
+    {
+        "query": "What is inheritance?",
+        "response": "Inheritance is when one class or interface acquires the properties of another class or interface. Specifically, inheritance occurs through the extends and implements keywords.",
+        "credit": ["Xingzhi Dai"]
+    },
+    {
+        "query": "What is clears mode?",
+        "response": "Clears mode is a parameter mode where the method resets the value of the parameter to a predetermined initial value. Clears mode is indicated through the @clears JavaDoc annotation.",
+        "credit": ["Ethan Chilton"]
+    }
 ]
