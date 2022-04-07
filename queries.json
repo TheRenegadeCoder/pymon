@@ -170,8 +170,18 @@
         "credit": ["Dan Brace"]
     },
     {
-        "query": "What is a drawback/problem of aliasing?",
+        "query": "What is the drawback and/or problem with aliasing?",
         "response": "When multiple objects reference the same location (aliasing), it is easy for objects to get accidently modified.",
         "credit": ["Michael Grady"]
+    },
+    {
+        "query": "What is a superclass?",
+        "response": "A superclass is a class that is inherited from (i.e., the class name that appears to the right of the extends keyword). A subclass is a class that inherits from a parent class (i.e., a class that includes the extends keyword).",
+        "credit": ["Ben Janita"]
+    },
+    {
+        "query": "Will you be my girlfriend?",
+        "response": "Wow! Um... This is really awkward...",
+        "credit": ["Ben Janita"]
     }
 ]
