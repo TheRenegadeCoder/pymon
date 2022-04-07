@@ -203,5 +203,10 @@
         "query": "What is Recursion?",
         "response": "Recursion is a problem-solving technique that makes used of the fact that a function can call itself.",
         "credit": ["Gani Sagiev"]
-    } 
+    },
+    {
+        "query": "What is the difference between unit and integration testing?",
+        "response": "Unit testing involves testing one class or method at a time while integration testing involves testing multiple components as a larger system.",
+        "credit": ["Jacob Kolaczkowski"]
+    }
 ]
