@@ -65,6 +65,12 @@ Currently, the bot can answer the following questions. The numbers map directly 
 27. "What is replaces mode?" by Shaan Patel
 28. "What is updates mode?" by Colin Russel
 29. "Are arrays immutable or mutable?" by Jessica Molitor
+30. "What is inheritance?" by Xingzhi Dai
+31. "What is clears mode?" by Ethan Chilton
+32. "What is the default parameter mode when none is specified in the method contract?" by Dan Brace
+33. "What is the drawback and/or problem with aliasing?" by Michael Grady
+34. "What is a superclass?" by Ben Janita
+35. "Will you be my girlfriend?" by Ben Janita
 
 ---
 
