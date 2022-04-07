@@ -163,5 +163,15 @@
         "query": "What is clears mode?",
         "response": "Clears mode is a parameter mode where the method resets the value of the parameter to a predetermined initial value. Clears mode is indicated through the @clears JavaDoc annotation.",
         "credit": ["Ethan Chilton"]
+    },
+    {
+        "query": "What is the default parameter mode when none is specified in the method contract?",
+        "response": "When no parameter mode is specified in the method contract, the default parameter mode is Restores. This means that the variable should be restored to its original value/state after the method is called.",
+        "credit": ["Dan Brace"]
+    },
+    {
+        "query": "What is a drawback/problem of aliasing?",
+        "response": "When multiple objects reference the same location (aliasing), it is easy for objects to get accidently modified.",
+        "credit": ["Michael Grady"]
     }
 ]
