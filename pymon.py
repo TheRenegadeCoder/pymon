@@ -8,7 +8,7 @@ from discord_slash.utils.manage_commands import create_option
 
 import pymon_utils as utils
 
-__version__ = "0.4.0"
+__version__ = "0.4.1"
 
 
 # Global variables
@@ -26,7 +26,7 @@ queries, keyword_mapping = utils.refresh_knowledge()
 
 # Discord bot code
 async def _react_on_mention(message: Message):
-    if client.user.mentioned_in(message):
+    if client.user.mentioned_in(message) and not message.mention_everyone:
         indices = utils.search(keyword_mapping, utils.generate_keywords(message.content))
         if indices:
             reply = list()
