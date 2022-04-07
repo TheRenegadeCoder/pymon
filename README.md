@@ -49,7 +49,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 11. "What is the declared type of a variable?" by Jeremy Grifski
 12. "What is method overriding?" by Jeremy Grifski, Le Chang
 13. "What is method overloading?" by Jeremy Grifski
-14. "What is the implements relationship?" by Jeremy Grifski
+14. "What is the implements relationship?" by Jeremy Grifski, Yibo Gan
 15. "What is the extends relationship?" by Jeremy Grifski
 16. "What is a mathematical string?" by Jeremy Grifski
 17. "What is mathematical string notation for concatenation?" by Jeremy Grifski
@@ -73,6 +73,8 @@ Currently, the bot can answer the following questions. The numbers map directly 
 35. "Will you be my girlfriend?" by Ben Janita
 36. "What is an interface?" by Chenmeinian Guo
 37. "Is testing an expensive waste of time?" by Jason Su
+38. "What is the purpose of the queue data structure?" by Ying Liang
+39. "What is Recursion?" by Gani Sagiev
 
 ---
 

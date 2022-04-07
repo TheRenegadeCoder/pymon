@@ -74,8 +74,8 @@
     },
     {
         "query": "What is the implements relationship?",
-        "response": "The implements relationship can only occur between classes and interfaces. Specifically, a class can implement an interface using the `implements` keyword.",
-        "credit": ["Jeremy Grifski"]
+        "response": "The implements relationship can only occur between classes and interfaces. Specifically, a class can implement an interface using the `implements` keyword. If a class, C, implements and interface, I, then C contains code for the behavior specified in I.",
+        "credit": ["Jeremy Grifski", "Yibo Gan"]
     },
     {
         "query": "What is the extends relationship?",
@@ -193,5 +193,15 @@
         "query": "Is testing an expensive waste of time?",
         "response": "Testing is a very expensive activity, but it is never a waste of time.",
         "credit": ["Jason Su"]
+    },
+    {
+        "query": "What is the purpose of the queue data structure?",
+        "response": "The queue data structure can be used to manipulate strings of entries of any (arbitrary) type in FIFO (first-in-first-out) order.",
+        "credit": ["Ying Liang"]
+    },
+    {
+        "query": "What is Recursion?",
+        "response": "Recursion is a problem-solving technique that makes used of the fact that a function can call itself.",
+        "credit": ["Gani Sagiev"]
     } 
 ]
