@@ -40,14 +40,14 @@ Currently, the bot can answer the following questions. The numbers map directly 
 2. "What is a primitive type?" by Jeremy Grifski
 3. "How can I create a constant?" by Jeremy Grifski
 4. "What is testing?" by Jeremy Grifski
-5. "What is debugging?" by Jeremy Grifski
+5. "What is debugging?" by Jeremy Grifski, Xining Feng
 6. "What is correctness?" by Jeremy Grifski
 7. "What is JUnit?" by Jeremy Grifski
 8. "What is unit testing?" by Jeremy Grifski
 9. "What is an expression tree?" by Jeremy Grifski
 10. "What is confidence building?" by Jeremy Grifski
 11. "What is the declared type of a variable?" by Jeremy Grifski
-12. "What is method overriding?" by Jeremy Grifski
+12. "What is method overriding?" by Jeremy Grifski, Le Chang
 13. "What is method overloading?" by Jeremy Grifski
 14. "What is the implements relationship?" by Jeremy Grifski
 15. "What is the extends relationship?" by Jeremy Grifski
@@ -71,6 +71,8 @@ Currently, the bot can answer the following questions. The numbers map directly 
 33. "What is the drawback and/or problem with aliasing?" by Michael Grady
 34. "What is a superclass?" by Ben Janita
 35. "Will you be my girlfriend?" by Ben Janita
+36. "What is an interface?" by Chenmeinian Guo
+37. "Is testing an expensive waste of time?" by Jason Su
 
 ---
 

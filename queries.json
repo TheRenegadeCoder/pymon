@@ -29,7 +29,7 @@
     {
         "query": "What is debugging?",
         "response": "Debugging is the process of finding and fixing bugs. It is often used in conjunction with testing to resolve bugs.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski", "Xining Feng"]
     },
     {
         "query": "What is correctness?",
@@ -64,8 +64,8 @@
     },
     {
         "query": "What is method overriding?",
-        "response": "Method overriding occurs when a method from a parent class is reimplemented in the child class.",
-        "credit": ["Jeremy Grifski"]
+        "response": "Method overriding occurs when a method from a parent class is reimplemented in the child class. An overridden method can appear in multiple classes, each with the same name and parameters.",
+        "credit": ["Jeremy Grifski", "Le Chang"]
     },
     {
         "query": "What is method overloading?",
@@ -183,5 +183,15 @@
         "query": "Will you be my girlfriend?",
         "response": "Wow! Um... This is really awkward...",
         "credit": ["Ben Janita"]
-    }
+    },
+    {
+        "query": "What is an interface?",
+        "response": "An interface is an abstract type used to specify the behavior of a class. It is used as a blueprint of a class.",
+        "credit": ["Chenmeinian Guo"]
+    },
+    {
+        "query": "Is testing an expensive waste of time?",
+        "response": "Testing is a very expensive activity, but it is never a waste of time.",
+        "credit": ["Jason Su"]
+    } 
 ]
