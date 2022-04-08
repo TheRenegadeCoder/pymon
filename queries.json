@@ -213,5 +213,10 @@
         "query": "What is the difference between testing and debugging?",
         "response": "Testing is the process of checking for bugs, while debugging is the process of finding and fixing those bugs.",
         "credit": ["John DiFilippo"]
+    },
+    {
+        "query": "What is object-oriented-programming?",
+        "response": "Object-oriented programming is programming with objects that contain both data and methods, which we can re-use. It allows us to implement and conceptualize real-world entities such as cars, animals, and beverages. We can use techniques such as polymorphism to use the same method to perform different tasks, hence the idea of 'many form'.",
+        "credit": ["Felix Ji"]
     } 
 ]
