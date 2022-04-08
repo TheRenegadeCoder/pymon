@@ -137,7 +137,7 @@
     {
         "query": "What is an immutable type?",
         "response": "An immutable type is a reference type whose object value cannot be modified once created. The underlying object value cannot be modified because no fields or methods are exposed to allow it.",
-        "credit": ["Jacob Skarsten"]
+        "credit": ["Jacob Skarsten", "Ziqing Zhao"]
     },
     {
         "query": "What is replaces mode?",
@@ -208,5 +208,10 @@
         "query": "What is the difference between unit and integration testing?",
         "response": "Unit testing involves testing one class or method at a time while integration testing involves testing multiple components as a larger system.",
         "credit": ["Jacob Kolaczkowski"]
-    }
+    },
+    {
+        "query": "What is the difference between testing and debugging?",
+        "response": "Testing is the process of checking for bugs, while debugging is the process of finding and fixing those bugs.",
+        "credit": ["John DiFilippo"]
+    } 
 ]

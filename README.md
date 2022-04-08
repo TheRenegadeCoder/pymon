@@ -61,7 +61,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 23. "What does FIFO mean?" by Jeremy Grifski
 24. "What does LIFO mean?" by Jeremy Grifski
 25. "What is the object type of a variable?" by Kelvin Nguyen
-26. "What is an immutable type?" by Jacob Skarsten
+26. "What is an immutable type?" by Jacob Skarsten, Ziqing Zhao
 27. "What is replaces mode?" by Shaan Patel
 28. "What is updates mode?" by Colin Russel
 29. "Are arrays immutable or mutable?" by Jessica Molitor
@@ -76,6 +76,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 38. "What is the purpose of the queue data structure?" by Ying Liang
 39. "What is Recursion?" by Gani Sagiev
 40. "What is the difference between unit and integration testing?" by Jacob Kolaczkowski
+41. "What is the difference between testing and debugging?" by John DiFilippo
 
 ---
 
