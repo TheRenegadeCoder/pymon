@@ -78,6 +78,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 40. "What is the difference between unit and integration testing?" by Jacob Kolaczkowski
 41. "What is the difference between testing and debugging?" by John DiFilippo
 42. "What is object-oriented-programming?" by Felix Ji
+43. "What type of method is a JUnit test case?" by Matthew Alfieri
 
 ---
 
