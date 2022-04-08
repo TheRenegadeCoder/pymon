@@ -212,7 +212,7 @@
     {
         "query": "What is the difference between testing and debugging?",
         "response": "Testing is the process of checking for bugs, while debugging is the process of finding and fixing those bugs.",
-        "credit": ["John DiFilippo"]
+        "credit": ["John DiFilippo", "Ahmed Mohamed"]
     },
     {
         "query": "What is object-oriented-programming?",

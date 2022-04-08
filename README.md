@@ -76,7 +76,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 38. "What is the purpose of the queue data structure?" by Ying Liang
 39. "What is Recursion?" by Gani Sagiev
 40. "What is the difference between unit and integration testing?" by Jacob Kolaczkowski
-41. "What is the difference between testing and debugging?" by John DiFilippo
+41. "What is the difference between testing and debugging?" by John DiFilippo, Ahmed Mohamed
 42. "What is object-oriented-programming?" by Felix Ji
 43. "What type of method is a JUnit test case?" by Matthew Alfieri
 
