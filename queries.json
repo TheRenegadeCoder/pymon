@@ -65,7 +65,7 @@
     {
         "query": "What is method overriding?",
         "response": "Method overriding occurs when a method from a parent class is reimplemented in the child class. An overridden method can appear in multiple classes, each with the same name and parameters.",
-        "credit": ["Jeremy Grifski", "Le Chang"]
+        "credit": ["Jeremy Grifski", "Le Chang", "Zihe Fang", "Alexia Scarvelli"]
     },
     {
         "query": "What is method overloading?",
@@ -223,5 +223,10 @@
         "query": "What type of method is a JUnit test case?", 
         "response": "Each test case is a public void method with no parameters, residing within the test class. The @Test annotation is required.",
         "credit": ["Matthew Alfieri"]
-    }
+    },
+    {
+        "query": "What is aliasing?",
+        "response": "Aliasing occurs when there are two variables holding the same reference. These references are called aliases.",
+        "credit": ["Yuhang Huang"]
+    } 
 ]
