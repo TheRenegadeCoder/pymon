@@ -201,8 +201,8 @@
     },
     {
         "query": "What is Recursion?",
-        "response": "Recursion is a problem-solving technique that makes used of the fact that a function can call itself.",
-        "credit": ["Gani Sagiev"]
+        "response": "Recursion is a problem-solving technique that makes used of the fact that a function can call itself. In other words, recursion is when a solution to a problem builds itself upon smaller instances of the same problem.",
+        "credit": ["Gani Sagiev", "Tim Keck"]
     },
     {
         "query": "What is the difference between unit and integration testing?",
@@ -268,5 +268,30 @@
         "query": "What is the Set data type?",
         "response": "A set is a collection of elements of type T with the criteria of having no duplicate elements and no particular order. Think of a bag of uniquely colored marbles.",
         "credit": ["Luke Thompson"]
+    },
+    {
+        "query": "What is the correct expression to see if an integer is odd in Java?",
+        "response": "The correct expression to check if an integer is odd is `n % 2 != 0`. `n % 2 == 1` is incorrect because this expression will not work for odd negative integers.",
+        "credit": ["Kurt Wanner"]
+    },
+    {
+        "query": "What is XML?",
+        "response": "XML stands for eXtensible Markup Language, and is a way of displaying data in a hierarchically organized fashion (organized by rank starting from the root)",
+        "credit": ["Tim Keck"]
+    },
+    {
+        "query": "What is mutability?",
+        "response": "Mutability is the ability of reference type objects to be altered during use in processes and methods. Immutable types cannot change during methods, while mutable types can.",
+        "credit": ["Tim Keck"]
+    },
+    {
+        "query": "What is a comparator?",
+        "response": "A comparator is an interface that allows you to determine whether an object is greater than, less than, or equal to another object of the same type. Comparators are interfaces and need to be implemented within the class using them. Often, the compare method will be overridden according to the needs of the class.",
+        "credit": ["Tim Keck"]
+    },
+    {
+        "query": "What is a method contract?",
+        "response": "A method contract is a way of telling whoever is looking at the code of the method what the method does. It usually defines the precondition, postcondition, and expected behavior of the method, as well as defining important parts such as parameters and return values.",
+        "credit": ["Tim Keck"]
     } 
 ]

@@ -47,7 +47,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 9. "What is an expression tree?" by Jeremy Grifski
 10. "What is confidence building?" by Jeremy Grifski
 11. "What is the declared type of a variable?" by Jeremy Grifski
-12. "What is method overriding?" by Jeremy Grifski, Le Chang
+12. "What is method overriding?" by Jeremy Grifski, Le Chang, Zihe Fang, Alexia Scarvelli
 13. "What is method overloading?" by Jeremy Grifski
 14. "What is the implements relationship?" by Jeremy Grifski, Yibo Gan
 15. "What is the extends relationship?" by Jeremy Grifski
@@ -74,11 +74,25 @@ Currently, the bot can answer the following questions. The numbers map directly 
 36. "What is an interface?" by Chenmeinian Guo
 37. "Is testing an expensive waste of time?" by Jason Su
 38. "What is the purpose of the queue data structure?" by Ying Liang
-39. "What is Recursion?" by Gani Sagiev
+39. "What is Recursion?" by Gani Sagiev, Tim Keck
 40. "What is the difference between unit and integration testing?" by Jacob Kolaczkowski
 41. "What is the difference between testing and debugging?" by John DiFilippo, Ahmed Mohamed
 42. "What is object-oriented-programming?" by Felix Ji
 43. "What type of method is a JUnit test case?" by Matthew Alfieri
+44. "What is aliasing?" by Yuhang Huang
+45. "Is XML a mutable or immutable type?" by Drishti Mittal
+46. "Is a string a mutable or immutable type?" by Grant McGeehen
+47. "What is the difference between copyFrom and transferFrom?" by Jashira Herrera Brito
+48. "What is the purpose of testing and what can it not prove?" by Nick Cheong
+49. "What does the method `.divide()` for NaturalNumber return?" by Kate Goertz
+50. "What is the benefit of interval halving?" by Ashir Faruq
+51. "What is mathematical induction?" by Om Amin
+52. "What is the Set data type?" by Luke Thompson
+53. "What is the correct expression to see if an integer is odd in Java?" by Kurt Wanner
+54. "What is XML?" by Tim Keck
+55. "What is mutability?" by Tim Keck
+56. "What is a comparator?" by Tim Keck
+57. "What is a method contract?" by Tim Keck
 
 ---
 
