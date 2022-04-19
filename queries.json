@@ -187,7 +187,7 @@
     {
         "query": "What is an interface?",
         "response": "An interface is an abstract type used to specify the behavior of a class. It is used as a blueprint of a class.",
-        "credit": ["Chenmeinian Guo"]
+        "credit": ["Chenmeinian Guo", "Tim Keck"]
     },
     {
         "query": "Is testing an expensive waste of time?",
@@ -293,5 +293,25 @@
         "query": "What is a method contract?",
         "response": "A method contract is a way of telling whoever is looking at the code of the method what the method does. It usually defines the precondition, postcondition, and expected behavior of the method, as well as defining important parts such as parameters and return values.",
         "credit": ["Tim Keck"]
-    } 
+    },
+    {
+        "query": "How do I trace a variable through a recursive method?",
+        "response": "When tracing a variable through a recursive method, if the variable is changed through recursion, report only the final, expected value of the variable, without reporting any of the possible values during the recursion.",
+        "credit": ["Tim Keck"]
+    },
+    {
+        "query": "What is the difference between a remainder and a modulus?",
+        "response": "Both remainder and modulo find the 'remainder' of a division expression. However, the remainder will have the same sign as the quotient whereas the modulus will have the same sign as the divisor.",
+        "credit": ["Darrel Jobin"]
+    },
+    {
+        "query": "What are the four parameter modes?",
+        "response": "The four parameter modes are: Restores, Clears, Replaces, and Updates.",
+        "credit": ["Darrel Jobin"]
+    },
+    {
+        "query": "What are NaturalNumberKernal's three methods?",
+        "response": "NaturalNumberKernal's three methods are multiplyBy10, divideBy10, and isZero.",
+        "credit": ["Alyssa Wiegman"]
+    }
 ]

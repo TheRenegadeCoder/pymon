@@ -71,7 +71,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 33. "What is the drawback and/or problem with aliasing?" by Michael Grady
 34. "What is a superclass?" by Ben Janita
 35. "Will you be my girlfriend?" by Ben Janita
-36. "What is an interface?" by Chenmeinian Guo
+36. "What is an interface?" by Chenmeinian Guo, Tim Keck
 37. "Is testing an expensive waste of time?" by Jason Su
 38. "What is the purpose of the queue data structure?" by Ying Liang
 39. "What is Recursion?" by Gani Sagiev, Tim Keck
@@ -93,6 +93,10 @@ Currently, the bot can answer the following questions. The numbers map directly 
 55. "What is mutability?" by Tim Keck
 56. "What is a comparator?" by Tim Keck
 57. "What is a method contract?" by Tim Keck
+58. "How do I trace a variable through a recursive method?" by Tim Keck
+59. "What is the difference between a remainder and a modulus?" by Darrel Jobin
+60. "What are the four parameter modes?" by Darrel Jobin
+61. "What are NaturalNumberKernal's three methods?" by Alyssa Wiegman
 
 ---
 
