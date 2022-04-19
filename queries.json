@@ -228,5 +228,45 @@
         "query": "What is aliasing?",
         "response": "Aliasing occurs when there are two variables holding the same reference. These references are called aliases.",
         "credit": ["Yuhang Huang"]
+    },
+    {
+        "query": "Is XML a mutable or immutable type?",
+        "response": "XML is an immutable type since all methods are 'getter' (not 'setter') methods. As a result, no method in this class can edit the receiver.",
+        "credit": ["Drishti Mittal"]
+    },
+    {
+        "query": "Is a string a mutable or immutable type?",
+        "response": "String are of an immutable type.",
+        "credit": ["Grant McGeehen"]
+    },
+    {
+        "query": "What is the difference between copyFrom and transferFrom?",
+        "response": "transferFrom is useful when you care about performance and/or want to clear the value you're transferring away. It's also more useful on other objects because copyFrom is only a method of NaturalNumber as opposed to transferFrom which comes from standard. However, it's less useful when dealing with two natural numbers of different types",
+        "credit": ["Jashira Herrera Brito"]
+    },
+    {
+        "query": "What is the purpose of testing and what can it not prove?",
+        "response": "Testing is the process of finding errors and bugs in one's code.  Testing can't prove that your software is correct but can show its defects.",
+        "credit": ["Nick Cheong"]
+    },
+    {
+        "query": "What does the method `.divide()` for NaturalNumber return?",
+        "response": "The `.divide()` method returns the remainder of the division as a NaturalNumber.",
+        "credit": ["Kate Goertz"]
+    },
+    {
+        "query": "What is the benefit of interval halving?",
+        "response": "It cuts down the possible solutions by 1/2 every update. This helps us ignore half our set of possibilities every time instead of one solution every time.",
+        "credit": ["Ashir Faruq"]
+    },
+    {
+        "query": "What is mathematical induction?",
+        "response": "Induction is proving a base is true, then assuming it is true for some value k, it can be proven that it works for k+1. This is similar to confidence building with recursion.",
+        "credit": ["Om Amin"]
+    },
+    {
+        "query": "What is the Set data type?",
+        "response": "A set is a collection of elements of type T with the criteria of having no duplicate elements and no particular order. Think of a bag of uniquely colored marbles.",
+        "credit": ["Luke Thompson"]
     } 
 ]
