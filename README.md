@@ -47,7 +47,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 9. "What is an expression tree?" by Jeremy Grifski
 10. "What is confidence building?" by Jeremy Grifski
 11. "What is the declared type of a variable?" by Jeremy Grifski
-12. "What is method overriding?" by Jeremy Grifski, Le Chang, Zihe Fang, Alexia Scarvelli
+12. "What is method overriding?" by Jeremy Grifski, Le Chang, Zihe Fang, Alexia Scarvelli, Tae Yeon Kim
 13. "What is method overloading?" by Jeremy Grifski
 14. "What is the implements relationship?" by Jeremy Grifski, Yibo Gan
 15. "What is the extends relationship?" by Jeremy Grifski
@@ -96,7 +96,12 @@ Currently, the bot can answer the following questions. The numbers map directly 
 58. "How do I trace a variable through a recursive method?" by Tim Keck
 59. "What is the difference between a remainder and a modulus?" by Darrel Jobin
 60. "What are the four parameter modes?" by Darrel Jobin
-61. "What are NaturalNumberKernal's three methods?" by Alyssa Wiegman
+61. "What are NaturalNumberKernal's three methods?" by Alyssa Wiegman, Catherine Wu
+62. "What is a procedure?" by Amit Bharathan
+63. "What is the implementer's role?" by Daniel Han
+64. "What is the Standard interface?" by Andrew Nida
+65. "What are some ways to iterate over non-ordered data structures like sets?" by Josh Grismer
+66. "Is restores mode a default parameter mode?" by Allen Zhang
 
 ---
 

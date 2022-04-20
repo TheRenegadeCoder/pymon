@@ -65,7 +65,7 @@
     {
         "query": "What is method overriding?",
         "response": "Method overriding occurs when a method from a parent class is reimplemented in the child class. An overridden method can appear in multiple classes, each with the same name and parameters.",
-        "credit": ["Jeremy Grifski", "Le Chang", "Zihe Fang", "Alexia Scarvelli"]
+        "credit": ["Jeremy Grifski", "Le Chang", "Zihe Fang", "Alexia Scarvelli", "Tae Yeon Kim"]
     },
     {
         "query": "What is method overloading?",
@@ -312,6 +312,31 @@
     {
         "query": "What are NaturalNumberKernal's three methods?",
         "response": "NaturalNumberKernal's three methods are multiplyBy10, divideBy10, and isZero.",
-        "credit": ["Alyssa Wiegman"]
-    }
+        "credit": ["Alyssa Wiegman", "Catherine Wu"]
+    },
+    {
+        "query": "What is a procedure?",
+        "response": "A procedure (statement) is a method that has side effects and does not have a return value typically (void return type).",
+        "credit": ["Amit Bharathan"]
+    },
+    {
+        "query": "What is the implementer's role?",
+        "response": "The implementer's role is to promise the client a behavior. The implementer is also allowed to assume the preconditions are true only when the method is called.",
+        "credit": ["Daniel Han"]
+    },
+    {
+        "query": "What is the Standard interface?",
+        "response": "Standard is the base interface for many classes in the OSU CSE Components library. Each subinterface of Standard implements newInstance(), clear(), and transferFrom() methods.",
+        "credit": ["Andrew Nida"]
+    },
+    {
+        "query": "What are some ways to iterate over non-ordered data structures like sets?",
+        "response": "The are two good ways to iterate over an unorded data structure. First you can use a For Each loop in the form `for(T x : dataStructure)` with : (colon) meaning in. A second way is to use the removeAny() method which will randomly remove one instance from the datatype which can then be used as you wish.",
+        "credit": ["Josh Grismer"]
+    },
+    {
+        "query": "Is restores mode a default parameter mode?",
+        "response": "Yes, restores mode is a default parameter mode.",
+        "credit": ["Allen Zhang"]
+    } 
 ]
