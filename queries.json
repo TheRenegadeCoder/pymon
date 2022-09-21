@@ -338,5 +338,11 @@
         "query": "Is restores mode a default parameter mode?",
         "response": "Yes, restores mode is a default parameter mode.",
         "credit": ["Allen Zhang"]
-    } 
+    },
+    {
+        "query": "What is the difference between parameter and argument?",
+        "response": "A parameter is the variable used within the method implementation. The argument is the value you pass into the method.",
+        "resource": "https://stackoverflow.com/questions/156767/whats-the-difference-between-an-argument-and-a-parameter",
+        "credit": ["Lucas Curran"]
+    }
 ]
