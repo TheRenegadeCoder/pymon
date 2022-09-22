@@ -4,7 +4,7 @@ import discord
 from discord import Message
 from discord.ext import commands
 from discord_slash import SlashCommand
-from discord_slash.utils.manage_commands import create_option
+from discord_slash.utils.manage_commands import create_choice, create_option
 
 import pymon_utils as utils
 
@@ -106,6 +106,45 @@ async def _get(ctx, index: int):
             ),
             inline=True
         )
+
+    await ctx.send(embed=embed)
+    
+    
+@slash.slash(
+    name="study",
+    description="Provides a study guide from a set of predetermined tags.",
+    options=[
+        create_option(
+            name="tag",
+            description="Select a topic for your study guide.",
+            required=True,
+            option_type=3,
+            choices=[
+                create_choice(
+                    value=tag,
+                    name=tag,
+                )
+                for tag in utils.generate_tags_set(queries)
+            ]
+        )
+    ]
+)
+async def _study(ctx, tag: str):
+    """
+    Prints out a list of questions relevant to the tag.
+
+    :param ctx: the context to send messages to
+    :return: None
+    """
+    matches = utils.get_queries_from_tag(queries, tag)
+    embed = discord.Embed(
+        title=f"Pymon v{__version__}: Study Guide for {tag}",
+        color=discord.Color.red(),
+        description="\n".join(
+            f"• ID-{match[0]}: {utils.create_md_link(match[1].get('resource'), match[1].get('query'))}"
+            for match in matches
+        )
+    )
 
     await ctx.send(embed=embed)
 

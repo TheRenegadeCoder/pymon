@@ -128,3 +128,18 @@ def refresh_knowledge() -> tuple[list, dict]:
     keyword_mapping = generate_keyword_mapping(queries)
     generate_similar_queries(queries, keyword_mapping)
     return queries, keyword_mapping
+
+def generate_tags_set(queries: list) -> set:
+    tags = set()
+    for query in queries:
+        query_tags = query.get("tags", [])
+        tags |= set(query_tags)
+    return tags
+
+def get_queries_from_tag(queries: list, tag: str) -> list[tuple[int, dict]]:
+    matches = list()
+    for i, query in enumerate(queries):
+        if tag in query.get("tags", []):
+            matches.append((i, query))
+    return matches
+        
