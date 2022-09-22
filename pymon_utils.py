@@ -129,6 +129,7 @@ def refresh_knowledge() -> tuple[list, dict]:
     generate_similar_queries(queries, keyword_mapping)
     return queries, keyword_mapping
 
+
 def generate_tags_set(queries: list) -> set:
     """
     A handy method for processing the set of tags contained in Pymon's
@@ -142,6 +143,7 @@ def generate_tags_set(queries: list) -> set:
         query_tags = query.get("tags", [])
         tags |= set(query_tags)
     return tags
+
 
 def get_queries_from_tag(queries: list, tag: str) -> list[tuple[int, dict]]:
     """
@@ -157,4 +159,3 @@ def get_queries_from_tag(queries: list, tag: str) -> list[tuple[int, dict]]:
         if tag in query.get("tags", []):
             matches.append((i, query))
     return matches
-        
