@@ -8,28 +8,33 @@
         "query": "What is a magic number?",
         "response": "A magic number is a number that is not obvious upon inspection and should therefore be converted to a constant.",
         "resource": "https://therenegadecoder.com/code/what-is-a-magic-number-and-how-do-we-fix-it/",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 1", "Best Practices"]
     },
     {
         "query": "What is a primitive type?",
         "response": "In Java, a primitive type, which differs from a reference type, is one of 8 data types including int, double, and boolean. All primitive types are written in lowercase letters.",
         "resource": "https://therenegadecoder.com/code/the-8-primitive-types-in-java/",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "How can I create a constant?",
         "response": "In Java, a constant can be created by using the final keyword: \n```java\nfinal int x = 5;\n```",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 1", "Best Practices"]
     },
     {
         "query": "What is testing?",
         "response": "Testing is the process of evaluating a program for bugs. It cannot be used to determine correctness of a program. It is used in conjuction with debugging to resolve bugs.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is debugging?",
         "response": "Debugging is the process of finding and fixing bugs. It is often used in conjunction with testing to resolve bugs.",
-        "credit": ["Jeremy Grifski", "Xining Feng"]
+        "credit": ["Jeremy Grifski", "Xining Feng"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is correctness?",
