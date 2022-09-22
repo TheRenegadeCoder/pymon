@@ -130,6 +130,13 @@ def refresh_knowledge() -> tuple[list, dict]:
     return queries, keyword_mapping
 
 def generate_tags_set(queries: list) -> set:
+    """
+    A handy method for processing the set of tags contained in Pymon's
+    brain. 
+
+    :param queries: the list of queries from Pymon's brain
+    :return: a set of tags represented in Pymon's brain
+    """
     tags = set()
     for query in queries:
         query_tags = query.get("tags", [])
@@ -137,6 +144,14 @@ def generate_tags_set(queries: list) -> set:
     return tags
 
 def get_queries_from_tag(queries: list, tag: str) -> list[tuple[int, dict]]:
+    """
+    Given a tag, this function searches Pymon's brain for all the
+    matching queries.
+
+    :param queries: Pymon's brain as a list of queries
+    :param tag: a tag to lookup
+    :return: a list of tuples in the form (query ID, query)
+    """
     matches = list()
     for i, query in enumerate(queries):
         if tag in query.get("tags", []):
