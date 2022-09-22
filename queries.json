@@ -39,18 +39,21 @@
     {
         "query": "What is correctness?",
         "response": "Correctness has many definitions. However, for the purposes of this course, we define correctness as the ability of a program to behave in a way that is consistent with the contract. In other words, the set of actual outputs of a program fit within the set of all possible outputs according to the contract.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is JUnit?",
         "response": "JUnit is a unit testing framework for Java. It is used to automatically detect bugs in methods.",
         "resource": "https://therenegadecoder.com/code/junit-testing-in-java/",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is unit testing?",
         "response": "Unit testing is a specific form of program testing where the focus is on a small unit of the program, usually a single method. A common unit testing framework in Java is JUnit.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is an expression tree?",
@@ -60,345 +63,413 @@
     {
         "query": "What is confidence building?",
         "response": "Confidence building is an approach to reasoning about a recursive algorithm. Confidence building begins by testing the recursive algorithm with the smallest problem. It then tests the recursive algorithm with the next smallest problem, and so on. By subbing in correct answers to smaller problems, we can build confidence in the recursive algorithm.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the declared type of a variable?",
         "response": "Sometimes called the static type or the compile-time type, the declared type is the type of a variable at the time it was declared. The declared type is often called the static type or compile-time type because it is the type the compiler uses to type check the program.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is method overriding?",
         "response": "Method overriding occurs when a method from a parent class is reimplemented in the child class. An overridden method can appear in multiple classes, each with the same name and parameters.",
-        "credit": ["Jeremy Grifski", "Le Chang", "Zihe Fang", "Alexia Scarvelli", "Tae Yeon Kim"]
+        "credit": ["Jeremy Grifski", "Le Chang", "Zihe Fang", "Alexia Scarvelli", "Tae Yeon Kim"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is method overloading?",
         "response": "Method overloading occurs when multiple methods with the same name have different parameters.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the implements relationship?",
         "response": "The implements relationship can only occur between classes and interfaces. Specifically, a class can implement an interface using the `implements` keyword. If a class, C, implements and interface, I, then C contains code for the behavior specified in I.",
-        "credit": ["Jeremy Grifski", "Yibo Gan"]
+        "credit": ["Jeremy Grifski", "Yibo Gan"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the extends relationship?",
         "response": "The extends relationship can only occur between classes and classes or interfaces and interfaces. In other words, class B can extend class A and interface B can extend interface A, but class A cannot extend interface A.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is a mathematical string?",
         "response": "When modeling data types, we often use mathematical models. One such model is the mathematical string, and it can be used to model everything from strings to arrays and queues. Mathematical string notation takes the form of angle brackets which store sequential items: `<3, 5, 2>`.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is mathematical string notation for concatenation?",
         "response": "Often, strings are concatenated using the `+` operator. In mathematical string notation, we concatenate strings using the `*` operator. Therefore, `<2, 3> * <5> = <2, 3, 5>`.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is a parameter mode?",
         "response": "A parameter mode is a way to specify what will happen to a parameter when the method is called. In our course, there are four main parameter modes: restores, clears, updates, and replaces.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is restores mode?",
         "response": "Restores mode is the default parameter mode. If a parameter is in restores mode, the method promises that the parameter will not be modified from the perspective of the client. It is okay for a method to modify the parameter, but they must always restore it before the method returns.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is a queue?",
         "response": "A queue is a sequence-like data structure where elements can only be added to one end and removed from another (FIFO). A common example of a queue is the line at the register of a grocery store. The first person in line is the first person to checkout. In practice, queues are often used for similar purposes, such as a queue of songs in a music player.",
         "resource": "https://therenegadecoder.com/code/queue-data-structure/",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Final Exam"]
     },
     {
         "query": "What is a set?",
         "response": "A set is a data structure where all elements are unique and unordered.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Final Exam"]
     },
     {
         "query": "What is a stack?",
         "response": "A stack is a sequence-like data structure where elements can only be added and removed from the same end (LIFO), like a stack of papers or pancakes. Stacks are one of the most important data structures as programming languages like Java use them to store method calls. When you make too many nested method calls, you get a Stack Overflow error, meaning the program ran out of memory.",
         "resource": "https://therenegadecoder.com/code/stack-data-structure/",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Final Exam"]
     },
     {
         "query": "What does FIFO mean?",
         "response": "FIFO means First In, First Out. In other words, the first element added to the data structure is the first element to be removed.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Final Exam"]
     },
     {
         "query": "What does LIFO mean?",
         "response": "LIFO means Last In, First Out. In other words, the last element added to the data structure is the first element to be removed.",
-        "credit": ["Jeremy Grifski"]
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Final Exam"]
     },
     {
         "query": "What is the object type of a variable?",
         "response": "The object type (aka, dynamic type or run-time type) of a variable is the type used by Java to decide which method body to use in the presence of method overriding.",
-        "credit": ["Kelvin Nguyen"]
+        "credit": ["Kelvin Nguyen"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is an immutable type?",
         "response": "An immutable type is a reference type whose object value cannot be modified once created. The underlying object value cannot be modified because no fields or methods are exposed to allow it.",
-        "credit": ["Jacob Skarsten", "Ziqing Zhao"]
+        "credit": ["Jacob Skarsten", "Ziqing Zhao"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is replaces mode?",
         "response": "Replaces mode is a parameter mode that indicates that a parameter will change regardless of its initial value. In this course, we indicate replaces mode using the JavaDoc annotation @replaces.",
-        "credit": ["Shaan Patel"]
+        "credit": ["Shaan Patel"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is updates mode?",
         "response": "Updates mode is a parameter mode which describes a parameter that is to be changed to some other value. Under this mode, the initial value of the parameter matters. In this course, we indicate updates mode using the JavaDoc annotation @updates.",
-        "credit": ["Colin Russel"]
+        "credit": ["Colin Russel"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "Are arrays immutable or mutable?",
         "response": "Arrays are mutable. Their size cannot be changed, but their elements can be replaced.",
-        "credit": ["Jessica Molitor"]
+        "credit": ["Jessica Molitor"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is inheritance?",
         "response": "Inheritance is when one class or interface acquires the properties of another class or interface. Specifically, inheritance occurs through the extends and implements keywords.",
-        "credit": ["Xingzhi Dai"]
+        "credit": ["Xingzhi Dai"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is clears mode?",
         "response": "Clears mode is a parameter mode where the method resets the value of the parameter to a predetermined initial value. Clears mode is indicated through the @clears JavaDoc annotation.",
-        "credit": ["Ethan Chilton"]
+        "credit": ["Ethan Chilton"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the default parameter mode when none is specified in the method contract?",
         "response": "When no parameter mode is specified in the method contract, the default parameter mode is Restores. This means that the variable should be restored to its original value/state after the method is called.",
-        "credit": ["Dan Brace"]
+        "credit": ["Dan Brace"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the drawback and/or problem with aliasing?",
         "response": "When multiple objects reference the same location (aliasing), it is easy for objects to get accidently modified.",
-        "credit": ["Michael Grady"]
+        "credit": ["Michael Grady"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is a superclass?",
         "response": "A superclass is a class that is inherited from (i.e., the class name that appears to the right of the extends keyword). A subclass is a class that inherits from a parent class (i.e., a class that includes the extends keyword).",
-        "credit": ["Ben Janita"]
+        "credit": ["Ben Janita"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "Will you be my girlfriend?",
         "response": "Wow! Um... This is really awkward...",
-        "credit": ["Ben Janita"]
+        "credit": ["Ben Janita"],
+        "tags": ["Shitposts"]
     },
     {
         "query": "What is an interface?",
         "response": "An interface is an abstract type used to specify the behavior of a class. It is used as a blueprint of a class.",
-        "credit": ["Chenmeinian Guo", "Tim Keck"]
+        "credit": ["Chenmeinian Guo", "Tim Keck"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "Is testing an expensive waste of time?",
         "response": "Testing is a very expensive activity, but it is never a waste of time.",
-        "credit": ["Jason Su"]
+        "credit": ["Jason Su"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the purpose of the queue data structure?",
         "response": "The queue data structure can be used to manipulate strings of entries of any (arbitrary) type in FIFO (first-in-first-out) order.",
-        "credit": ["Ying Liang"]
+        "credit": ["Ying Liang"],
+        "tags": ["Final Exam"]
     },
     {
         "query": "What is Recursion?",
         "response": "Recursion is a problem-solving technique that makes used of the fact that a function can call itself. In other words, recursion is when a solution to a problem builds itself upon smaller instances of the same problem.",
-        "credit": ["Gani Sagiev", "Tim Keck"]
+        "credit": ["Gani Sagiev", "Tim Keck"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the difference between unit and integration testing?",
         "response": "Unit testing involves testing one class or method at a time while integration testing involves testing multiple components as a larger system.",
-        "credit": ["Jacob Kolaczkowski"]
+        "credit": ["Jacob Kolaczkowski"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the difference between testing and debugging?",
         "response": "Testing is the process of checking for bugs, while debugging is the process of finding and fixing those bugs.",
-        "credit": ["John DiFilippo", "Ahmed Mohamed"]
+        "credit": ["John DiFilippo", "Ahmed Mohamed"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is object-oriented-programming?",
         "response": "Object-oriented programming is programming with objects that contain both data and methods, which we can re-use. It allows us to implement and conceptualize real-world entities such as cars, animals, and beverages. We can use techniques such as polymorphism to use the same method to perform different tasks, hence the idea of 'many form'.",
-        "credit": ["Felix Ji"]
+        "credit": ["Felix Ji"],
+        "tags": ["Exam 2"]
     },
     { 
         "query": "What type of method is a JUnit test case?", 
         "response": "Each test case is a public void method with no parameters, residing within the test class. The @Test annotation is required.",
-        "credit": ["Matthew Alfieri"]
+        "credit": ["Matthew Alfieri"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is aliasing?",
         "response": "Aliasing occurs when there are two variables holding the same reference. These references are called aliases.",
-        "credit": ["Yuhang Huang"]
+        "credit": ["Yuhang Huang"],
+        "tags": ["Exam 2"]
     },
     {
-        "query": "Is XML a mutable or immutable type?",
-        "response": "XML is an immutable type since all methods are 'getter' (not 'setter') methods. As a result, no method in this class can edit the receiver.",
-        "credit": ["Drishti Mittal"]
+        "query": "Is XMLTree a mutable or immutable type?",
+        "response": "XMLTree is an immutable type since all methods are 'getter' (not 'setter') methods. As a result, no method in this class can edit the receiver.",
+        "credit": ["Drishti Mittal"],
+        "tags": ["Exam 2", "Final Exam"]
     },
     {
         "query": "Is a string a mutable or immutable type?",
         "response": "String are of an immutable type.",
-        "credit": ["Grant McGeehen"]
+        "credit": ["Grant McGeehen"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the difference between copyFrom and transferFrom?",
         "response": "transferFrom is useful when you care about performance and/or want to clear the value you're transferring away. It's also more useful on other objects because copyFrom is only a method of NaturalNumber as opposed to transferFrom which comes from standard. However, it's less useful when dealing with two natural numbers of different types",
-        "credit": ["Jashira Herrera Brito"]
+        "credit": ["Jashira Herrera Brito"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the purpose of testing and what can it not prove?",
         "response": "Testing is the process of finding errors and bugs in one's code.  Testing can't prove that your software is correct but can show its defects.",
-        "credit": ["Nick Cheong"]
+        "credit": ["Nick Cheong"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What does the method `.divide()` for NaturalNumber return?",
         "response": "The `.divide()` method returns the remainder of the division as a NaturalNumber.",
-        "credit": ["Kate Goertz"]
+        "credit": ["Kate Goertz"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the benefit of interval halving?",
         "response": "It cuts down the possible solutions by 1/2 every update. This helps us ignore half our set of possibilities every time instead of one solution every time.",
-        "credit": ["Ashir Faruq"]
+        "credit": ["Ashir Faruq"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is mathematical induction?",
         "response": "Induction is proving a base is true, then assuming it is true for some value k, it can be proven that it works for k+1. This is similar to confidence building with recursion.",
-        "credit": ["Om Amin"]
+        "credit": ["Om Amin"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the Set data type?",
         "response": "A set is a collection of elements of type T with the criteria of having no duplicate elements and no particular order. Think of a bag of uniquely colored marbles.",
-        "credit": ["Luke Thompson"]
+        "credit": ["Luke Thompson"],
+        "tags": ["Final Exam"]
     },
     {
         "query": "What is the correct expression to see if an integer is odd in Java?",
         "response": "The correct expression to check if an integer is odd is `n % 2 != 0`. `n % 2 == 1` is incorrect because this expression will not work for odd negative integers.",
-        "credit": ["Kurt Wanner", "Yi-You (Joseph) Chiu"]
+        "credit": ["Kurt Wanner", "Yi-You (Joseph) Chiu"],
+        "tags": ["Exam 1", "Best Practices"]
     },
     {
         "query": "What is XML?",
         "response": "XML stands for eXtensible Markup Language, and is a way of displaying data in a hierarchically organized fashion (organized by rank starting from the root)",
-        "credit": ["Tim Keck"]
+        "credit": ["Tim Keck"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is mutability?",
         "response": "Mutability is the ability of reference type objects to be altered during use in processes and methods. Immutable types cannot change during methods, while mutable types can.",
-        "credit": ["Tim Keck"]
+        "credit": ["Tim Keck"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is a comparator?",
         "response": "A comparator is an interface that allows you to determine whether an object is greater than, less than, or equal to another object of the same type. Comparators are interfaces and need to be implemented within the class using them. Often, the compare method will be overridden according to the needs of the class.",
-        "credit": ["Tim Keck"]
+        "credit": ["Tim Keck"],
+        "tags": ["Final Exam"]
     },
     {
         "query": "What is a method contract?",
         "response": "A method contract is a way of telling whoever is looking at the code of the method what the method does. It usually defines the precondition, postcondition, and expected behavior of the method, as well as defining important parts such as parameters and return values.",
-        "credit": ["Tim Keck"]
+        "credit": ["Tim Keck"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "How do I trace a variable through a recursive method?",
         "response": "When tracing a variable through a recursive method, if the variable is changed through recursion, report only the final, expected value of the variable, without reporting any of the possible values during the recursion.",
-        "credit": ["Tim Keck"]
+        "credit": ["Tim Keck"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the difference between a remainder and a modulus?",
         "response": "Both remainder and modulo find the 'remainder' of a division expression. However, the remainder will have the same sign as the quotient whereas the modulus will have the same sign as the divisor.",
-        "credit": ["Darrel Jobin"]
+        "credit": ["Darrel Jobin"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What are the four parameter modes?",
         "response": "The four parameter modes are: Restores, Clears, Replaces, and Updates.",
-        "credit": ["Darrel Jobin"]
+        "credit": ["Darrel Jobin"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What are NaturalNumberKernal's three methods?",
         "response": "NaturalNumberKernal's three methods are multiplyBy10, divideBy10, and isZero.",
-        "credit": ["Alyssa Wiegman", "Catherine Wu"]
+        "credit": ["Alyssa Wiegman", "Catherine Wu"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is a procedure?",
         "response": "A procedure (statement) is a method that has side effects and does not have a return value typically (void return type).",
-        "credit": ["Amit Bharathan"]
+        "credit": ["Amit Bharathan"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What is the implementer's role?",
         "response": "The implementer's role is to promise the client a behavior. The implementer is also allowed to assume the preconditions are true only when the method is called.",
-        "credit": ["Daniel Han"]
+        "credit": ["Daniel Han"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What is the Standard interface?",
         "response": "Standard is the base interface for many classes in the OSU CSE Components library. Each subinterface of Standard implements newInstance(), clear(), and transferFrom() methods.",
-        "credit": ["Andrew Nida"]
+        "credit": ["Andrew Nida"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What are some ways to iterate over non-ordered data structures like sets?",
         "response": "The are two good ways to iterate over an unorded data structure. First you can use a For Each loop in the form `for(T x : dataStructure)` with : (colon) meaning in. A second way is to use the removeAny() method which will randomly remove one instance from the datatype which can then be used as you wish.",
-        "credit": ["Josh Grismer"]
+        "credit": ["Josh Grismer"],
+        "tags": ["Final Exam"]
     },
     {
         "query": "Is restores mode a default parameter mode?",
-        "response": "Yes, restores mode is a default parameter mode.",
-        "credit": ["Allen Zhang"]
+        "response": "Yes, restores mode is the default parameter mode.",
+        "credit": ["Allen Zhang"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the difference between parameter and argument?",
         "response": "A parameter is the variable used within the method implementation. The argument is the value you pass into the method.",
-        "credit": ["Lucas Curran"]
+        "credit": ["Lucas Curran"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What is the difference between an expression and a statement?",
         "response": "A expression is a a piece of code that can be evaluated into a value. A statement is a part of code that can perform an action or task.",
         "resource": "https://therenegadecoder.com/code/the-difference-between-statements-and-expressions/",
-        "credit": ["Peter Sung"]
+        "credit": ["Peter Sung"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What is API?",
         "response": "APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols.",
-        "credit": ["Yingqi Gao"]
+        "credit": ["Yingqi Gao"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What is a boolean?",
         "response": "A boolean is a data type that can only hold one of two values: true and false, or 1 and 0.",
-        "credit": ["Oliver Gwynn"]
+        "credit": ["Oliver Gwynn"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What is the difference between a public and private method?",
         "response": "public: scope to make that property/method available from anywhere, other classes and instances of the object. private: scope when you want your property/method to be visible in its own class only.",
         "resource": "https://therenegadecoder.com/code/the-difference-between-private-and-public-in-java/",
-        "credit": ["Sammy Schwartz"]
+        "credit": ["Sammy Schwartz"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What is design by contract for?",
         "response": "Design by Contract declares what should be met by a client (caller) in pre-conditions, what should be met by the implementer (callee) in post-conditions and what is forever true in all conditions. Based on the presumption, we are able to recognize who is supposed to take the responsibility of repairing defects.",
-        "credit": ["Darin Renusch"]
+        "credit": ["Darin Renusch"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What is RSS?",
         "response": "RSS (Really Simple Syndication) is a web feed that allows users and applications to access updates to websites in a standardized, computer-readable format.",
-        "credit": ["Andy Vong"]
+        "credit": ["Andy Vong"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is the difference between Inheritance and Polymorphism?",
         "response": "Inheritance allows for one class (child class) to inherit the fields and methods of another class (parent class). For instance, we might want a child class Dog to inherent traits from a more general parent class Animal. Whereas, polymorphism allows a child class to share the information and behaviour of its parent class while also incorporating its own functionality.",
-        "credit": ["Jatin Mamtani"]
+        "credit": ["Jatin Mamtani"],
+        "tags": ["Exam 2"]
     },
     {
         "query": "What is a precondition?",
         "response": "A precondition is a condition for a method that the client has to follow when entering input or passing parameters, in order for the method to produce expected results promised by the implementer.",
-        "credit": ["Akshaya Iyer"]
+        "credit": ["Akshaya Iyer"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What is short-circuit evaluation?",
         "response": "Short-circuit evaluation is when a compiler skips the execution or evaluation of some sub-expressions in a logical expression (ex: in a while loop or if statement). The compiler stops evaluating the further sub-expressions as soon as the value of the expression is determined. This practice is often used to save resources and memory, leading to more efficient code.",
-        "credit": ["Junbo Chen"]
+        "credit": ["Junbo Chen"],
+        "tags": ["Exam 1"]
     },
     {
         "query": "What makes two if statements independent?",
         "response": "Two if statements are independent if they use they both use the `if` keyword without an else (note: sometimes lazily referred to as if/if). Alternatively, if statements can depend on each other if they make use of the `else` and `else if` keywords (note: sometimes lazily referred to as if/else).",
-        "credit": ["Jarrett Reeves", "Jeremy Grifski"]
+        "credit": ["Jarrett Reeves", "Jeremy Grifski"],
+        "tags": ["Exam 1"]
     }
 ]

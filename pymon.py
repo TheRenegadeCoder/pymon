@@ -123,9 +123,9 @@ async def _get(ctx, index: int):
             choices=[
                 create_choice(
                     value=tag,
-                    name=tag,
+                    name=f"{tag} ({len(utils.get_queries_from_tag(queries, tag))})",
                 )
-                for tag in utils.generate_tags_set(queries)
+                for tag in sorted(utils.generate_tags_set(queries))
             ]
         )
     ]
