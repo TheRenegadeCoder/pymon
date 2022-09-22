@@ -27,7 +27,8 @@ queries, keyword_mapping = utils.refresh_knowledge()
 # Discord bot code
 async def _react_on_mention(message: Message):
     if client.user.mentioned_in(message) and not message.mention_everyone:
-        indices = utils.search(keyword_mapping, utils.generate_keywords(message.content))
+        indices = utils.search(
+            keyword_mapping, utils.generate_keywords(message.content))
         if indices:
             reply = list()
             reply.extend([
@@ -108,8 +109,8 @@ async def _get(ctx, index: int):
         )
 
     await ctx.send(embed=embed)
-    
-    
+
+
 @slash.slash(
     name="study",
     description="Provides a study guide from a set of predetermined tags.",
