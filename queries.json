@@ -272,7 +272,7 @@
     {
         "query": "What is the correct expression to see if an integer is odd in Java?",
         "response": "The correct expression to check if an integer is odd is `n % 2 != 0`. `n % 2 == 1` is incorrect because this expression will not work for odd negative integers.",
-        "credit": ["Kurt Wanner"]
+        "credit": ["Kurt Wanner", "Yi-You (Joseph) Chiu"]
     },
     {
         "query": "What is XML?",
@@ -342,7 +342,58 @@
     {
         "query": "What is the difference between parameter and argument?",
         "response": "A parameter is the variable used within the method implementation. The argument is the value you pass into the method.",
-        "resource": "https://stackoverflow.com/questions/156767/whats-the-difference-between-an-argument-and-a-parameter",
         "credit": ["Lucas Curran"]
+    },
+    {
+        "query": "What is the difference between an expression and a statement?",
+        "response": "A expression is a a piece of code that can be evaluated into a value. A statement is a part of code that can perform an action or task.",
+        "resource": "https://therenegadecoder.com/code/the-difference-between-statements-and-expressions/",
+        "credit": ["Peter Sung"]
+    },
+    {
+        "query": "What is API?",
+        "response": "APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols.",
+        "credit": ["Yingqi Gao"]
+    },
+    {
+        "query": "What is a boolean?",
+        "response": "A boolean is a data type that can only hold one of two values: true and false, or 1 and 0.",
+        "credit": ["Oliver Gwynn"]
+    },
+    {
+        "query": "What is the difference between a public and private method?",
+        "response": "public: scope to make that property/method available from anywhere, other classes and instances of the object. private: scope when you want your property/method to be visible in its own class only.",
+        "resource": "https://therenegadecoder.com/code/the-difference-between-private-and-public-in-java/",
+        "credit": ["Sammy Schwartz"]
+    },
+    {
+        "query": "What is design by contract for?",
+        "response": "Design by Contract declares what should be met by a client (caller) in pre-conditions, what should be met by the implementer (callee) in post-conditions and what is forever true in all conditions. Based on the presumption, we are able to recognize who is supposed to take the responsibility of repairing defects.",
+        "credit": ["Darin Renusch"]
+    },
+    {
+        "query": "What is RSS?",
+        "response": "RSS (Really Simple Syndication) is a web feed that allows users and applications to access updates to websites in a standardized, computer-readable format.",
+        "credit": ["Andy Vong"]
+    },
+    {
+        "query": "What is the difference between Inheritance and Polymorphism?",
+        "response": "Inheritance allows for one class (child class) to inherit the fields and methods of another class (parent class). For instance, we might want a child class Dog to inherent traits from a more general parent class Animal. Whereas, polymorphism allows a child class to share the information and behaviour of its parent class while also incorporating its own functionality.",
+        "credit": ["Jatin Mamtani"]
+    },
+    {
+        "query": "What is a precondition?",
+        "response": "A precondition is a condition for a method that the client has to follow when entering input or passing parameters, in order for the method to produce expected results promised by the implementer.",
+        "credit": ["Akshaya Iyer"]
+    },
+    {
+        "query": "What is short-circuit evaluation?",
+        "response": "Short-circuit evaluation is when a compiler skips the execution or evaluation of some sub-expressions in a logical expression (ex: in a while loop or if statement). The compiler stops evaluating the further sub-expressions as soon as the value of the expression is determined. This practice is often used to save resources and memory, leading to more efficient code.",
+        "credit": ["Junbo Chen"]
+    },
+    {
+        "query": "What makes two if statements independent?",
+        "response": "Two if statements are independent if they use they both use the `if` keyword without an else (note: sometimes lazily referred to as if/if). Alternatively, if statements can depend on each other if they make use of the `else` and `else if` keywords (note: sometimes lazily referred to as if/else).",
+        "credit": ["Jarrett Reeves", "Jeremy Grifski"]
     }
 ]
