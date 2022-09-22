@@ -8,7 +8,7 @@ from discord_slash.utils.manage_commands import create_choice, create_option
 
 import pymon_utils as utils
 
-__version__ = "0.4.1"
+__version__ = "0.5.0"
 
 
 # Global variables
