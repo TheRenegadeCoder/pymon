@@ -30,6 +30,7 @@ def generate_keyword_mapping(queries: list) -> dict:
                 keyword_to_queries.setdefault(keyword, {})
                 keyword_to_queries[keyword].setdefault(i, 0)
                 keyword_to_queries[keyword][i] += 1
+    log.debug(f"Generated keyword mapping as follows: {keyword_to_queries}")
     return keyword_to_queries
 
 
@@ -43,12 +44,13 @@ def generate_keywords(query: string) -> list:
     log.debug(f"Generating keywords from following query: {query}")
     stop_words = ["", "is", "a", "the", "can",
                   "i", "to", "in", "by", "from", "be", "of",
-                  "what", "where", "when", "why", "how", "which"]
+                  "what", "where", "when", "why", "how", "which", "and"]
     keywords = query \
         .translate(str.maketrans('', '', string.punctuation)) \
         .lower() \
         .split(" ")
     keywords = [word for word in keywords if word not in stop_words]
+    log.debug(f"Generated list of keywords as follows: {keywords}")
     return keywords
 
 
@@ -67,8 +69,10 @@ def search(keyword_to_queries: dict, keywords: list) -> list:
         for i, weight in query_indices.items():
             query_count.setdefault(i, 0)
             query_count[i] += weight
-    best_matches = list(
-        dict(sorted(query_count.items(), key=lambda item: item[1], reverse=True)).keys())
+    best_matches = list(dict(
+        sorted(query_count.items(), key=lambda item: item[1], reverse=True)
+    ).keys())
+    log.debug(f"Found closest matches as follows: {best_matches}")
     return best_matches
 
 
@@ -86,6 +90,7 @@ def generate_similar_queries(queries: list, keyword_to_queries: dict) -> None:
             top_ids = search(keyword_to_queries, keywords)
             top_ids.remove(i)
             query["similar_queries"] = top_ids
+            log.debug(f"Updated query to include similar queries: {query}")
 
 
 def create_md_link(url: string, text: string) -> string:
@@ -148,11 +153,12 @@ def generate_tags_set(queries: list) -> set:
     :param queries: the list of queries from Pymon's brain
     :return: a set of tags represented in Pymon's brain
     """
-    log.debug(f"Collects the unique set of tags from following list of queries: {queries}")
+    log.debug(f"Generating the unique set of tags from following list of queries: {queries}")
     tags = set()
     for query in queries:
         query_tags = query.get("tags", [])
         tags |= set(query_tags)
+    log.debug(f"Generated list of unique tags as follows: {tags}")
     return tags
 
 
@@ -165,9 +171,10 @@ def get_queries_from_tag(queries: list, tag: str) -> list[tuple[int, dict]]:
     :param tag: a tag to lookup
     :return: a list of tuples in the form (query ID, query)
     """
-    log.debug(f"Returns set of queries that include the following tag: {tag}")
+    log.debug(f"Getting set of queries that include the following tag: {tag}")
     matches = list()
     for i, query in enumerate(queries):
         if tag in query.get("tags", []):
             matches.append((i, query))
+    log.debug(f"Found queries that match tag as follows: {matches}")
     return matches
