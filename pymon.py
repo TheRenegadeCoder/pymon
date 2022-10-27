@@ -1,4 +1,7 @@
+from logging.handlers import RotatingFileHandler
 import os
+import logging
+import pathlib
 
 import discord
 from discord import Message
@@ -10,6 +13,20 @@ import pymon_utils as utils
 
 __version__ = "0.5.0"
 
+
+# Setup logging
+logs_path = pathlib.Path(
+    os.path.abspath(os.path.dirname(__file__)), 
+    "logs"
+)
+logs_path.mkdir(parents=True, exist_ok=True)
+logging.basicConfig(
+    handlers=[RotatingFileHandler(logs_path / "bot.log", backupCount=10, maxBytes=1000000)],
+    level=logging.DEBUG,
+    format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    datefmt='%Y-%m-%d:%H:%M:%S',
+)
+log = logging.getLogger(__name__)
 
 # Global variables
 client = commands.Bot(
@@ -168,4 +185,5 @@ async def _refresh(ctx):
     await ctx.send(f"{len(diff)} queries modified and/or added.")
 
 
-client.run(os.environ.get("DISCORD_TOKEN"))
+if __name__ == '__main__':
+    client.run(os.environ.get("DISCORD_TOKEN"))
