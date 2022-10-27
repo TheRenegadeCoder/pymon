@@ -50,7 +50,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 12. "What is method overriding?" by Jeremy Grifski, Le Chang, Zihe Fang, Alexia Scarvelli, Tae Yeon Kim
 13. "What is method overloading?" by Jeremy Grifski
 14. "What is the implements relationship?" by Jeremy Grifski, Yibo Gan
-15. "What is the extends relationship?" by Jeremy Grifski
+15. "What is the extends relationship?" by Jeremy Grifski, Yi-You (Joseph) Chiu
 16. "What is a mathematical string?" by Jeremy Grifski
 17. "What is mathematical string notation for concatenation?" by Jeremy Grifski
 18. "What is a parameter mode?" by Jeremy Grifski
@@ -80,7 +80,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 42. "What is object-oriented-programming?" by Felix Ji
 43. "What type of method is a JUnit test case?" by Matthew Alfieri
 44. "What is aliasing?" by Yuhang Huang
-45. "Is XML a mutable or immutable type?" by Drishti Mittal
+45. "Is XMLTree a mutable or immutable type?" by Drishti Mittal
 46. "Is a string a mutable or immutable type?" by Grant McGeehen
 47. "What is the difference between copyFrom and transferFrom?" by Jashira Herrera Brito
 48. "What is the purpose of testing and what can it not prove?" by Nick Cheong
@@ -88,7 +88,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 50. "What is the benefit of interval halving?" by Ashir Faruq
 51. "What is mathematical induction?" by Om Amin
 52. "What is the Set data type?" by Luke Thompson
-53. "What is the correct expression to see if an integer is odd in Java?" by Kurt Wanner
+53. "What is the correct expression to see if an integer is odd in Java?" by Kurt Wanner, Yi-You (Joseph) Chiu
 54. "What is XML?" by Tim Keck
 55. "What is mutability?" by Tim Keck
 56. "What is a comparator?" by Tim Keck
@@ -102,6 +102,22 @@ Currently, the bot can answer the following questions. The numbers map directly 
 64. "What is the Standard interface?" by Andrew Nida
 65. "What are some ways to iterate over non-ordered data structures like sets?" by Josh Grismer
 66. "Is restores mode a default parameter mode?" by Allen Zhang
+67. "What is the difference between parameter and argument?" by Lucas Curran
+68. "What is the difference between an expression and a statement?" by Peter Sung
+69. "What is API?" by Yingqi Gao
+70. "What is a boolean?" by Oliver Gwynn
+71. "What is the difference between a public and private method?" by Sammy Schwartz
+72. "What is design by contract for?" by Darin Renusch
+73. "What is RSS?" by Andy Vong
+74. "What is the difference between inheritance and polymorphism?" by Jatin Mamtani
+75. "What is a precondition?" by Akshaya Iyer
+76. "What is short-circuit evaluation?" by Junbo Chen
+77. "What makes two if statements independent?" by Jarrett Reeves, Jeremy Grifski
+78. "What is polymorphism?" by Angstrom Sarkar
+79. "Why can't interfaces have constructors?" by Yingqi Gao
+80. "What is abstraction?" by Yingqi Gao
+81. "What is the difference between interface and abstract class?" by Yingqi Gao
+82. "When should I use newInstance?" by Shivam Engineer
 
 ---
 
