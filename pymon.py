@@ -1,7 +1,7 @@
-from logging.handlers import RotatingFileHandler
-import os
 import logging
+import os
 import pathlib
+from logging.handlers import RotatingFileHandler
 
 import discord
 from discord import Message
@@ -11,7 +11,7 @@ from discord_slash.utils.manage_commands import create_choice, create_option
 
 import pymon_utils as utils
 
-__version__ = "0.5.0"
+__version__ = "0.6.0"
 
 
 # Setup logging
