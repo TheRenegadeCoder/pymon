@@ -16,12 +16,16 @@ __version__ = "0.5.0"
 
 # Setup logging
 logs_path = pathlib.Path(
-    os.path.abspath(os.path.dirname(__file__)), 
+    os.path.abspath(os.path.dirname(__file__)),
     "logs"
 )
 logs_path.mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
-    handlers=[RotatingFileHandler(logs_path / "bot.log", backupCount=10, maxBytes=1000000)],
+    handlers=[RotatingFileHandler(
+        logs_path / "bot.log",
+        backupCount=10,
+        maxBytes=1000000
+    )],
     level=logging.DEBUG,
     format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
     datefmt='%Y-%m-%d:%H:%M:%S',
