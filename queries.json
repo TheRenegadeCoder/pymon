@@ -27,6 +27,7 @@
     {
         "query": "What is testing?",
         "response": "Testing is the process of evaluating a program for bugs. It cannot be used to determine correctness of a program. It is used in conjuction with debugging to resolve bugs.",
+        "resource": "https://therenegadecoder.com/code/junit-testing-in-java/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -52,6 +53,7 @@
     {
         "query": "What is unit testing?",
         "response": "Unit testing is a specific form of program testing where the focus is on a small unit of the program, usually a single method. A common unit testing framework in Java is JUnit.",
+        "resource": "https://therenegadecoder.com/code/junit-testing-in-java/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -63,12 +65,19 @@
     {
         "query": "What is confidence building?",
         "response": "Confidence building is an approach to reasoning about a recursive algorithm. Confidence building begins by testing the recursive algorithm with the smallest problem. It then tests the recursive algorithm with the next smallest problem, and so on. By subbing in correct answers to smaller problems, we can build confidence in the recursive algorithm.",
+        "resource": "https://therenegadecoder.com/code/5-tips-for-making-sense-of-recursion/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is the declared type of a variable?",
         "response": "Sometimes called the static type or the compile-time type, the declared type is the type of a variable at the time it was declared. The declared type is often called the static type or compile-time type because it is the type the compiler uses to type check the program.",
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "What is the static type of a variable?",
+        "response": "Sometimes called the declared type or the compile-time type, the static type is the type of a variable that the compiler uses to perform type checking. The static type is often called the declared type because it is the type of the variable when it is declared.",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -81,6 +90,7 @@
     {
         "query": "What is method overloading?",
         "response": "Method overloading occurs when multiple methods with the same name have different parameters.",
+        "resource": "https://therenegadecoder.com/code/explain-like-im-five-method-overloading/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -111,12 +121,14 @@
     {
         "query": "What is a parameter mode?",
         "response": "A parameter mode is a way to specify what will happen to a parameter when the method is called. In our course, there are four main parameter modes: restores, clears, updates, and replaces.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is restores mode?",
         "response": "Restores mode is the default parameter mode. If a parameter is in restores mode, the method promises that the parameter will not be modified from the perspective of the client. It is okay for a method to modify the parameter, but they must always restore it before the method returns.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -167,12 +179,14 @@
     {
         "query": "What is replaces mode?",
         "response": "Replaces mode is a parameter mode that indicates that a parameter will change regardless of its initial value. In this course, we indicate replaces mode using the JavaDoc annotation @replaces.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Shaan Patel"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is updates mode?",
         "response": "Updates mode is a parameter mode which describes a parameter that is to be changed to some other value. Under this mode, the initial value of the parameter matters. In this course, we indicate updates mode using the JavaDoc annotation @updates.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Colin Russel"],
         "tags": ["Exam 2"]
     },
@@ -191,12 +205,14 @@
     {
         "query": "What is clears mode?",
         "response": "Clears mode is a parameter mode where the method resets the value of the parameter to a predetermined initial value. Clears mode is indicated through the @clears JavaDoc annotation.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Ethan Chilton"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is the default parameter mode when none is specified in the method contract?",
         "response": "When no parameter mode is specified in the method contract, the default parameter mode is Restores. This means that the variable should be restored to its original value/state after the method is called.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Dan Brace"],
         "tags": ["Exam 2"]
     },
@@ -255,7 +271,7 @@
         "tags": ["Exam 2"]
     },
     {
-        "query": "What is object-oriented-programming?",
+        "query": "What is object-oriented programming (OOP)?",
         "response": "Object-oriented programming is programming with objects that contain both data and methods, which we can re-use. It allows us to implement and conceptualize real-world entities such as cars, animals, and beverages. We can use techniques such as polymorphism to use the same method to perform different tasks, hence the idea of 'many form'.",
         "credit": ["Felix Ji"],
         "tags": ["Exam 2"]
@@ -365,18 +381,19 @@
     {
         "query": "What are the four parameter modes?",
         "response": "The four parameter modes are: Restores, Clears, Replaces, and Updates.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Darrel Jobin"],
         "tags": ["Exam 2"]
     },
     {
-        "query": "What are NaturalNumberKernal's three methods?",
-        "response": "NaturalNumberKernal's three methods are multiplyBy10, divideBy10, and isZero.",
+        "query": "What are NaturalNumberKernel's three methods?",
+        "response": "NaturalNumberKernel's three methods are multiplyBy10, divideBy10, and isZero.",
         "credit": ["Alyssa Wiegman", "Catherine Wu"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is a procedure?",
-        "response": "A procedure (statement) is a method that has side effects and does not have a return value typically (void return type).",
+        "response": "A procedure is a method that has side effects and does not have a return value typically (void return type).",
         "credit": ["Amit Bharathan"],
         "tags": ["Exam 1"]
     },
@@ -401,6 +418,7 @@
     {
         "query": "Is restores mode a default parameter mode?",
         "response": "Yes, restores mode is the default parameter mode.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Allen Zhang"],
         "tags": ["Exam 2"]
     },
