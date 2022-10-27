@@ -381,18 +381,19 @@
     {
         "query": "What are the four parameter modes?",
         "response": "The four parameter modes are: Restores, Clears, Replaces, and Updates.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Darrel Jobin"],
         "tags": ["Exam 2"]
     },
     {
-        "query": "What are NaturalNumberKernal's three methods?",
-        "response": "NaturalNumberKernal's three methods are multiplyBy10, divideBy10, and isZero.",
+        "query": "What are NaturalNumberKernel's three methods?",
+        "response": "NaturalNumberKernel's three methods are multiplyBy10, divideBy10, and isZero.",
         "credit": ["Alyssa Wiegman", "Catherine Wu"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is a procedure?",
-        "response": "A procedure (statement) is a method that has side effects and does not have a return value typically (void return type).",
+        "response": "A procedure is a method that has side effects and does not have a return value typically (void return type).",
         "credit": ["Amit Bharathan"],
         "tags": ["Exam 1"]
     },
@@ -417,6 +418,7 @@
     {
         "query": "Is restores mode a default parameter mode?",
         "response": "Yes, restores mode is the default parameter mode.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Allen Zhang"],
         "tags": ["Exam 2"]
     },
