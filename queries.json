@@ -27,6 +27,7 @@
     {
         "query": "What is testing?",
         "response": "Testing is the process of evaluating a program for bugs. It cannot be used to determine correctness of a program. It is used in conjuction with debugging to resolve bugs.",
+        "resource": "https://therenegadecoder.com/code/junit-testing-in-java/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -52,6 +53,7 @@
     {
         "query": "What is unit testing?",
         "response": "Unit testing is a specific form of program testing where the focus is on a small unit of the program, usually a single method. A common unit testing framework in Java is JUnit.",
+        "resource": "https://therenegadecoder.com/code/junit-testing-in-java/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -63,12 +65,19 @@
     {
         "query": "What is confidence building?",
         "response": "Confidence building is an approach to reasoning about a recursive algorithm. Confidence building begins by testing the recursive algorithm with the smallest problem. It then tests the recursive algorithm with the next smallest problem, and so on. By subbing in correct answers to smaller problems, we can build confidence in the recursive algorithm.",
+        "resource": "https://therenegadecoder.com/code/5-tips-for-making-sense-of-recursion/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is the declared type of a variable?",
         "response": "Sometimes called the static type or the compile-time type, the declared type is the type of a variable at the time it was declared. The declared type is often called the static type or compile-time type because it is the type the compiler uses to type check the program.",
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "What is the static type of a variable?",
+        "response": "Sometimes called the declared type or the compile-time type, the static type is the type of a variable that the compiler uses to perform type checking. The static type is often called the declared type because it is the type of the variable when it is declared.",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -81,6 +90,7 @@
     {
         "query": "What is method overloading?",
         "response": "Method overloading occurs when multiple methods with the same name have different parameters.",
+        "resource": "https://therenegadecoder.com/code/explain-like-im-five-method-overloading/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },

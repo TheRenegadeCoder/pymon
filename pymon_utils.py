@@ -69,6 +69,7 @@ def search(keyword_to_queries: dict, keywords: list) -> list:
         for i, weight in query_indices.items():
             query_count.setdefault(i, 0)
             query_count[i] += weight
+    log.debug(f"Generated dictionary of query counts: {query_count}")
     best_matches = list(dict(
         sorted(query_count.items(), key=lambda item: item[1], reverse=True)
     ).keys())
