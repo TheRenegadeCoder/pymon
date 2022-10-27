@@ -28,7 +28,7 @@ def test_search_exact_match_middle():
         keyword_mapping,
         ["what", "is", "method", "overriding"]
     )[:1]
-    assert 12 in top_ids
+    assert 13 in top_ids
     assert "What is method overriding?" in top_queries(top_ids)
 
 
@@ -37,7 +37,7 @@ def test_search_routine_match():
         keyword_mapping,
         ["what", "does", "implements", "mean"]
     )[:3]
-    assert 14 in top_ids
+    assert 15 in top_ids
     assert "What is the implements relationship?" in top_queries(top_ids)
 
 
