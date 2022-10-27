@@ -93,7 +93,7 @@
     {
         "query": "What is the extends relationship?",
         "response": "The extends relationship can only occur between classes and classes or interfaces and interfaces. In other words, class B can extend class A and interface B can extend interface A, but class A cannot extend interface A.",
-        "credit": ["Jeremy Grifski"],
+        "credit": ["Jeremy Grifski", "Yi-You (Joseph) Chiu"],
         "tags": ["Exam 2"]
     },
     {
@@ -449,7 +449,7 @@
         "tags": ["Exam 2"]
     },
     {
-        "query": "What is the difference between Inheritance and Polymorphism?",
+        "query": "What is the difference between inheritance and polymorphism?",
         "response": "Inheritance allows for one class (child class) to inherit the fields and methods of another class (parent class). For instance, we might want a child class Dog to inherent traits from a more general parent class Animal. Whereas, polymorphism allows a child class to share the information and behaviour of its parent class while also incorporating its own functionality.",
         "credit": ["Jatin Mamtani"],
         "tags": ["Exam 2"]
@@ -471,5 +471,35 @@
         "response": "Two if statements are independent if they use they both use the `if` keyword without an else (note: sometimes lazily referred to as if/if). Alternatively, if statements can depend on each other if they make use of the `else` and `else if` keywords (note: sometimes lazily referred to as if/else).",
         "credit": ["Jarrett Reeves", "Jeremy Grifski"],
         "tags": ["Exam 1"]
+    },
+    {
+        "query": "What is polymorphism?",
+        "response": "Polymorphism is the ability of a class to have different ways of implementing a method, based on what objects runs the method. This is accomplished by giving multiple objects related by inheritance their own unique versions of a specific method.",
+        "credit": ["Angstrom Sarkar"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "Why can't interfaces have constructors?",
+        "response": "Interface can't have constructors becauses methods present in the interface are only declared not defined. As there is no implementation of methods, there is no need of making objects for calling methods in the interface and thus no point of having constructor in it.",
+        "credit": ["Yingqi Gao"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "What is abstraction?",
+        "response": "Data abstraction is the process of hiding certain details and showing only essential information to the user.Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).",
+        "credit": ["Yingqi Gao"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "What is the difference between interface and abstract class?",
+        "response": "Interfaces are a kind of code contract, which must be implemented by a concrete class. Abstract classes are similar to normal classes, with the difference that they can include abstract methods, which are methods without a body. Abstract classes cannot be instantiated.",
+        "credit": ["Yingqi Gao"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "When should I use newInstance?",
+        "response": "newInstance allows you to return an object with the same dynamic type as this (another object), having an initial value, so you would use newInstance if you don't know the dynamic type of an object but you want to return an object with the same dynamic type.",
+        "credit": ["Shivam Engineer"],
+        "tags": ["Exam 2"]
     }
 ]
