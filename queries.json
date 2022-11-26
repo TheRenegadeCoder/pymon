@@ -27,6 +27,7 @@
     {
         "query": "What is testing?",
         "response": "Testing is the process of evaluating a program for bugs. It cannot be used to determine correctness of a program. It is used in conjuction with debugging to resolve bugs.",
+        "resource": "https://therenegadecoder.com/code/junit-testing-in-java/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -52,6 +53,7 @@
     {
         "query": "What is unit testing?",
         "response": "Unit testing is a specific form of program testing where the focus is on a small unit of the program, usually a single method. A common unit testing framework in Java is JUnit.",
+        "resource": "https://therenegadecoder.com/code/junit-testing-in-java/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -63,12 +65,19 @@
     {
         "query": "What is confidence building?",
         "response": "Confidence building is an approach to reasoning about a recursive algorithm. Confidence building begins by testing the recursive algorithm with the smallest problem. It then tests the recursive algorithm with the next smallest problem, and so on. By subbing in correct answers to smaller problems, we can build confidence in the recursive algorithm.",
+        "resource": "https://therenegadecoder.com/code/5-tips-for-making-sense-of-recursion/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is the declared type of a variable?",
         "response": "Sometimes called the static type or the compile-time type, the declared type is the type of a variable at the time it was declared. The declared type is often called the static type or compile-time type because it is the type the compiler uses to type check the program.",
+        "credit": ["Jeremy Grifski"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "What is the static type of a variable?",
+        "response": "Sometimes called the declared type or the compile-time type, the static type is the type of a variable that the compiler uses to perform type checking. The static type is often called the declared type because it is the type of the variable when it is declared.",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -81,6 +90,7 @@
     {
         "query": "What is method overloading?",
         "response": "Method overloading occurs when multiple methods with the same name have different parameters.",
+        "resource": "https://therenegadecoder.com/code/explain-like-im-five-method-overloading/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -93,7 +103,7 @@
     {
         "query": "What is the extends relationship?",
         "response": "The extends relationship can only occur between classes and classes or interfaces and interfaces. In other words, class B can extend class A and interface B can extend interface A, but class A cannot extend interface A.",
-        "credit": ["Jeremy Grifski"],
+        "credit": ["Jeremy Grifski", "Yi-You (Joseph) Chiu"],
         "tags": ["Exam 2"]
     },
     {
@@ -111,12 +121,14 @@
     {
         "query": "What is a parameter mode?",
         "response": "A parameter mode is a way to specify what will happen to a parameter when the method is called. In our course, there are four main parameter modes: restores, clears, updates, and replaces.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is restores mode?",
         "response": "Restores mode is the default parameter mode. If a parameter is in restores mode, the method promises that the parameter will not be modified from the perspective of the client. It is okay for a method to modify the parameter, but they must always restore it before the method returns.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Jeremy Grifski"],
         "tags": ["Exam 2"]
     },
@@ -167,12 +179,14 @@
     {
         "query": "What is replaces mode?",
         "response": "Replaces mode is a parameter mode that indicates that a parameter will change regardless of its initial value. In this course, we indicate replaces mode using the JavaDoc annotation @replaces.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Shaan Patel"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is updates mode?",
         "response": "Updates mode is a parameter mode which describes a parameter that is to be changed to some other value. Under this mode, the initial value of the parameter matters. In this course, we indicate updates mode using the JavaDoc annotation @updates.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Colin Russel"],
         "tags": ["Exam 2"]
     },
@@ -191,12 +205,14 @@
     {
         "query": "What is clears mode?",
         "response": "Clears mode is a parameter mode where the method resets the value of the parameter to a predetermined initial value. Clears mode is indicated through the @clears JavaDoc annotation.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Ethan Chilton"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is the default parameter mode when none is specified in the method contract?",
         "response": "When no parameter mode is specified in the method contract, the default parameter mode is Restores. This means that the variable should be restored to its original value/state after the method is called.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Dan Brace"],
         "tags": ["Exam 2"]
     },
@@ -255,7 +271,7 @@
         "tags": ["Exam 2"]
     },
     {
-        "query": "What is object-oriented-programming?",
+        "query": "What is object-oriented programming (OOP)?",
         "response": "Object-oriented programming is programming with objects that contain both data and methods, which we can re-use. It allows us to implement and conceptualize real-world entities such as cars, animals, and beverages. We can use techniques such as polymorphism to use the same method to perform different tasks, hence the idea of 'many form'.",
         "credit": ["Felix Ji"],
         "tags": ["Exam 2"]
@@ -365,18 +381,19 @@
     {
         "query": "What are the four parameter modes?",
         "response": "The four parameter modes are: Restores, Clears, Replaces, and Updates.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Darrel Jobin"],
         "tags": ["Exam 2"]
     },
     {
-        "query": "What are NaturalNumberKernal's three methods?",
-        "response": "NaturalNumberKernal's three methods are multiplyBy10, divideBy10, and isZero.",
+        "query": "What are NaturalNumberKernel's three methods?",
+        "response": "NaturalNumberKernel's three methods are multiplyBy10, divideBy10, and isZero.",
         "credit": ["Alyssa Wiegman", "Catherine Wu"],
         "tags": ["Exam 2"]
     },
     {
         "query": "What is a procedure?",
-        "response": "A procedure (statement) is a method that has side effects and does not have a return value typically (void return type).",
+        "response": "A procedure is a method that has side effects and does not have a return value typically (void return type).",
         "credit": ["Amit Bharathan"],
         "tags": ["Exam 1"]
     },
@@ -401,6 +418,7 @@
     {
         "query": "Is restores mode a default parameter mode?",
         "response": "Yes, restores mode is the default parameter mode.",
+        "resource": "https://therenegadecoder.com/code/improve-code-readability-by-using-parameter-modes/",
         "credit": ["Allen Zhang"],
         "tags": ["Exam 2"]
     },
@@ -449,7 +467,7 @@
         "tags": ["Exam 2"]
     },
     {
-        "query": "What is the difference between Inheritance and Polymorphism?",
+        "query": "What is the difference between inheritance and polymorphism?",
         "response": "Inheritance allows for one class (child class) to inherit the fields and methods of another class (parent class). For instance, we might want a child class Dog to inherent traits from a more general parent class Animal. Whereas, polymorphism allows a child class to share the information and behaviour of its parent class while also incorporating its own functionality.",
         "credit": ["Jatin Mamtani"],
         "tags": ["Exam 2"]
@@ -471,5 +489,35 @@
         "response": "Two if statements are independent if they use they both use the `if` keyword without an else (note: sometimes lazily referred to as if/if). Alternatively, if statements can depend on each other if they make use of the `else` and `else if` keywords (note: sometimes lazily referred to as if/else).",
         "credit": ["Jarrett Reeves", "Jeremy Grifski"],
         "tags": ["Exam 1"]
+    },
+    {
+        "query": "What is polymorphism?",
+        "response": "Polymorphism is the ability of a class to have different ways of implementing a method, based on what objects runs the method. This is accomplished by giving multiple objects related by inheritance their own unique versions of a specific method.",
+        "credit": ["Angstrom Sarkar"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "Why can't interfaces have constructors?",
+        "response": "Interface can't have constructors becauses methods present in the interface are only declared not defined. As there is no implementation of methods, there is no need of making objects for calling methods in the interface and thus no point of having constructor in it.",
+        "credit": ["Yingqi Gao"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "What is abstraction?",
+        "response": "Data abstraction is the process of hiding certain details and showing only essential information to the user.Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).",
+        "credit": ["Yingqi Gao"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "What is the difference between interface and abstract class?",
+        "response": "Interfaces are a kind of code contract, which must be implemented by a concrete class. Abstract classes are similar to normal classes, with the difference that they can include abstract methods, which are methods without a body. Abstract classes cannot be instantiated.",
+        "credit": ["Yingqi Gao"],
+        "tags": ["Exam 2"]
+    },
+    {
+        "query": "When should I use newInstance?",
+        "response": "newInstance allows you to return an object with the same dynamic type as this (another object), having an initial value, so you would use newInstance if you don't know the dynamic type of an object but you want to return an object with the same dynamic type.",
+        "credit": ["Shivam Engineer"],
+        "tags": ["Exam 2"]
     }
 ]

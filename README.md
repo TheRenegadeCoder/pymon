@@ -47,61 +47,78 @@ Currently, the bot can answer the following questions. The numbers map directly 
 9. "What is an expression tree?" by Jeremy Grifski
 10. "What is confidence building?" by Jeremy Grifski
 11. "What is the declared type of a variable?" by Jeremy Grifski
-12. "What is method overriding?" by Jeremy Grifski, Le Chang, Zihe Fang, Alexia Scarvelli, Tae Yeon Kim
-13. "What is method overloading?" by Jeremy Grifski
-14. "What is the implements relationship?" by Jeremy Grifski, Yibo Gan
-15. "What is the extends relationship?" by Jeremy Grifski
-16. "What is a mathematical string?" by Jeremy Grifski
-17. "What is mathematical string notation for concatenation?" by Jeremy Grifski
-18. "What is a parameter mode?" by Jeremy Grifski
-19. "What is restores mode?" by Jeremy Grifski
-20. "What is a queue?" by Jeremy Grifski
-21. "What is a set?" by Jeremy Grifski
-22. "What is a stack?" by Jeremy Grifski
-23. "What does FIFO mean?" by Jeremy Grifski
-24. "What does LIFO mean?" by Jeremy Grifski
-25. "What is the object type of a variable?" by Kelvin Nguyen
-26. "What is an immutable type?" by Jacob Skarsten, Ziqing Zhao
-27. "What is replaces mode?" by Shaan Patel
-28. "What is updates mode?" by Colin Russel
-29. "Are arrays immutable or mutable?" by Jessica Molitor
-30. "What is inheritance?" by Xingzhi Dai
-31. "What is clears mode?" by Ethan Chilton
-32. "What is the default parameter mode when none is specified in the method contract?" by Dan Brace
-33. "What is the drawback and/or problem with aliasing?" by Michael Grady
-34. "What is a superclass?" by Ben Janita
-35. "Will you be my girlfriend?" by Ben Janita
-36. "What is an interface?" by Chenmeinian Guo, Tim Keck
-37. "Is testing an expensive waste of time?" by Jason Su
-38. "What is the purpose of the queue data structure?" by Ying Liang
-39. "What is Recursion?" by Gani Sagiev, Tim Keck
-40. "What is the difference between unit and integration testing?" by Jacob Kolaczkowski
-41. "What is the difference between testing and debugging?" by John DiFilippo, Ahmed Mohamed
-42. "What is object-oriented-programming?" by Felix Ji
-43. "What type of method is a JUnit test case?" by Matthew Alfieri
-44. "What is aliasing?" by Yuhang Huang
-45. "Is XML a mutable or immutable type?" by Drishti Mittal
-46. "Is a string a mutable or immutable type?" by Grant McGeehen
-47. "What is the difference between copyFrom and transferFrom?" by Jashira Herrera Brito
-48. "What is the purpose of testing and what can it not prove?" by Nick Cheong
-49. "What does the method `.divide()` for NaturalNumber return?" by Kate Goertz
-50. "What is the benefit of interval halving?" by Ashir Faruq
-51. "What is mathematical induction?" by Om Amin
-52. "What is the Set data type?" by Luke Thompson
-53. "What is the correct expression to see if an integer is odd in Java?" by Kurt Wanner
-54. "What is XML?" by Tim Keck
-55. "What is mutability?" by Tim Keck
-56. "What is a comparator?" by Tim Keck
-57. "What is a method contract?" by Tim Keck
-58. "How do I trace a variable through a recursive method?" by Tim Keck
-59. "What is the difference between a remainder and a modulus?" by Darrel Jobin
-60. "What are the four parameter modes?" by Darrel Jobin
-61. "What are NaturalNumberKernal's three methods?" by Alyssa Wiegman, Catherine Wu
-62. "What is a procedure?" by Amit Bharathan
-63. "What is the implementer's role?" by Daniel Han
-64. "What is the Standard interface?" by Andrew Nida
-65. "What are some ways to iterate over non-ordered data structures like sets?" by Josh Grismer
-66. "Is restores mode a default parameter mode?" by Allen Zhang
+12. "What is the static type of a variable?" by Jeremy Grifski
+13. "What is method overriding?" by Jeremy Grifski, Le Chang, Zihe Fang, Alexia Scarvelli, Tae Yeon Kim
+14. "What is method overloading?" by Jeremy Grifski
+15. "What is the implements relationship?" by Jeremy Grifski, Yibo Gan
+16. "What is the extends relationship?" by Jeremy Grifski, Yi-You (Joseph) Chiu
+17. "What is a mathematical string?" by Jeremy Grifski
+18. "What is mathematical string notation for concatenation?" by Jeremy Grifski
+19. "What is a parameter mode?" by Jeremy Grifski
+20. "What is restores mode?" by Jeremy Grifski
+21. "What is a queue?" by Jeremy Grifski
+22. "What is a set?" by Jeremy Grifski
+23. "What is a stack?" by Jeremy Grifski
+24. "What does FIFO mean?" by Jeremy Grifski
+25. "What does LIFO mean?" by Jeremy Grifski
+26. "What is the object type of a variable?" by Kelvin Nguyen
+27. "What is an immutable type?" by Jacob Skarsten, Ziqing Zhao
+28. "What is replaces mode?" by Shaan Patel
+29. "What is updates mode?" by Colin Russel
+30. "Are arrays immutable or mutable?" by Jessica Molitor
+31. "What is inheritance?" by Xingzhi Dai
+32. "What is clears mode?" by Ethan Chilton
+33. "What is the default parameter mode when none is specified in the method contract?" by Dan Brace
+34. "What is the drawback and/or problem with aliasing?" by Michael Grady
+35. "What is a superclass?" by Ben Janita
+36. "Will you be my girlfriend?" by Ben Janita
+37. "What is an interface?" by Chenmeinian Guo, Tim Keck
+38. "Is testing an expensive waste of time?" by Jason Su
+39. "What is the purpose of the queue data structure?" by Ying Liang
+40. "What is Recursion?" by Gani Sagiev, Tim Keck
+41. "What is the difference between unit and integration testing?" by Jacob Kolaczkowski
+42. "What is the difference between testing and debugging?" by John DiFilippo, Ahmed Mohamed
+43. "What is object-oriented programming (OOP)?" by Felix Ji
+44. "What type of method is a JUnit test case?" by Matthew Alfieri
+45. "What is aliasing?" by Yuhang Huang
+46. "Is XMLTree a mutable or immutable type?" by Drishti Mittal
+47. "Is a string a mutable or immutable type?" by Grant McGeehen
+48. "What is the difference between copyFrom and transferFrom?" by Jashira Herrera Brito
+49. "What is the purpose of testing and what can it not prove?" by Nick Cheong
+50. "What does the method `.divide()` for NaturalNumber return?" by Kate Goertz
+51. "What is the benefit of interval halving?" by Ashir Faruq
+52. "What is mathematical induction?" by Om Amin
+53. "What is the Set data type?" by Luke Thompson
+54. "What is the correct expression to see if an integer is odd in Java?" by Kurt Wanner, Yi-You (Joseph) Chiu
+55. "What is XML?" by Tim Keck
+56. "What is mutability?" by Tim Keck
+57. "What is a comparator?" by Tim Keck
+58. "What is a method contract?" by Tim Keck
+59. "How do I trace a variable through a recursive method?" by Tim Keck
+60. "What is the difference between a remainder and a modulus?" by Darrel Jobin
+61. "What are the four parameter modes?" by Darrel Jobin
+62. "What are NaturalNumberKernel's three methods?" by Alyssa Wiegman, Catherine Wu
+63. "What is a procedure?" by Amit Bharathan
+64. "What is the implementer's role?" by Daniel Han
+65. "What is the Standard interface?" by Andrew Nida
+66. "What are some ways to iterate over non-ordered data structures like sets?" by Josh Grismer
+67. "Is restores mode a default parameter mode?" by Allen Zhang
+68. "What is the difference between parameter and argument?" by Lucas Curran
+69. "What is the difference between an expression and a statement?" by Peter Sung
+70. "What is API?" by Yingqi Gao
+71. "What is a boolean?" by Oliver Gwynn
+72. "What is the difference between a public and private method?" by Sammy Schwartz
+73. "What is design by contract for?" by Darin Renusch
+74. "What is RSS?" by Andy Vong
+75. "What is the difference between inheritance and polymorphism?" by Jatin Mamtani
+76. "What is a precondition?" by Akshaya Iyer
+77. "What is short-circuit evaluation?" by Junbo Chen
+78. "What makes two if statements independent?" by Jarrett Reeves, Jeremy Grifski
+79. "What is polymorphism?" by Angstrom Sarkar
+80. "Why can't interfaces have constructors?" by Yingqi Gao
+81. "What is abstraction?" by Yingqi Gao
+82. "What is the difference between interface and abstract class?" by Yingqi Gao
+83. "When should I use newInstance?" by Shivam Engineer
 
 ---
 
