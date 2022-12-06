@@ -1,4 +1,4 @@
 discord.py==1.7.3
-python-dotenv
 discord-py-slash-command==3.0.3
+python-dotenv
 snakemd

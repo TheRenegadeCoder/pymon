@@ -1,4 +1,6 @@
-py -m venv D:\Projects\cs-query-bot\venv
-call D:\Projects\cs-query-bot\venv\Scripts\activate.bat
-pip install -r D:\Projects\cs-query-bot\requirements.txt --no-cache-dir
-python D:\Projects\cs-query-bot\pymon.py
+D:
+cd D:\Projects\cs-query-bot
+py -m venv venv
+call venv\Scripts\activate.bat
+pip install -r requirements.txt --no-cache-dir
+python pymon.py
