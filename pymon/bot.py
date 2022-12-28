@@ -3,32 +3,33 @@ from discord import *
 
 from pymon import utils
 
+
 class Pymon(discord.Client):
     """
     A discord bot for my programming courses.
     """
-    
+
     def __init__(self,) -> None:
         intents = discord.Intents.default()
         super().__init__(
             intents=intents,
             activity=discord.Activity(
-                type=discord.ActivityType.listening, 
+                type=discord.ActivityType.listening,
                 name='student questions'
             ),
             status=discord.Status.idle
         )
         self.tree = app_commands.CommandTree(self)
         self.queries, self.keyword_mapping = utils.refresh_knowledge()
-        
+
     async def on_ready(self):
         """
         Launches when the bot is ready to go.
-        
+
         :return: None
         """
         self.add_slash_commands()
-        
+
     async def on_message(self, message: Message):
         """
         The action to be called when a message is sent.
@@ -38,13 +39,13 @@ class Pymon(discord.Client):
         """
         if message.author != client.user:
             await self._react_on_mention(message)
-            
+
     def add_slash_commands(self):
         """
         A helper method which gives the tree commands access to self.
         All tree commands should go here.
         """
-        
+
         @self.tree.command(
             name="get",
             description="Looks up the answer to a query by its ID.",
@@ -59,14 +60,16 @@ class Pymon(discord.Client):
             embed = discord.Embed(
                 title=f"Pymon v{__version__}: Answer to ID-{index}",
                 color=discord.Color.red(),
-                url=self.queries[index].get("resource", discord.embeds.EmptyEmbed)
+                url=self.queries[index].get(
+                    "resource", discord.embeds.EmptyEmbed)
             )
             embed.add_field(
                 name=self.queries[index].get("query"),
                 value=self.queries[index].get("response"),
                 inline=False
             )
-            similar_queries = self.queries[index].get("similar_queries", [])[:3]
+            similar_queries = self.queries[index].get(
+                "similar_queries", [])[:3]
             if similar_queries:
                 embed.add_field(
                     name="Similar Queries",
@@ -78,7 +81,7 @@ class Pymon(discord.Client):
                 )
 
             await interaction.response.send_message(embed=embed)
-            
+
         @self.tree.command(
             name="study",
             description="Provides a study guide from a set of predetermined tags.",
@@ -104,7 +107,7 @@ class Pymon(discord.Client):
             )
 
             await interaction.response.send_message(embed=embed)
-            
+
         @self.tree.command(
             name="refresh",
             description="Refreshes the bot's knowledge base.",
@@ -120,10 +123,11 @@ class Pymon(discord.Client):
             diff = [x for x in new_queries if x not in self.queries]
             self.queries, self.keyword_mapping = new_queries, new_keyword_mapping
             await interaction.response.send_message(f"{len(diff)} queries modified and/or added.")
-            
+
     async def _react_on_mention(self, message: Message):
         if client.user.mentioned_in(message) and not message.mention_everyone:
-            indices = utils.search(self.keyword_mapping, utils.generate_keywords(message.content))
+            indices = utils.search(self.keyword_mapping,
+                                   utils.generate_keywords(message.content))
             if indices:
                 reply = list()
                 reply.extend([

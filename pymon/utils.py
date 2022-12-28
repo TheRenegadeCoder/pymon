@@ -62,7 +62,8 @@ def search(keyword_to_queries: dict, keywords: list) -> list:
     :param keywords: a list of keywords to lookup
     :return: a list of query indices
     """
-    log.debug(f"Searching for matching queries from the following list of keywords: {keywords}")
+    log.debug(
+        f"Searching for matching queries from the following list of keywords: {keywords}")
     query_count = dict()
     for keyword in keywords:
         query_indices = keyword_to_queries.get(keyword, {})
@@ -154,7 +155,8 @@ def generate_tags_set(queries: list) -> set:
     :param queries: the list of queries from Pymon's brain
     :return: a set of tags represented in Pymon's brain
     """
-    log.debug(f"Generating the unique set of tags from following list of queries: {queries}")
+    log.debug(
+        f"Generating the unique set of tags from following list of queries: {queries}")
     tags = set()
     for query in queries:
         query_tags = query.get("tags", [])
