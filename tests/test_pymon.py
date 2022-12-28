@@ -4,7 +4,7 @@ from urllib.request import urlopen
 
 from dotenv import load_dotenv
 
-import pymon_utils as utils
+import pymon.utils as utils
 
 queries = json.load(open("queries.json"))
 keyword_mapping = utils.generate_keyword_mapping(queries)
