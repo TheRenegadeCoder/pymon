@@ -10,8 +10,6 @@ class Pymon(discord.Client):
     
     def __init__(self,) -> None:
         intents = discord.Intents.default()
-        intents.members = True
-        intents.message_content = True
         super().__init__(
             intents=intents,
             activity=discord.Activity(
