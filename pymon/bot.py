@@ -30,7 +30,6 @@ class Pymon(discord.Client):
         :return: None
         """
         self.add_slash_commands()
-        utils.migrate_v0_to_v1(self.queries, self.brain)
 
     async def on_message(self, message: Message):
         """
