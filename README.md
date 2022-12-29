@@ -40,7 +40,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 2. "What is a primitive type?" by Jeremy Grifski
 3. "How can I create a constant?" by Jeremy Grifski
 4. "What is testing?" by Jeremy Grifski
-5. "What is debugging?" by Jeremy Grifski, Xining Feng
+5. "What is debugging?" by Xining Feng, Jeremy Grifski
 6. "What is correctness?" by Jeremy Grifski
 7. "What is JUnit?" by Jeremy Grifski
 8. "What is unit testing?" by Jeremy Grifski
@@ -48,10 +48,10 @@ Currently, the bot can answer the following questions. The numbers map directly 
 10. "What is confidence building?" by Jeremy Grifski
 11. "What is the declared type of a variable?" by Jeremy Grifski
 12. "What is the static type of a variable?" by Jeremy Grifski
-13. "What is method overriding?" by Jeremy Grifski, Le Chang, Zihe Fang, Alexia Scarvelli, Tae Yeon Kim
+13. "What is method overriding?" by Alexia Scarvelli, Tae Yeon Kim, Le Chang, Zihe Fang, Jeremy Grifski
 14. "What is method overloading?" by Jeremy Grifski
-15. "What is the implements relationship?" by Jeremy Grifski, Yibo Gan
-16. "What is the extends relationship?" by Jeremy Grifski, Yi-You (Joseph) Chiu
+15. "What is the implements relationship?" by Yibo Gan, Jeremy Grifski
+16. "What is the extends relationship?" by Yi-You (Joseph) Chiu, Jeremy Grifski
 17. "What is a mathematical string?" by Jeremy Grifski
 18. "What is mathematical string notation for concatenation?" by Jeremy Grifski
 19. "What is a parameter mode?" by Jeremy Grifski
@@ -72,10 +72,10 @@ Currently, the bot can answer the following questions. The numbers map directly 
 34. "What is the drawback and/or problem with aliasing?" by Michael Grady
 35. "What is a superclass?" by Ben Janita
 36. "Will you be my girlfriend?" by Ben Janita
-37. "What is an interface?" by Chenmeinian Guo, Tim Keck
+37. "What is an interface?" by Tim Keck, Chenmeinian Guo
 38. "Is testing an expensive waste of time?" by Jason Su
 39. "What is the purpose of the queue data structure?" by Ying Liang
-40. "What is Recursion?" by Gani Sagiev, Tim Keck
+40. "What is Recursion?" by Tim Keck, Gani Sagiev
 41. "What is the difference between unit and integration testing?" by Jacob Kolaczkowski
 42. "What is the difference between testing and debugging?" by John DiFilippo, Ahmed Mohamed
 43. "What is object-oriented programming (OOP)?" by Felix Ji
@@ -89,7 +89,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 51. "What is the benefit of interval halving?" by Ashir Faruq
 52. "What is mathematical induction?" by Om Amin
 53. "What is the Set data type?" by Luke Thompson
-54. "What is the correct expression to see if an integer is odd in Java?" by Kurt Wanner, Yi-You (Joseph) Chiu
+54. "What is the correct expression to see if an integer is odd in Java?" by Yi-You (Joseph) Chiu, Kurt Wanner
 55. "What is XML?" by Tim Keck
 56. "What is mutability?" by Tim Keck
 57. "What is a comparator?" by Tim Keck
@@ -97,7 +97,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 59. "How do I trace a variable through a recursive method?" by Tim Keck
 60. "What is the difference between a remainder and a modulus?" by Darrel Jobin
 61. "What are the four parameter modes?" by Darrel Jobin
-62. "What are NaturalNumberKernel's three methods?" by Alyssa Wiegman, Catherine Wu
+62. "What are NaturalNumberKernel's three methods?" by Catherine Wu, Alyssa Wiegman
 63. "What is a procedure?" by Amit Bharathan
 64. "What is the implementer's role?" by Daniel Han
 65. "What is the Standard interface?" by Andrew Nida
