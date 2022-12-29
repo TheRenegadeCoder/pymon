@@ -124,10 +124,16 @@ class Brain:
             tag_id INTEGER,
             query_id INTEGER,
             FOREIGN KEY (tag_id) REFERENCES tags (tag_id),
-            FOREIGN KEY (query_id) REFERENCES queries (query_id),
+            FOREIGN KEY (query_id) REFERENCES queries (query_id)
         )""")
         
     def add_query(self, query: str, response: str, **metadata):
+        """
+        A handy method for adding queries into the database.
+
+        :param query: the question to ask
+        :param response: the answer to that question
+        """
         cur = self.connection.cursor()
         command = "INSERT INTO queries (query, response) VALUES (?, ?)"
         cur.execute(command, (query, response))
@@ -140,16 +146,27 @@ class Brain:
                 command = "SELECT * FROM authors WHERE name = ?"
                 cur.execute(command, (author, ))
                 author_id = cur.fetchone()[0]
-                log.debug(f"Added author with ID-{author_id}")
                 command = "INSERT INTO author_to_query (author_id, query_id) VALUES (?, ?)"
                 cur.execute(command, (author_id, query_id))
         if metadata.get("resources"):
             log.debug(f"Adding resources to query: {metadata.get('resources')}")
-            command = "INSERT OR IGNORE INTO resources (url) VALUES (?)"
-            cur.executemany(command, [(x, ) for x in metadata.get("resources")])
+            for resource in metadata.get('resources'):
+                command = "INSERT OR IGNORE INTO resources (url) VALUES (?)"
+                cur.execute(command, (resource, ))
+                command = "SELECT * FROM resources WHERE url = ?"
+                cur.execute(command, (resource, ))
+                resource_id = cur.fetchone()[0]
+                command = "INSERT INTO resource_to_query (resource_id, query_id) VALUES (?, ?)"
+                cur.execute(command, (resource_id, query_id))
         if metadata.get("tags"):
             log.debug(f"Adding tags to query: {metadata.get('tags')}")
-            command = "INSERT OR IGNORE INTO tags (tag) VALUES (?)"
-            cur.executemany(command, [(x, ) for x in metadata.get("tags")])
+            for tag in metadata.get("tags"):
+                command = "INSERT OR IGNORE INTO tags (tag) VALUES (?)"
+                cur.execute(command, (tag, ))
+                command = "SELECT * FROM tags WHERE tag = ?"
+                cur.execute(command, (tag, ))
+                tag_id = cur.fetchone()[0]
+                command = "INSERT INTO tag_to_query (tag_id, query_id) VALUES (?, ?)"
+                cur.execute(command, (tag_id, query_id))
         self.connection.commit()
         
