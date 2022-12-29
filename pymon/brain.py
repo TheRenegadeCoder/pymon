@@ -237,6 +237,55 @@ class Brain:
         """
         tags = cur.execute(command).fetchall()
         return [tag[0] for tag in tags]
+    
+    def get_queries_by_tag(self, tag: str) -> list[models.Query]:
+        cur = self.connection.cursor()
+        command = """
+            SELECT
+                queries.query_id,
+                query, 
+                response,
+                authors.name,
+                resources.url,
+                tags.tag
+            FROM
+                queries
+            LEFT JOIN author_to_query
+                ON author_to_query.query_id = queries.query_id
+            LEFT JOIN authors
+                ON author_to_query.author_id = authors.author_id
+            LEFT JOIN resource_to_query
+                ON resource_to_query.query_id = queries.query_id
+            LEFT JOIN resources
+                ON resource_to_query.resource_id = resources.resource_id
+            LEFT JOIN tag_to_query
+                ON tag_to_query.query_id = queries.query_id
+            LEFT JOIN tags
+                ON tag_to_query.tag_id = tags.tag_id
+            WHERE
+                tags.tag = ?
+        """
+        matches = cur.execute(command, (tag, )).fetchall()
+        log.debug(f"Retrieved queries by tag ({tag}): {matches}")
+        
+        groups = defaultdict(list)
+        for match in matches:
+            groups[match["query_id"]].append(match)
+
+        results = []
+        for group in groups.values():
+            row = list(zip(*group))
+            results.append(models.Query(
+                query_id=list(set(row[0]))[0],
+                query=list(set(row[1]))[0],
+                response=list(set(row[2]))[0],
+                authors=list(set(row[3])) if row[3][0] else [],
+                resources=list(set(row[4])) if row[4][0] else [],
+                tags=list(set(row[5])) if row[5][0] else []
+            ))
+
+        return results
+
 
     def search(self, key_phrase: str) -> list[models.Query]:
         """

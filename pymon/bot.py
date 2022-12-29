@@ -100,12 +100,12 @@ class Pymon(discord.Client):
             :param ctx: the context to send messages to
             :return: None
             """
-            matches = utils.get_queries_from_tag(self.queries, tag)
+            matches = self.brain.get_queries_by_tag(tag)
             embed = discord.Embed(
                 title=f"Pymon v{VERSION}: Study Guide for {tag}",
                 color=discord.Color.red(),
                 description="\n".join(
-                    f"• ID-{match[0]}: {utils.create_md_link(match[1].get('resource'), match[1].get('query'))}"
+                    f"• ID-{match.query_id}: {utils.create_md_link(match.resources[0] if match.resources else None, match.query)}"
                     for match in matches
                 )
             )
