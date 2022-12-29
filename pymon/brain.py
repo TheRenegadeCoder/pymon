@@ -237,8 +237,13 @@ class Brain:
         """
         tags = cur.execute(command).fetchall()
         return [tag[0] for tag in tags]
-    
+
     def get_queries_by_tag(self, tag: str) -> list[models.Query]:
+        """
+        Retrieves all queries matching the given tag.
+
+        :param tag: the tag to lookup
+        """
         cur = self.connection.cursor()
         command = """
             SELECT
@@ -267,7 +272,7 @@ class Brain:
         """
         matches = cur.execute(command, (tag, )).fetchall()
         log.debug(f"Retrieved queries by tag ({tag}): {matches}")
-        
+
         groups = defaultdict(list)
         for match in matches:
             groups[match["query_id"]].append(match)
@@ -285,7 +290,6 @@ class Brain:
             ))
 
         return results
-
 
     def search(self, key_phrase: str) -> list[models.Query]:
         """
