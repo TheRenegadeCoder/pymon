@@ -38,7 +38,7 @@ class Pymon(discord.Client):
         :param message: the message to scrutinize
         :return: None
         """
-        if message.author != client.user:
+        if message.author != self.user:
             await self._react_on_mention(message)
 
     def add_slash_commands(self):
@@ -97,7 +97,7 @@ class Pymon(discord.Client):
             :param ctx: the context to send messages to
             :return: None
             """
-            matches = utils.get_queries_from_tag(queries, tag)
+            matches = utils.get_queries_from_tag(self.queries, tag)
             embed = discord.Embed(
                 title=f"Pymon v{__version__}: Study Guide for {tag}",
                 color=discord.Color.red(),
@@ -126,7 +126,7 @@ class Pymon(discord.Client):
             await interaction.response.send_message(f"{len(diff)} queries modified and/or added.")
 
     async def _react_on_mention(self, message: Message):
-        if client.user.mentioned_in(message) and not message.mention_everyone:
+        if self.user.mentioned_in(message) and not message.mention_everyone:
             indices = utils.search(self.keyword_mapping,
                                    utils.generate_keywords(message.content))
             if indices:
