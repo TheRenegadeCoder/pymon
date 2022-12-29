@@ -107,21 +107,6 @@ class Pymon(discord.Client):
 
             await interaction.response.send_message(embed=embed)
 
-        @self.tree.command(
-            name="refresh",
-            description="Refreshes the bot's knowledge base.",
-        )
-        async def _refresh(interaction: discord.Interaction):
-            """
-            Refreshes the bot's knowledge base.
-
-            :param ctx: the context to send messages to
-            :return: None
-            """
-            new_queries, new_keyword_mapping = utils.refresh_knowledge()
-            diff = [x for x in new_queries if x not in self.queries]
-            self.queries, self.keyword_mapping = new_queries, new_keyword_mapping
-            await interaction.response.send_message(f"{len(diff)} queries modified and/or added.")
 
     async def _react_on_mention(self, message: Message):
         if self.user.mentioned_in(message) and not message.mention_everyone:
