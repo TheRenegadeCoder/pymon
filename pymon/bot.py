@@ -33,6 +33,7 @@ class Pymon(discord.Client):
         :return: None
         """
         self.add_slash_commands()
+        await self.tree.sync()
 
     async def on_message(self, message: Message):
         """
@@ -99,7 +100,8 @@ class Pymon(discord.Client):
             """
             Prints out a list of questions relevant to the tag.
 
-            :param ctx: the context to send messages to
+            :param interaction: the context to send messages to
+            :param tag: the tag used to generate the study guide
             :return: None
             """
             matches = self.brain.get_queries_by_tag(tag)
@@ -113,6 +115,33 @@ class Pymon(discord.Client):
             )
 
             await interaction.response.send_message(embed=embed)
+            
+        @self.tree.command(
+            name="new_query",
+            description="Adds a new query to Pymon."
+        )
+        @app_commands.choices(tag=[
+            app_commands.Choice(name=item, value=item) for item in self.brain.get_tags()
+        ])
+        async def _new_query(interaction: discord.Interaction, query: str, response: str, author: str = None, tag: str = None, resource: str = None):
+            """
+            Adds a new query to Pymon.
+
+            :param interaction: the interaction object that stores information about the user who triggered this command
+            :param query: the question that you are answering
+            :param response: the answer to the question
+            :param author: the author of the new query, defaults to discord username
+            :param tag: the tag that helps categorize the queries, defaults to None
+            :param resource: a URL to provide additional context to the query, defaults to None
+            """
+            query_id = self.brain.add_query(
+                query=query,
+                response=response,
+                authors=[author] if author else interaction.user.display_name,
+                tags=[tag] if tag else None,
+                resources=[resource] if resource else None
+            )
+            interaction.response.send_message(f"Thanks for adding query ID-{query_id}: {query}—{response}")
 
     async def _react_on_mention(self, message: Message):
         if self.user.mentioned_in(message) and not message.mention_everyone:

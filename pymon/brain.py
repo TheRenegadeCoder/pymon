@@ -136,7 +136,7 @@ class Brain:
             END;
         """)
 
-    def add_query(self, query: str, response: str, **metadata) -> None:
+    def add_query(self, query: str, response: str, **metadata) -> int:
         """
         A handy method for adding queries into the database.
 
@@ -179,6 +179,7 @@ class Brain:
                 command = "INSERT INTO tag_to_query (tag_id, query_id) VALUES (?, ?)"
                 cur.execute(command, (tag_id, query_id))
         self.connection.commit()
+        return query_id
 
     def get_query(self, index: int) -> models.Query:
         """
@@ -353,6 +354,9 @@ class Brain:
         return results
     
     def get_all_queries(self) -> list[models.Query]:
+        """
+        A handy method for pulling out all of the queries in the database.
+        """
         cur = self.connection.cursor()
         command = """
             SELECT
