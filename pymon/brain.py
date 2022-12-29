@@ -47,17 +47,13 @@ class Brain:
             try:
                 command()
             except sqlite3.OperationalError:
-                log.debug(
-                    f"Failure to create table as it already exists: {command}"
-                )
+                log.debug(f"Failure to create table as it already exists: {command}")
                 
     def init_queries(self):
         cur = self.connection.cursor()
-        cur.execute("""CREATE TABLE queries(
-            query_id INTEGER PRIMARY KEY, 
-            date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
-            query VARCHAR, 
-            response VARCHAR
+        cur.execute("""CREATE VIRTUAL TABLE queries USING FTS5(
+            query, 
+            response
         )""")
         
     def init_authors(self):
@@ -91,7 +87,7 @@ class Brain:
             date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
             author_id INTEGER,
             query_id INTEGER,
-            FOREIGN KEY (query_id) REFERENCES queries (query_id),
+            FOREIGN KEY (query_id) REFERENCES queries (rowid),
             FOREIGN KEY (author_id) REFERENCES authors (author_id)
         )""")
         
@@ -102,8 +98,8 @@ class Brain:
             date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
             resource_id INTEGER,
             query_id INTEGER,
-            FOREIGN KEY (resource_id) REFERENCES queries (resource_id),
-            FOREIGN KEY (author_id) REFERENCES authors (author_id)
+            FOREIGN KEY (query_id) REFERENCES queries (rowid),
+            FOREIGN KEY (resource_id) REFERENCES resources (resource_id)
         )""")
         
     def init_tag_to_query(self):
@@ -113,7 +109,7 @@ class Brain:
             date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
             tag_id INTEGER,
             query_id INTEGER,
-            FOREIGN KEY (tag_id) REFERENCES queries (tag_id),
-            FOREIGN KEY (author_id) REFERENCES authors (author_id)
+            FOREIGN KEY (query_id) REFERENCES queries (rowid),
+            FOREIGN KEY (tag_id) REFERENCES tags (tag_id)
         )""")
         

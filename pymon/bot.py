@@ -127,8 +127,7 @@ class Pymon(discord.Client):
 
     async def _react_on_mention(self, message: Message):
         if self.user.mentioned_in(message) and not message.mention_everyone:
-            indices = utils.search(self.keyword_mapping,
-                                   utils.generate_keywords(message.content))
+            indices = utils.search(self.keyword_mapping, utils.generate_keywords(message.content))
             if indices:
                 reply = list()
                 reply.extend([
