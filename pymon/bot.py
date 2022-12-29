@@ -141,8 +141,7 @@ class Pymon(discord.Client):
                 tags=[tag] if tag else None,
                 resources=[resource] if resource else None
             )
-            interaction.response.send_message(
-                f"Thanks for adding query ID-{query_id}: {query}—{response}")
+            await interaction.response.send_message(f"Thanks for adding query ID-{query_id}: {query}—{response}")
 
     async def _react_on_mention(self, message: Message):
         """
