@@ -34,7 +34,13 @@ class Brain:
         """
 
         tables_commands = [
-            self.init_queries
+            self.init_queries,
+            self.init_authors,
+            self.init_resources,
+            self.init_tags,
+            self.init_author_to_query,
+            self.init_resource_to_query,
+            self.init_tag_to_query
         ]
 
         for command in tables_commands:
@@ -60,5 +66,54 @@ class Brain:
             author_id INTEGER PRIMARY KEY, 
             date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
             name VARCHAR
+        )""")
+        
+    def init_resources(self):
+        cur = self.connection.cursor()
+        cur.execute("""CREATE TABLE resources(
+            resource_id INTEGER PRIMARY KEY, 
+            date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
+            url VARCHAR
+        )""")
+        
+    def init_tags(self):
+        cur = self.connection.cursor()
+        cur.execute("""CREATE TABLE tags(
+            tag_id INTEGER PRIMARY KEY, 
+            date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
+            tag VARCHAR
+        )""")
+        
+    def init_author_to_query(self):
+        cur = self.connection.cursor()
+        cur.execute("""CREATE TABLE author_to_query(
+            author_to_query_id INTEGER PRIMARY KEY, 
+            date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
+            author_id INTEGER,
+            query_id INTEGER,
+            FOREIGN KEY (query_id) REFERENCES queries (query_id),
+            FOREIGN KEY (author_id) REFERENCES authors (author_id)
+        )""")
+        
+    def init_resource_to_query(self):
+        cur = self.connection.cursor()
+        cur.execute("""CREATE TABLE resource_to_query(
+            resource_to_query_id INTEGER PRIMARY KEY, 
+            date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
+            resource_id INTEGER,
+            query_id INTEGER,
+            FOREIGN KEY (resource_id) REFERENCES queries (resource_id),
+            FOREIGN KEY (author_id) REFERENCES authors (author_id)
+        )""")
+        
+    def init_tag_to_query(self):
+        cur = self.connection.cursor()
+        cur.execute("""CREATE TABLE tag_to_query(
+            tag_to_query_id INTEGER PRIMARY KEY, 
+            date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
+            tag_id INTEGER,
+            query_id INTEGER,
+            FOREIGN KEY (tag_id) REFERENCES queries (tag_id),
+            FOREIGN KEY (author_id) REFERENCES authors (author_id)
         )""")
         
