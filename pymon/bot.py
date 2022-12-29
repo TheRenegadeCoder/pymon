@@ -1,7 +1,7 @@
 import discord
 from discord import *
 
-from pymon import utils
+from pymon import utils, brain
 
 
 class Pymon(discord.Client):
@@ -20,6 +20,7 @@ class Pymon(discord.Client):
             status=discord.Status.idle
         )
         self.tree = app_commands.CommandTree(self)
+        self.brain = brain.Brain()
         self.queries, self.keyword_mapping = utils.refresh_knowledge()
 
     async def on_ready(self):
