@@ -51,10 +51,24 @@ class Brain:
                 
     def init_queries(self):
         cur = self.connection.cursor()
-        cur.execute("""CREATE VIRTUAL TABLE queries USING FTS5(
-            query, 
-            response
+        cur.execute("""CREATE TABLE queries(
+            query_id INTEGER PRIMARY KEY,
+            date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
+            query VARCHAR,
+            response VARCHAR   
         )""")
+        cur.execute("""CREATE VIRTUAL TABLE queries_fts USING FTS5(
+            query, 
+            response,
+            content='queries',
+            content_rowid='query_id'
+        )""")
+        cur.execute("""CREATE TRIGGER query_insert AFTER INSERT ON queries
+            BEGIN
+                INSERT INTO queries_fts (rowid, query, response)
+                VALUES (new.query_id, new.query, new.response);
+            END;
+        """)
         
     def init_authors(self):
         cur = self.connection.cursor()
@@ -69,7 +83,7 @@ class Brain:
         cur.execute("""CREATE TABLE resources(
             resource_id INTEGER PRIMARY KEY, 
             date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
-            url VARCHAR
+            url VARCHAR UNIQUE
         )""")
         
     def init_tags(self):
@@ -77,7 +91,7 @@ class Brain:
         cur.execute("""CREATE TABLE tags(
             tag_id INTEGER PRIMARY KEY, 
             date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
-            tag VARCHAR
+            tag VARCHAR UNIQUE
         )""")
         
     def init_author_to_query(self):
@@ -87,8 +101,8 @@ class Brain:
             date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
             author_id INTEGER,
             query_id INTEGER,
-            FOREIGN KEY (query_id) REFERENCES queries (rowid),
-            FOREIGN KEY (author_id) REFERENCES authors (author_id)
+            FOREIGN KEY (author_id) REFERENCES authors (author_id),
+            FOREIGN KEY (query_id) REFERENCES queries (query_id)
         )""")
         
     def init_resource_to_query(self):
@@ -98,8 +112,8 @@ class Brain:
             date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
             resource_id INTEGER,
             query_id INTEGER,
-            FOREIGN KEY (query_id) REFERENCES queries (rowid),
-            FOREIGN KEY (resource_id) REFERENCES resources (resource_id)
+            FOREIGN KEY (resource_id) REFERENCES resources (resource_id),
+            FOREIGN KEY (query_id) REFERENCES queries (query_id)
         )""")
         
     def init_tag_to_query(self):
@@ -109,8 +123,8 @@ class Brain:
             date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
             tag_id INTEGER,
             query_id INTEGER,
-            FOREIGN KEY (query_id) REFERENCES queries (rowid),
-            FOREIGN KEY (tag_id) REFERENCES tags (tag_id)
+            FOREIGN KEY (tag_id) REFERENCES tags (tag_id),
+            FOREIGN KEY (query_id) REFERENCES queries (query_id),
         )""")
         
     def add_query(self, query: str, response: str, **metadata):
@@ -120,8 +134,22 @@ class Brain:
         query_id = cur.lastrowid
         if metadata.get("authors"):
             log.debug(f"Adding authors to query: {metadata.get('authors')}")
-            command = "INSERT OR IGNORE INTO authors (name) VALUES (?)"
-            cur.executemany(command, [(x, ) for x in metadata.get("authors")])
-            author_id = cur.lastrowid
+            for author in metadata.get("authors"):
+                command = "INSERT OR IGNORE INTO authors (name) VALUES (?)"
+                cur.execute(command, (author, ))
+                command = "SELECT * FROM authors WHERE name = ?"
+                cur.execute(command, (author, ))
+                author_id = cur.fetchone()[0]
+                log.debug(f"Added author with ID-{author_id}")
+                command = "INSERT INTO author_to_query (author_id, query_id) VALUES (?, ?)"
+                cur.execute(command, (author_id, query_id))
+        if metadata.get("resources"):
+            log.debug(f"Adding resources to query: {metadata.get('resources')}")
+            command = "INSERT OR IGNORE INTO resources (url) VALUES (?)"
+            cur.executemany(command, [(x, ) for x in metadata.get("resources")])
+        if metadata.get("tags"):
+            log.debug(f"Adding tags to query: {metadata.get('tags')}")
+            command = "INSERT OR IGNORE INTO tags (tag) VALUES (?)"
+            cur.executemany(command, [(x, ) for x in metadata.get("tags")])
         self.connection.commit()
         

@@ -194,5 +194,7 @@ def migrate_v0_to_v1(queries: list, brain: brain.Brain):
     for i, query in enumerate(queries):
         if i != 0:
             log.debug(f"Migrating JSON query to SQLite database: {query}")
-            query["authors"] = query["credit"]
+            query["authors"] = query.get("credit")
+            if query.get("resource"):
+                query["resources"] = [query.get("resource")]
             brain.add_query(**query)
