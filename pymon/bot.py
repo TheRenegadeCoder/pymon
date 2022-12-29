@@ -115,7 +115,7 @@ class Pymon(discord.Client):
             )
 
             await interaction.response.send_message(embed=embed)
-            
+
         @self.tree.command(
             name="new_query",
             description="Adds a new query to Pymon."
@@ -141,9 +141,15 @@ class Pymon(discord.Client):
                 tags=[tag] if tag else None,
                 resources=[resource] if resource else None
             )
-            interaction.response.send_message(f"Thanks for adding query ID-{query_id}: {query}—{response}")
+            interaction.response.send_message(
+                f"Thanks for adding query ID-{query_id}: {query}—{response}")
 
     async def _react_on_mention(self, message: Message):
+        """
+        A helper method for generating reactions to student questions.
+
+        :param message: the message to react to
+        """
         if self.user.mentioned_in(message) and not message.mention_everyone:
             queries: list[models.Query] = self.brain.search(
                 message.clean_content.removeprefix("@Pymon"))
