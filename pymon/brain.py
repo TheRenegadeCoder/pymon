@@ -1,6 +1,8 @@
 import logging
 import sqlite3
 
+from pymon import models
+
 log = logging.getLogger(__name__)
 
 
@@ -11,6 +13,7 @@ class Brain:
         """
         self.connection = self.init_connection("pymon.db")
         self.init_db()
+        self.search("magic")
         
     def init_connection(self, name: str):
         """
@@ -48,7 +51,7 @@ class Brain:
             try:
                 command()
             except sqlite3.OperationalError:
-                log.debug(f"Failure to run database command: {command}")
+                log.warning(f"Failure to run database command: {command}")
                 
     def init_queries(self):
         cur = self.connection.cursor()
@@ -131,7 +134,7 @@ class Brain:
             END;
         """)
         
-    def add_query(self, query: str, response: str, **metadata):
+    def add_query(self, query: str, response: str, **metadata) -> None:
         """
         A handy method for adding queries into the database.
 
@@ -174,3 +177,37 @@ class Brain:
                 cur.execute(command, (tag_id, query_id))
         self.connection.commit()
         
+    def search(self, key_phrase: str) -> list[models.Query]:
+        """
+        Searches the queries table for matching searches.
+
+        :param key_phrase: the phrase to search up
+        :return: a list of queries that match the user's search phrase
+        """
+        cur = self.connection.cursor()
+        command = """
+            SELECT 
+                queries_fts.rowid,
+                query, 
+                response,
+                authors.name,
+                resources.url
+            FROM 
+                queries_fts 
+            LEFT JOIN author_to_query
+                ON author_to_query.query_id = queries_fts.rowid
+            LEFT JOIN authors
+                ON author_to_query.author_id = authors.author_id
+            LEFT JOIN resource_to_query
+                ON resource_to_query.query_id = queries_fts.rowid
+            LEFT JOIN resources
+                ON resource_to_query.resource_id = resources.resource_id
+            WHERE 
+                queries_fts MATCH ? 
+            ORDER BY 
+                rank
+        """
+        matches = cur.execute(command, (key_phrase, )).fetchall()
+        log.debug(f"TEST: {list(matches[0])}")
+        return [models.Query(*query) for query in matches]
+    
