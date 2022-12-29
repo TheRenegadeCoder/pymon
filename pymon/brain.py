@@ -222,6 +222,19 @@ class Brain:
             tags = list(set(row[5])) if row[5][0] else []
         )
         
+    def get_tags(self) -> list[str]:
+        cur = self.connection.cursor()
+        command = """
+            SELECT
+                tag
+            FROM
+                tags
+            ORDER BY
+                tag
+        """
+        tags = cur.execute(command).fetchall()
+        return [tag[0] for tag in tags]
+        
     def search(self, key_phrase: str) -> list[models.Query]:
         """
         Searches the queries table for matching searches.

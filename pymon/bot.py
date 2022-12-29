@@ -90,9 +90,9 @@ class Pymon(discord.Client):
             name="study",
             description="Provides a study guide from a set of predetermined tags.",
         )
-        #@app_commands.choices(tag=[
-        #    app_commands.Choice(name=item, value=item) for item in sorted(utils.generate_tags_set(self.queries))
-        #])
+        @app_commands.choices(tag=[
+            app_commands.Choice(name=item, value=item) for item in self.brain.get_tags()
+        ])
         async def _study(interaction: discord.Interaction, tag: str):
             """
             Prints out a list of questions relevant to the tag.
@@ -102,7 +102,7 @@ class Pymon(discord.Client):
             """
             matches = utils.get_queries_from_tag(self.queries, tag)
             embed = discord.Embed(
-                title=f"Pymon v{__version__}: Study Guide for {tag}",
+                title=f"Pymon v{VERSION}: Study Guide for {tag}",
                 color=discord.Color.red(),
                 description="\n".join(
                     f"• ID-{match[0]}: {utils.create_md_link(match[1].get('resource'), match[1].get('query'))}"
