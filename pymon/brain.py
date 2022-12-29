@@ -40,14 +40,15 @@ class Brain:
             self.init_tags,
             self.init_author_to_query,
             self.init_resource_to_query,
-            self.init_tag_to_query
+            self.init_tag_to_query,
+            self.init_triggers
         ]
 
         for command in tables_commands:
             try:
                 command()
             except sqlite3.OperationalError:
-                log.debug(f"Failure to create table as it already exists: {command}")
+                log.debug(f"Failure to run database command: {command}")
                 
     def init_queries(self):
         cur = self.connection.cursor()
@@ -63,12 +64,6 @@ class Brain:
             content='queries',
             content_rowid='query_id'
         )""")
-        cur.execute("""CREATE TRIGGER query_insert AFTER INSERT ON queries
-            BEGIN
-                INSERT INTO queries_fts (rowid, query, response)
-                VALUES (new.query_id, new.query, new.response);
-            END;
-        """)
         
     def init_authors(self):
         cur = self.connection.cursor()
@@ -126,6 +121,15 @@ class Brain:
             FOREIGN KEY (tag_id) REFERENCES tags (tag_id),
             FOREIGN KEY (query_id) REFERENCES queries (query_id)
         )""")
+        
+    def init_triggers(self):
+        cur = self.connection.cursor()
+        cur.execute("""CREATE TRIGGER query_insert AFTER INSERT ON queries
+            BEGIN
+                INSERT INTO queries_fts (rowid, query, response)
+                VALUES (new.query_id, new.query, new.response);
+            END;
+        """)
         
     def add_query(self, query: str, response: str, **metadata):
         """
