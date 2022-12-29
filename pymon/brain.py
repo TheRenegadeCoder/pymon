@@ -61,7 +61,7 @@ class Brain:
         cur.execute("""CREATE TABLE authors(
             author_id INTEGER PRIMARY KEY, 
             date_added DATETIME DEFAULT CURRENT_TIMESTAMP, 
-            name VARCHAR
+            name VARCHAR UNIQUE
         )""")
         
     def init_resources(self):
@@ -112,4 +112,16 @@ class Brain:
             FOREIGN KEY (query_id) REFERENCES queries (rowid),
             FOREIGN KEY (tag_id) REFERENCES tags (tag_id)
         )""")
+        
+    def add_query(self, query: str, response: str, **metadata):
+        cur = self.connection.cursor()
+        command = "INSERT INTO queries (query, response) VALUES (?, ?)"
+        cur.execute(command, (query, response))
+        query_id = cur.lastrowid
+        if metadata.get("authors"):
+            log.debug(f"Adding authors to query: {metadata.get('authors')}")
+            command = "INSERT OR IGNORE INTO authors (name) VALUES (?)"
+            cur.executemany(command, [(x, ) for x in metadata.get("authors")])
+            author_id = cur.lastrowid
+        self.connection.commit()
         

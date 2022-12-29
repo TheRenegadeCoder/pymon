@@ -6,6 +6,8 @@ from urllib.request import urlopen
 
 from dotenv import load_dotenv
 
+from pymon import brain
+
 log = logging.getLogger(__name__)
 
 
@@ -181,3 +183,16 @@ def get_queries_from_tag(queries: list, tag: str) -> list[tuple[int, dict]]:
             matches.append((i, query))
     log.debug(f"Found queries that match tag as follows: {matches}")
     return matches
+
+def migrate_v0_to_v1(queries: list, brain: brain.Brain):
+    """
+    A legacy function for migrating JSON data to a SQLite databse.
+
+    :param queries: a list of queries
+    :param brain: the SQLite database connection
+    """
+    for i, query in enumerate(queries):
+        if i != 0:
+            log.debug(f"Migrating JSON query to SQLite database: {query}")
+            query["authors"] = query["credit"]
+            brain.add_query(**query)
