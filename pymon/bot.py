@@ -21,7 +21,6 @@ class Pymon(discord.Client):
         )
         self.tree = app_commands.CommandTree(self)
         self.brain = brain.Brain()
-        self.queries, self.keyword_mapping = utils.refresh_knowledge()
 
     async def on_ready(self):
         """
@@ -59,7 +58,7 @@ class Pymon(discord.Client):
             :return: None
             """
             embed = discord.Embed(
-                title=f"Pymon v{__version__}: Answer to ID-{index}",
+                title=f"Pymon v{VERSION}: Answer to ID-{index}",
                 color=discord.Color.red(),
                 url=self.queries[index].get("resource", discord.embeds.EmptyEmbed)
             )
