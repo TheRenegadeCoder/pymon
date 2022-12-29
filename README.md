@@ -48,7 +48,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 10. "What is confidence building?" by Jeremy Grifski
 11. "What is the declared type of a variable?" by Jeremy Grifski
 12. "What is the static type of a variable?" by Jeremy Grifski
-13. "What is method overriding?" by Zihe Fang, Le Chang, Jeremy Grifski, Alexia Scarvelli, Tae Yeon Kim
+13. "What is method overriding?" by Jeremy Grifski, Alexia Scarvelli, Zihe Fang, Tae Yeon Kim, Le Chang
 14. "What is method overloading?" by Jeremy Grifski
 15. "What is the implements relationship?" by Yibo Gan, Jeremy Grifski
 16. "What is the extends relationship?" by Yi-You (Joseph) Chiu, Jeremy Grifski
@@ -77,7 +77,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 39. "What is the purpose of the queue data structure?" by Ying Liang
 40. "What is Recursion?" by Gani Sagiev, Tim Keck
 41. "What is the difference between unit and integration testing?" by Jacob Kolaczkowski
-42. "What is the difference between testing and debugging?" by John DiFilippo, Ahmed Mohamed
+42. "What is the difference between testing and debugging?" by Ahmed Mohamed, John DiFilippo
 43. "What is object-oriented programming (OOP)?" by Felix Ji
 44. "What type of method is a JUnit test case?" by Matthew Alfieri
 45. "What is aliasing?" by Yuhang Huang
@@ -121,6 +121,7 @@ Currently, the bot can answer the following questions. The numbers map directly 
 83. "When should I use newInstance?" by Shivam Engineer
 84. "What is an observer pattern?" by Jayshuk Pandrangi
 85. "What is a loop invariant?" by Jayshuk Pandrangi
+86. "What is MVC?" by Yuheng Long (Simon)
 
 ---
 
