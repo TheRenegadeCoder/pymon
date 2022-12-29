@@ -1,8 +1,8 @@
-import json
 
 import snakemd
 
-queries = json.load(open("queries.json"))
+from pymon import brain
+
 
 doc = snakemd.new_doc("README")
 
@@ -95,10 +95,11 @@ doc.add_paragraph(
 )
 
 questions = []
+pymon_brain = brain.Brain()
+queries = pymon_brain.get_all_queries()
 for query in queries:
-    if query.get("query"):
-        item = f"\"{query.get('query')}\" by {', '.join(query.get('credit'))}"
-        questions.append(item)
+    item = f"\"{query.query}\" by {', '.join(query.authors)}"
+    questions.append(item)
 
 doc.add_ordered_list(questions)
 
