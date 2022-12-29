@@ -1,3 +1,4 @@
+from collections import defaultdict
 import logging
 import sqlite3
 
@@ -13,7 +14,9 @@ class Brain:
         """
         self.connection = self.init_connection("pymon.db")
         self.init_db()
-        self.search("magic")
+        queries = self.search("recursion")
+        log.debug(f"TEST: {queries}")
+
         
     def init_connection(self, name: str):
         """
@@ -191,7 +194,8 @@ class Brain:
                 query, 
                 response,
                 authors.name,
-                resources.url
+                resources.url,
+                tags.tag
             FROM 
                 queries_fts 
             LEFT JOIN author_to_query
@@ -202,12 +206,35 @@ class Brain:
                 ON resource_to_query.query_id = queries_fts.rowid
             LEFT JOIN resources
                 ON resource_to_query.resource_id = resources.resource_id
+            LEFT JOIN tag_to_query
+                ON tag_to_query.query_id = queries_fts.rowid
+            LEFT JOIN tags
+                ON tag_to_query.tag_id = tags.tag_id
             WHERE 
                 queries_fts MATCH ? 
             ORDER BY 
                 rank
         """
         matches = cur.execute(command, (key_phrase, )).fetchall()
-        log.debug(f"TEST: {list(matches[0])}")
-        return [models.Query(*query) for query in matches]
+        log.debug(f"Retrieved search results: {matches}")
+        
+        groups = defaultdict(list)
+        for match in matches:
+            groups[match["rowid"]].append(match)
+        log.debug(groups)
+            
+        results = []
+        for group in groups.values():
+            row = list(zip(*group))
+            log.debug(row)
+            results.append(models.Query(
+                query_id = list(set(row[0]))[0],
+                query = list(set(row[1]))[0],
+                response = list(set(row[2]))[0],
+                authors = list(set(row[3])) if row[3][0] else [],
+                resources = list(set(row[4])) if row[4][0] else [],
+                tags = list(set(row[5])) if row[5][0] else []
+            ))
+                
+        return results
     
