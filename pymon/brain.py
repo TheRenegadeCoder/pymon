@@ -180,6 +180,48 @@ class Brain:
                 cur.execute(command, (tag_id, query_id))
         self.connection.commit()
         
+    def get_query(self, index: int) -> models.Query:
+        cur = self.connection.cursor()
+        command = """
+            SELECT 
+                queries.query_id,
+                query, 
+                response,
+                authors.name,
+                resources.url,
+                tags.tag
+            FROM 
+                queries
+            LEFT JOIN author_to_query
+                ON author_to_query.query_id = queries.query_id
+            LEFT JOIN authors
+                ON author_to_query.author_id = authors.author_id
+            LEFT JOIN resource_to_query
+                ON resource_to_query.query_id = queries.query_id
+            LEFT JOIN resources
+                ON resource_to_query.resource_id = resources.resource_id
+            LEFT JOIN tag_to_query
+                ON tag_to_query.query_id = queries.query_id
+            LEFT JOIN tags
+                ON tag_to_query.tag_id = tags.tag_id
+            WHERE 
+                queries.query_id = ?
+        """
+        matches = cur.execute(command, (index, )).fetchall()
+        log.debug(f"Retrieved query: {matches}")
+
+        row = list(zip(*matches))
+        log.debug(row)
+          
+        return models.Query(
+            query_id = list(set(row[0]))[0],
+            query = list(set(row[1]))[0],
+            response = list(set(row[2]))[0],
+            authors = list(set(row[3])) if row[3][0] else [],
+            resources = list(set(row[4])) if row[4][0] else [],
+            tags = list(set(row[5])) if row[5][0] else []
+        )
+        
     def search(self, key_phrase: str) -> list[models.Query]:
         """
         Searches the queries table for matching searches.
@@ -221,12 +263,10 @@ class Brain:
         groups = defaultdict(list)
         for match in matches:
             groups[match["rowid"]].append(match)
-        log.debug(groups)
             
         results = []
         for group in groups.values():
             row = list(zip(*group))
-            log.debug(row)
             results.append(models.Query(
                 query_id = list(set(row[0]))[0],
                 query = list(set(row[1]))[0],

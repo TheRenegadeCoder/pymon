@@ -1,7 +1,10 @@
+import logging
 import discord
 from discord import *
 
 from pymon import models, utils, brain, VERSION
+
+log = logging.getLogger(__name__)
 
 
 class Pymon(discord.Client):
@@ -57,24 +60,26 @@ class Pymon(discord.Client):
             :param ctx: the context to send messages to
             :return: None
             """
+            query = self.brain.get_query(index)
             embed = discord.Embed(
                 title=f"Pymon v{VERSION}: Answer to ID-{index}",
                 color=discord.Color.red(),
-                url=self.queries[index].get("resource", discord.embeds.EmptyEmbed)
+                url=query.resources[0] if query.resources else None
             )
             embed.add_field(
-                name=self.queries[index].get("query"),
-                value=self.queries[index].get("response"),
+                name=query.query,
+                value=query.response,
                 inline=False
             )
-            similar_queries = self.queries[index].get(
-                "similar_queries", [])[:3]
+            
+            similar_queries = self.brain.search(query.query.removesuffix("?"))[1:4]
+            log.debug(f"Similar queries: {similar_queries}")
             if similar_queries:
                 embed.add_field(
                     name="Similar Queries",
                     value="\n".join(
-                        f"• ID-{i}: {utils.create_md_link(self.queries[i].get('resource'), self.queries[i].get('query'))}"
-                        for i in similar_queries
+                        f"• ID-{curr.query_id}: {utils.create_md_link(curr.resources[0] if curr.resources else None, curr.query)}"
+                        for curr in similar_queries
                     ),
                     inline=True
                 )
@@ -85,9 +90,9 @@ class Pymon(discord.Client):
             name="study",
             description="Provides a study guide from a set of predetermined tags.",
         )
-        @app_commands.choices(tag=[
-            app_commands.Choice(name=item, value=item) for item in sorted(utils.generate_tags_set(self.queries))
-        ])
+        #@app_commands.choices(tag=[
+        #    app_commands.Choice(name=item, value=item) for item in sorted(utils.generate_tags_set(self.queries))
+        #])
         async def _study(interaction: discord.Interaction, tag: str):
             """
             Prints out a list of questions relevant to the tag.
