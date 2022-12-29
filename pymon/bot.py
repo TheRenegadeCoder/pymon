@@ -1,8 +1,9 @@
 import logging
+
 import discord
 from discord import *
 
-from pymon import models, utils, brain, VERSION
+from pymon import VERSION, brain, models, utils
 
 log = logging.getLogger(__name__)
 
@@ -71,8 +72,9 @@ class Pymon(discord.Client):
                 value=query.response,
                 inline=False
             )
-            
-            similar_queries = self.brain.search(query.query.removesuffix("?"))[1:4]
+
+            similar_queries = self.brain.search(
+                query.query.removesuffix("?"))[1:4]
             log.debug(f"Similar queries: {similar_queries}")
             if similar_queries:
                 embed.add_field(
@@ -112,10 +114,10 @@ class Pymon(discord.Client):
 
             await interaction.response.send_message(embed=embed)
 
-
     async def _react_on_mention(self, message: Message):
         if self.user.mentioned_in(message) and not message.mention_everyone:
-            queries: list[models.Query] = self.brain.search(message.clean_content.removeprefix("@Pymon"))
+            queries: list[models.Query] = self.brain.search(
+                message.clean_content.removeprefix("@Pymon"))
             if queries:
                 reply = list()
                 reply.extend([

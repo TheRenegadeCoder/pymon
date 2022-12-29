@@ -1,10 +1,5 @@
-import json
 import logging
-import os
 import string
-from urllib.request import urlopen
-
-from dotenv import load_dotenv
 
 from pymon import brain
 

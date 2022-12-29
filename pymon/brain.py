@@ -181,6 +181,11 @@ class Brain:
         self.connection.commit()
 
     def get_query(self, index: int) -> models.Query:
+        """
+        Retrieves a query by its index.
+        
+        :param index: the index of the query as an integer
+        """
         cur = self.connection.cursor()
         command = """
             SELECT 
