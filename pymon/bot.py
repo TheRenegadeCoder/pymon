@@ -1,7 +1,7 @@
 import discord
 from discord import *
 
-from pymon import utils, brain
+from pymon import models, utils, brain, VERSION
 
 
 class Pymon(discord.Client):
@@ -61,8 +61,7 @@ class Pymon(discord.Client):
             embed = discord.Embed(
                 title=f"Pymon v{__version__}: Answer to ID-{index}",
                 color=discord.Color.red(),
-                url=self.queries[index].get(
-                    "resource", discord.embeds.EmptyEmbed)
+                url=self.queries[index].get("resource", discord.embeds.EmptyEmbed)
             )
             embed.add_field(
                 name=self.queries[index].get("query"),
@@ -127,22 +126,22 @@ class Pymon(discord.Client):
 
     async def _react_on_mention(self, message: Message):
         if self.user.mentioned_in(message) and not message.mention_everyone:
-            indices = utils.search(self.keyword_mapping, utils.generate_keywords(message.content))
-            if indices:
+            queries: list[models.Query] = self.brain.search(message.clean_content.removeprefix("@Pymon"))
+            if queries:
                 reply = list()
                 reply.extend([
-                    f"{utils.create_md_link(self.queries[i].get('resource'), self.queries[i].get('query'))}"
-                    for i in indices[:3]
+                    f"{utils.create_md_link(query.resources[0] if query.resources else None, query.query)}"
+                    for query in queries[:3]
                 ])
                 embed = discord.Embed(
-                    title=f"Pymon v{__version__}: Do any of these questions match your query?",
+                    title=f"Pymon v{VERSION}: Do any of these questions match your query?",
                     description="Use the ID with the /get command to get an answer or follow the available links:",
                     color=discord.Color.blue(),
                     url="https://github.com/TheRenegadeCoder/pymon"
                 )
                 for idx, row in enumerate(reply):
                     embed.add_field(
-                        name=f"#{idx + 1}: ID-{indices[idx]}",
+                        name=f"#{idx + 1}: ID-{queries[idx].query_id}",
                         value=row,
                         inline=True
                     )
