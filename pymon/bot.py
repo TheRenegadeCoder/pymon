@@ -74,8 +74,7 @@ class Pymon(discord.Client):
                 inline=False
             )
 
-            similar_queries = self.brain.search(
-                query.query.removesuffix("?"))[1:4]
+            similar_queries = self.brain.search(query.query.removesuffix("?"))[1:4]
             log.debug(f"Similar queries: {similar_queries}")
             if similar_queries:
                 embed.add_field(
@@ -151,7 +150,11 @@ class Pymon(discord.Client):
         """
         if self.user.mentioned_in(message) and not message.mention_everyone:
             queries: list[models.Query] = self.brain.search(
-                message.clean_content.removeprefix("@Pymon"))
+                message
+                    .clean_content
+                    .removeprefix("@Pymon")
+                    .removesuffix("?")
+                )
             if queries:
                 reply = list()
                 reply.extend([
