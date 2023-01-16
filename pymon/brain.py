@@ -14,8 +14,6 @@ class Brain:
         """
         self.connection = self.init_connection("pymon.db")
         self.init_db()
-        queries = self.search("recursion")
-        log.debug(f"TEST: {queries}")
 
     def init_connection(self, name: str):
         """
