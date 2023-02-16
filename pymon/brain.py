@@ -326,11 +326,15 @@ class Brain:
             LEFT JOIN tags
                 ON tag_to_query.tag_id = tags.tag_id
             WHERE 
-                queries_fts MATCH ? 
+                queries_fts MATCH ?
             ORDER BY 
                 rank
         """
-        matches = cur.execute(command, (key_phrase, )).fetchall()
+        log.debug(f"User is looking for queries related to key phrase: {key_phrase}")
+        search_tokens = [f'"{token}"' for token in key_phrase.split()]
+        search_phrase = " OR ".join(search_tokens)
+        log.debug(f"Searching database using the following search phrase: {search_phrase}")
+        matches = cur.execute(command, (search_phrase, )).fetchall()
         log.debug(f"Retrieved search results: {matches}")
 
         groups = defaultdict(list)
